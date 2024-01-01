@@ -51,8 +51,10 @@
 		FCF9EB5E2B43383B00191996 /* BookarooPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FCF9EB6F2B43393A00191996 /* Models */,
+				FCF9EB6E2B43392F00191996 /* ViewModels */,
+				FCF9EB6D2B43391400191996 /* Views */,
 				FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */,
-				FCF9EB612B43383B00191996 /* ContentView.swift */,
 				FCF9EB632B43383C00191996 /* Assets.xcassets */,
 				FCF9EB652B43383C00191996 /* Preview Content */,
 			);
@@ -65,6 +67,28 @@
 				FCF9EB662B43383C00191996 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCF9EB6D2B43391400191996 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCF9EB612B43383B00191996 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCF9EB6E2B43392F00191996 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FCF9EB6F2B43393A00191996 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
