@@ -1,0 +1,39 @@
+//
+//  ApiProtocol.swift
+//  BookarooPlus
+//
+//  Created by Patrik Michl on 04.01.2024.
+//
+
+import Foundation
+
+class Api {
+    
+    func callApi<T: Codable>(fromURL: String) async -> CommunicationResult<T> {
+        do {
+            guard let url = URL(string: fromURL) else { throw CommunicationError.badUrl }
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard let response = response as? HTTPURLResponse else { throw CommunicationError.badResponse }
+            guard response.statusCode >= 200 && response.statusCode < 300 else { throw CommunicationError.badStatus }
+            guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw CommunicationError.failedToDecodeResponse }
+            
+            return .success(decodedResponse)
+        } catch CommunicationError.badUrl {
+            print("There was an error creating the URL")
+            return .failure(CommunicationError.badUrl)
+        } catch CommunicationError.badResponse {
+            print("Did not get a valid response")
+            return .failure(CommunicationError.badResponse)
+        } catch CommunicationError.badStatus {
+            print("Did not get a 2xx status code from the response")
+            return .failure(CommunicationError.badStatus)
+        } catch CommunicationError.failedToDecodeResponse {
+            print("Failed to decode response into the given type")
+            return .failure(CommunicationError.failedToDecodeResponse)
+        } catch {
+            print("An error occured downloading the data")
+            return .failure(CommunicationError.unknownError)
+        }
+    }
+    
+}

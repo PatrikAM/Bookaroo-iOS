@@ -19,6 +19,11 @@
 		FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB51E2B46EB6600D67B5D /* AssetsConstants.swift */; };
 		FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */; };
 		FC4AB5252B46EF6D00D67B5D /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5242B46EF6D00D67B5D /* AuthManager.swift */; };
+		FC4AB5282B46F20F00D67B5D /* BooksApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5272B46F20F00D67B5D /* BooksApiManager.swift */; };
+		FC4AB52A2B46F23000D67B5D /* CommunicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5292B46F23000D67B5D /* CommunicationError.swift */; };
+		FC4AB52C2B46F29300D67B5D /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB52B2B46F29300D67B5D /* Api.swift */; };
+		FC4AB52E2B46F3D300D67B5D /* BooksApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB52D2B46F3D300D67B5D /* BooksApiManagerProtocol.swift */; };
+		FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */; };
 		FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */; };
 		FCF9EB622B43383B00191996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB612B43383B00191996 /* ContentView.swift */; };
 		FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB632B43383C00191996 /* Assets.xcassets */; };
@@ -38,6 +43,11 @@
 		FC4AB51E2B46EB6600D67B5D /* AssetsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsConstants.swift; sourceTree = "<group>"; };
 		FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FC4AB5242B46EF6D00D67B5D /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		FC4AB5272B46F20F00D67B5D /* BooksApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApiManager.swift; sourceTree = "<group>"; };
+		FC4AB5292B46F23000D67B5D /* CommunicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationError.swift; sourceTree = "<group>"; };
+		FC4AB52B2B46F29300D67B5D /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		FC4AB52D2B46F3D300D67B5D /* BooksApiManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApiManagerProtocol.swift; sourceTree = "<group>"; };
+		FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationResult.swift; sourceTree = "<group>"; };
 		FCF9EB5C2B43383B00191996 /* BookarooPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookarooPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooPlusApp.swift; sourceTree = "<group>"; };
 		FCF9EB612B43383B00191996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +93,18 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FC4AB5262B46F1FF00D67B5D /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AB5272B46F20F00D67B5D /* BooksApiManager.swift */,
+				FC4AB5292B46F23000D67B5D /* CommunicationError.swift */,
+				FC4AB52B2B46F29300D67B5D /* Api.swift */,
+				FC4AB52D2B46F3D300D67B5D /* BooksApiManagerProtocol.swift */,
+				FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		FCF9EB532B43383A00191996 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,7 @@
 		FCF9EB5E2B43383B00191996 /* BookarooPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FC4AB5262B46F1FF00D67B5D /* Api */,
 				FC4AB5232B46EF6000D67B5D /* Login */,
 				FC4AB5222B46EE2500D67B5D /* ViewModels */,
 				FC4AB50A2B46E4DE00D67B5D /* Models */,
@@ -208,15 +231,20 @@
 				FC4AB51B2B46E83700D67B5D /* BarcodeScannerView.swift in Sources */,
 				FC4AB5252B46EF6D00D67B5D /* AuthManager.swift in Sources */,
 				FC4AB51D2B46EA1100D67B5D /* SplashView.swift in Sources */,
+				FC4AB52A2B46F23000D67B5D /* CommunicationError.swift in Sources */,
 				FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */,
 				FC4AB5172B46E7F100D67B5D /* BookDetailView.swift in Sources */,
 				FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,
+				FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */,
 				FC4AB5152B46E7C500D67B5D /* LoginView.swift in Sources */,
 				FC4AB5122B46E4F800D67B5D /* Reader.swift in Sources */,
 				FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */,
 				FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */,
 				FCF9EB622B43383B00191996 /* ContentView.swift in Sources */,
+				FC4AB52E2B46F3D300D67B5D /* BooksApiManagerProtocol.swift in Sources */,
+				FC4AB5282B46F20F00D67B5D /* BooksApiManager.swift in Sources */,
+				FC4AB52C2B46F29300D67B5D /* Api.swift in Sources */,
 				FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */,
 				FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */,
 			);
