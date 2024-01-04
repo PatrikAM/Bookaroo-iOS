@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Library: Codable {
+struct Library: Codable, DictionaryEncodable {
     var id: String
     var name: String?
     var ownerId: String?

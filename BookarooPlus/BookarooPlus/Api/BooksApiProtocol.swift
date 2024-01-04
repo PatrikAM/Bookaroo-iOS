@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BooksApiManagerProtocol {
+protocol BooksApiProtocol {
     
     func fetchBooks() async -> CommunicationResult<[Book]>
     

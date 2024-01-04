@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Reader: Codable {
+struct Reader: Codable, DictionaryEncodable {
     var id: String?
     var name: String?
     var login: String?
-    // var password: String?  // Password field is commented out as it's typically not recommended to include passwords in plain text in code
+    // var password: String?
     var token: String?
 }

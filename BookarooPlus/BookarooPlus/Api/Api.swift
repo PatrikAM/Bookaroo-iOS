@@ -36,4 +36,15 @@ class Api {
         }
     }
     
+    func buildParams(fromObject: DictionaryEncodable, token: String) -> String {
+        var params = "?token=\(String(describing: token))"
+        fromObject.dictionary()?.forEach({ (key: String, value: Any?) in
+            if let val = value {
+                params += "&\(key)=\(String(describing: value))"
+            }
+        })
+        
+        return params
+    }
+    
 }

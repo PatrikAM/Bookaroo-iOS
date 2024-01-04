@@ -9,6 +9,6 @@ import Foundation
 
 protocol GBooksApiProtocol {
     
-    func getBookByIsbn(isbn: String) -> CommunicationResult<GBooks>
+    func getBookByIsbn(isbn: String) async -> CommunicationResult<GBooks>
     
 }
