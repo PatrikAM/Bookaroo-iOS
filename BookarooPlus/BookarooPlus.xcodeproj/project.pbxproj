@@ -11,6 +11,14 @@
 		FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50C2B46E4DE00D67B5D /* GBook.swift */; };
 		FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50D2B46E4DE00D67B5D /* Book.swift */; };
 		FC4AB5122B46E4F800D67B5D /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5112B46E4F800D67B5D /* Reader.swift */; };
+		FC4AB5152B46E7C500D67B5D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5142B46E7C500D67B5D /* LoginView.swift */; };
+		FC4AB5172B46E7F100D67B5D /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5162B46E7F100D67B5D /* BookDetailView.swift */; };
+		FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5182B46E81A00D67B5D /* BookAddEditView.swift */; };
+		FC4AB51B2B46E83700D67B5D /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB51A2B46E83700D67B5D /* BarcodeScannerView.swift */; };
+		FC4AB51D2B46EA1100D67B5D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB51C2B46EA1100D67B5D /* SplashView.swift */; };
+		FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB51E2B46EB6600D67B5D /* AssetsConstants.swift */; };
+		FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */; };
+		FC4AB5252B46EF6D00D67B5D /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5242B46EF6D00D67B5D /* AuthManager.swift */; };
 		FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */; };
 		FCF9EB622B43383B00191996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB612B43383B00191996 /* ContentView.swift */; };
 		FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB632B43383C00191996 /* Assets.xcassets */; };
@@ -22,6 +30,14 @@
 		FC4AB50C2B46E4DE00D67B5D /* GBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBook.swift; sourceTree = "<group>"; };
 		FC4AB50D2B46E4DE00D67B5D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FC4AB5112B46E4F800D67B5D /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		FC4AB5142B46E7C500D67B5D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FC4AB5162B46E7F100D67B5D /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		FC4AB5182B46E81A00D67B5D /* BookAddEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAddEditView.swift; sourceTree = "<group>"; };
+		FC4AB51A2B46E83700D67B5D /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		FC4AB51C2B46EA1100D67B5D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FC4AB51E2B46EB6600D67B5D /* AssetsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsConstants.swift; sourceTree = "<group>"; };
+		FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FC4AB5242B46EF6D00D67B5D /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		FCF9EB5C2B43383B00191996 /* BookarooPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookarooPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooPlusApp.swift; sourceTree = "<group>"; };
 		FCF9EB612B43383B00191996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +67,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FC4AB5222B46EE2500D67B5D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FC4AB5232B46EF6000D67B5D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AB5242B46EF6D00D67B5D /* AuthManager.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		FCF9EB532B43383A00191996 = {
 			isa = PBXGroup;
 			children = (
@@ -70,11 +102,14 @@
 		FCF9EB5E2B43383B00191996 /* BookarooPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FC4AB5232B46EF6000D67B5D /* Login */,
+				FC4AB5222B46EE2500D67B5D /* ViewModels */,
 				FC4AB50A2B46E4DE00D67B5D /* Models */,
 				FCF9EB6D2B43391400191996 /* Views */,
 				FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */,
 				FCF9EB632B43383C00191996 /* Assets.xcassets */,
 				FCF9EB652B43383C00191996 /* Preview Content */,
+				FC4AB51E2B46EB6600D67B5D /* AssetsConstants.swift */,
 			);
 			path = BookarooPlus;
 			sourceTree = "<group>";
@@ -91,6 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				FCF9EB612B43383B00191996 /* ContentView.swift */,
+				FC4AB5142B46E7C500D67B5D /* LoginView.swift */,
+				FC4AB5162B46E7F100D67B5D /* BookDetailView.swift */,
+				FC4AB5182B46E81A00D67B5D /* BookAddEditView.swift */,
+				FC4AB51A2B46E83700D67B5D /* BarcodeScannerView.swift */,
+				FC4AB51C2B46EA1100D67B5D /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,8 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4AB51B2B46E83700D67B5D /* BarcodeScannerView.swift in Sources */,
+				FC4AB5252B46EF6D00D67B5D /* AuthManager.swift in Sources */,
+				FC4AB51D2B46EA1100D67B5D /* SplashView.swift in Sources */,
+				FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */,
+				FC4AB5172B46E7F100D67B5D /* BookDetailView.swift in Sources */,
+				FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,
+				FC4AB5152B46E7C500D67B5D /* LoginView.swift in Sources */,
 				FC4AB5122B46E4F800D67B5D /* Reader.swift in Sources */,
+				FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */,
 				FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */,
 				FCF9EB622B43383B00191996 /* ContentView.swift in Sources */,
 				FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */,
