@@ -24,6 +24,9 @@
 		FC4AB52C2B46F29300D67B5D /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB52B2B46F29300D67B5D /* Api.swift */; };
 		FC4AB52E2B46F3D300D67B5D /* BooksApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB52D2B46F3D300D67B5D /* BooksApiManagerProtocol.swift */; };
 		FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */; };
+		FC4AB5332B46FA5900D67B5D /* GBooksApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */; };
+		FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */; };
+		FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */; };
 		FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */; };
 		FCF9EB622B43383B00191996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB612B43383B00191996 /* ContentView.swift */; };
 		FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB632B43383C00191996 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		FC4AB52B2B46F29300D67B5D /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		FC4AB52D2B46F3D300D67B5D /* BooksApiManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApiManagerProtocol.swift; sourceTree = "<group>"; };
 		FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationResult.swift; sourceTree = "<group>"; };
+		FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBooksApiProtocol.swift; sourceTree = "<group>"; };
+		FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesApiProtocol.swift; sourceTree = "<group>"; };
+		FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadersApiProtocol.swift; sourceTree = "<group>"; };
 		FCF9EB5C2B43383B00191996 /* BookarooPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookarooPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooPlusApp.swift; sourceTree = "<group>"; };
 		FCF9EB612B43383B00191996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 				FC4AB52B2B46F29300D67B5D /* Api.swift */,
 				FC4AB52D2B46F3D300D67B5D /* BooksApiManagerProtocol.swift */,
 				FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */,
+				FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */,
+				FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */,
+				FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 				FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,
 				FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */,
+				FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */,
 				FC4AB5152B46E7C500D67B5D /* LoginView.swift in Sources */,
 				FC4AB5122B46E4F800D67B5D /* Reader.swift in Sources */,
 				FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */,
@@ -247,6 +257,8 @@
 				FC4AB52C2B46F29300D67B5D /* Api.swift in Sources */,
 				FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */,
 				FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */,
+				FC4AB5332B46FA5900D67B5D /* GBooksApiProtocol.swift in Sources */,
+				FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,5 +32,4 @@ class BooksApiManager : Api, BooksApiManagerProtocol {
         <#code#>
     }
     
-    
 }
