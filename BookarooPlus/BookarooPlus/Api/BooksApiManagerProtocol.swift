@@ -9,16 +9,16 @@ import Foundation
 
 protocol BooksApiManagerProtocol {
     
-    func fetchBooks() -> CommunicationResult<[Book]>
+    func fetchBooks() async -> CommunicationResult<[Book]>
     
-    func fetchBook(bookId: String) -> CommunicationResult<Book>
+    func fetchBook(bookId: String) async -> CommunicationResult<Book>
     
-    func fetchBooksFromLibrary(libraryId: String) -> CommunicationResult<[Book]>
+    func fetchBooksFromLibrary(libraryId: String) async -> CommunicationResult<[Book]>
     
-    func createBook(book: Book) -> CommunicationResult<Book>
+    func createBook(book: Book) async -> CommunicationResult<Book>
     
-    func updateBook(book: Book) -> CommunicationResult<Book>
-
-    func deleteBook(bookId: String) -> CommunicationResult<Book>
+    func updateBook(book: Book) async -> CommunicationResult<Book>
+    
+    func deleteBook(bookId: String) async -> CommunicationResult<Book>
     
 }

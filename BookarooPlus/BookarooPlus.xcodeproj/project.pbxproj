@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC16604B2B471069002F1BF7 /* BaseUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16604A2B471069002F1BF7 /* BaseUrls.swift */; };
+		FC16604E2B471A44002F1BF7 /* DictionaryEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */; };
 		FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50B2B46E4DE00D67B5D /* Library.swift */; };
 		FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50C2B46E4DE00D67B5D /* GBook.swift */; };
 		FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50D2B46E4DE00D67B5D /* Book.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC16604A2B471069002F1BF7 /* BaseUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrls.swift; sourceTree = "<group>"; };
+		FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncodable.swift; sourceTree = "<group>"; };
 		FC4AB50B2B46E4DE00D67B5D /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		FC4AB50C2B46E4DE00D67B5D /* GBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBook.swift; sourceTree = "<group>"; };
 		FC4AB50D2B46E4DE00D67B5D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC16604C2B471A29002F1BF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FC4AB50A2B46E4DE00D67B5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 				FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */,
 				FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */,
 				FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */,
+				FC16604A2B471069002F1BF7 /* BaseUrls.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -133,6 +146,7 @@
 		FCF9EB5E2B43383B00191996 /* BookarooPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FC16604C2B471A29002F1BF7 /* Extensions */,
 				FC4AB5262B46F1FF00D67B5D /* Api */,
 				FC4AB5232B46EF6000D67B5D /* Login */,
 				FC4AB5222B46EE2500D67B5D /* ViewModels */,
@@ -241,8 +255,10 @@
 				FC4AB5252B46EF6D00D67B5D /* AuthManager.swift in Sources */,
 				FC4AB51D2B46EA1100D67B5D /* SplashView.swift in Sources */,
 				FC4AB52A2B46F23000D67B5D /* CommunicationError.swift in Sources */,
+				FC16604B2B471069002F1BF7 /* BaseUrls.swift in Sources */,
 				FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */,
 				FC4AB5172B46E7F100D67B5D /* BookDetailView.swift in Sources */,
+				FC16604E2B471A44002F1BF7 /* DictionaryEncodable.swift in Sources */,
 				FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,
 				FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */,
