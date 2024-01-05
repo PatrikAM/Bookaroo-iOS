@@ -11,6 +11,8 @@
 		FC16604E2B471A44002F1BF7 /* DictionaryEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */; };
 		FC1660502B472947002F1BF7 /* BookarooApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16604F2B472947002F1BF7 /* BookarooApi.swift */; };
 		FC1660522B472AA1002F1BF7 /* GBooksApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */; };
+		FC1660542B47FCE6002F1BF7 /* BarcodeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660532B47FCE6002F1BF7 /* BarcodeOverlayView.swift */; };
+		FC1660562B47FD19002F1BF7 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660552B47FD18002F1BF7 /* VideoCaptureView.swift */; };
 		FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50B2B46E4DE00D67B5D /* Library.swift */; };
 		FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50C2B46E4DE00D67B5D /* GBook.swift */; };
 		FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50D2B46E4DE00D67B5D /* Book.swift */; };
@@ -42,6 +44,8 @@
 		FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncodable.swift; sourceTree = "<group>"; };
 		FC16604F2B472947002F1BF7 /* BookarooApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooApi.swift; sourceTree = "<group>"; };
 		FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBooksApiManager.swift; sourceTree = "<group>"; };
+		FC1660532B47FCE6002F1BF7 /* BarcodeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeOverlayView.swift; sourceTree = "<group>"; };
+		FC1660552B47FD18002F1BF7 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
 		FC4AB50B2B46E4DE00D67B5D /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		FC4AB50C2B46E4DE00D67B5D /* GBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBook.swift; sourceTree = "<group>"; };
 		FC4AB50D2B46E4DE00D67B5D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -86,6 +90,16 @@
 				FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC1660572B47FD49002F1BF7 /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AB51A2B46E83700D67B5D /* BarcodeScannerView.swift */,
+				FC1660532B47FCE6002F1BF7 /* BarcodeOverlayView.swift */,
+				FC1660552B47FD18002F1BF7 /* VideoCaptureView.swift */,
+			);
+			path = BarcodeScanner;
 			sourceTree = "<group>";
 		};
 		FC4AB50A2B46E4DE00D67B5D /* Models */ = {
@@ -177,11 +191,11 @@
 		FCF9EB6D2B43391400191996 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC1660572B47FD49002F1BF7 /* BarcodeScanner */,
 				FCF9EB612B43383B00191996 /* ContentView.swift */,
 				FC4AB5142B46E7C500D67B5D /* LoginView.swift */,
 				FC4AB5162B46E7F100D67B5D /* BookDetailView.swift */,
 				FC4AB5182B46E81A00D67B5D /* BookAddEditView.swift */,
-				FC4AB51A2B46E83700D67B5D /* BarcodeScannerView.swift */,
 				FC4AB51C2B46EA1100D67B5D /* SplashView.swift */,
 			);
 			path = Views;
@@ -260,6 +274,7 @@
 				FC4AB51B2B46E83700D67B5D /* BarcodeScannerView.swift in Sources */,
 				FC4AB5252B46EF6D00D67B5D /* AuthManager.swift in Sources */,
 				FC4AB51D2B46EA1100D67B5D /* SplashView.swift in Sources */,
+				FC1660562B47FD19002F1BF7 /* VideoCaptureView.swift in Sources */,
 				FC4AB52A2B46F23000D67B5D /* CommunicationError.swift in Sources */,
 				FC16604B2B471069002F1BF7 /* BaseUrls.swift in Sources */,
 				FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */,
@@ -281,6 +296,7 @@
 				FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */,
 				FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */,
 				FC4AB5332B46FA5900D67B5D /* GBooksApiProtocol.swift in Sources */,
+				FC1660542B47FCE6002F1BF7 /* BarcodeOverlayView.swift in Sources */,
 				FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */,
 				FC1660502B472947002F1BF7 /* BookarooApi.swift in Sources */,
 			);
