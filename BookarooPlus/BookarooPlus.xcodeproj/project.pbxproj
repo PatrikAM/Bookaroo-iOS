@@ -143,21 +143,37 @@
 		FC4AB5262B46F1FF00D67B5D /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				FC4AB5272B46F20F00D67B5D /* BooksApiManager.swift */,
+				FCACF54B2B4847A40035172E /* Protocols */,
+				FCACF54A2B48479B0035172E /* Managers */,
 				FC4AB5292B46F23000D67B5D /* CommunicationError.swift */,
 				FC4AB52B2B46F29300D67B5D /* Api.swift */,
-				FC4AB52D2B46F3D300D67B5D /* BooksApiProtocol.swift */,
 				FC4AB52F2B46F42600D67B5D /* CommunicationResult.swift */,
-				FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */,
-				FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */,
-				FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */,
 				FC16604A2B471069002F1BF7 /* BaseUrls.swift */,
 				FC16604F2B472947002F1BF7 /* BookarooApi.swift */,
-				FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */,
-				FC1660582B4806A2002F1BF7 /* ReadersApiManager.swift */,
 				FCACF5482B48422D0035172E /* Header.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		FCACF54A2B48479B0035172E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AB5272B46F20F00D67B5D /* BooksApiManager.swift */,
+				FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */,
+				FC1660582B4806A2002F1BF7 /* ReadersApiManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FCACF54B2B4847A40035172E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AB52D2B46F3D300D67B5D /* BooksApiProtocol.swift */,
+				FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */,
+				FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */,
+				FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FCF9EB532B43383A00191996 = {
