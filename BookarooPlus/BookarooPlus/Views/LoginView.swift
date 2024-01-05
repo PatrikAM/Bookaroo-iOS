@@ -52,7 +52,10 @@ struct LoginView: View {
                         .cornerRadius(10)
                 }
             )
-            .disabled(authManager.isLoading )
+            .disabled(authManager.isLoading)
+            
+            // LoginScreenEllipseShape().frame(width: .infinity, height: 500)
+            
             
             
         }
