@@ -9,9 +9,9 @@ import Foundation
 
 protocol ReadersApiProtocol {
     
-    func login(login: String, password: String) -> CommunicationResult<Reader>
+    func login(login: String, password: String) async -> CommunicationResult<Reader>
     
-    func register(login: String, password: String, name: String) -> CommunicationResult<Reader>
+    func register(login: String, password: String, name: String) async -> CommunicationResult<Reader>
     
 //    func logout() -> CommunicationResult<BookarooApiResponse>
     

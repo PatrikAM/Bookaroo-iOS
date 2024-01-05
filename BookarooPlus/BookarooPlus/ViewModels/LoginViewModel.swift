@@ -9,4 +9,6 @@ import Foundation
 
 class LoginViewModel: ObservableObject {
     
+    @Published var authManager = AuthManager()
+    
 }

@@ -26,7 +26,7 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
     
     func createBook(book: Book) async -> CommunicationResult<Book> {
         let endpoint = "book"
-        let bookDict = book.dictionary()
+//        let bookDict = book.dictionary()
         
         let params = super.buildParams(fromObject: book, token: self.token!)
         
@@ -42,7 +42,7 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
     
     func updateBook(book: Book) async -> CommunicationResult<Book> {
         let endpoint = "book/update"
-        let bookDict = book.dictionary()
+//        let bookDict = book.dictionary()
         
         let params = super.buildParams(fromObject: book, token: self.token!)
         

@@ -9,10 +9,14 @@ import Foundation
 
 class Api {
     
-    func callApi<T: Codable>(fromURL: String) async -> CommunicationResult<T> {
+    func callApi<T: Codable>(fromURL: String, header: Header = .get) async -> CommunicationResult<T> {
+        
         do {
             guard let url = URL(string: fromURL) else { throw CommunicationError.badUrl }
-            let (data, response) = try await URLSession.shared.data(from: url)
+            var request = URLRequest(url: url)
+            request.httpMethod = header.rawValue
+            
+            let (data, response) = try await URLSession.shared.data(for: request)
             guard let response = response as? HTTPURLResponse else { throw CommunicationError.badResponse }
             guard response.statusCode >= 200 && response.statusCode < 300 else { throw CommunicationError.badStatus }
             guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw CommunicationError.failedToDecodeResponse }
@@ -40,7 +44,7 @@ class Api {
         var params = "?token=\(String(describing: token))"
         fromObject.dictionary()?.forEach({ (key: String, value: Any?) in
             if let val = value {
-                params += "&\(key)=\(String(describing: value))"
+                params += "&\(key)=\(val)"
             }
         })
         

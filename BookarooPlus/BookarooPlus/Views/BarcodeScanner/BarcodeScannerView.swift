@@ -10,6 +10,8 @@ import SwiftUI
 
 struct BarcodeScannerView: View {
     
+    // https://medium.com/@ios_guru/swiftui-and-custom-barcode-scanner-f3daaeabfcea
+    
     @State private var captureSession: AVCaptureSession?
     @State private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
@@ -38,4 +40,5 @@ struct BarcodeScannerView: View {
             print(error)
         }
     }
+    
 }

@@ -13,6 +13,9 @@
 		FC1660522B472AA1002F1BF7 /* GBooksApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */; };
 		FC1660542B47FCE6002F1BF7 /* BarcodeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660532B47FCE6002F1BF7 /* BarcodeOverlayView.swift */; };
 		FC1660562B47FD19002F1BF7 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660552B47FD18002F1BF7 /* VideoCaptureView.swift */; };
+		FC1660592B4806A2002F1BF7 /* ReadersApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1660582B4806A2002F1BF7 /* ReadersApiManager.swift */; };
+		FC16605C2B482697002F1BF7 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = FC16605B2B482697002F1BF7 /* AlertToast */; };
+		FC16605E2B483552002F1BF7 /* ListOfBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16605D2B483552002F1BF7 /* ListOfBooksView.swift */; };
 		FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50B2B46E4DE00D67B5D /* Library.swift */; };
 		FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50C2B46E4DE00D67B5D /* GBook.swift */; };
 		FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB50D2B46E4DE00D67B5D /* Book.swift */; };
@@ -33,6 +36,8 @@
 		FC4AB5332B46FA5900D67B5D /* GBooksApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */; };
 		FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */; };
 		FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */; };
+		FCACF5472B48408F0035172E /* NavigateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5462B48408F0035172E /* NavigateView.swift */; };
+		FCACF5492B48422D0035172E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5482B48422D0035172E /* Header.swift */; };
 		FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */; };
 		FCF9EB622B43383B00191996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB612B43383B00191996 /* ContentView.swift */; };
 		FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB632B43383C00191996 /* Assets.xcassets */; };
@@ -46,6 +51,8 @@
 		FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBooksApiManager.swift; sourceTree = "<group>"; };
 		FC1660532B47FCE6002F1BF7 /* BarcodeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeOverlayView.swift; sourceTree = "<group>"; };
 		FC1660552B47FD18002F1BF7 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
+		FC1660582B4806A2002F1BF7 /* ReadersApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadersApiManager.swift; sourceTree = "<group>"; };
+		FC16605D2B483552002F1BF7 /* ListOfBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBooksView.swift; sourceTree = "<group>"; };
 		FC4AB50B2B46E4DE00D67B5D /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		FC4AB50C2B46E4DE00D67B5D /* GBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBook.swift; sourceTree = "<group>"; };
 		FC4AB50D2B46E4DE00D67B5D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBooksApiProtocol.swift; sourceTree = "<group>"; };
 		FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesApiProtocol.swift; sourceTree = "<group>"; };
 		FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadersApiProtocol.swift; sourceTree = "<group>"; };
+		FCACF5462B48408F0035172E /* NavigateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateView.swift; sourceTree = "<group>"; };
+		FCACF5482B48422D0035172E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FCF9EB5C2B43383B00191996 /* BookarooPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookarooPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooPlusApp.swift; sourceTree = "<group>"; };
 		FCF9EB612B43383B00191996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC16605C2B482697002F1BF7 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */,
+				FCACF5462B48408F0035172E /* NavigateView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +154,8 @@
 				FC16604A2B471069002F1BF7 /* BaseUrls.swift */,
 				FC16604F2B472947002F1BF7 /* BookarooApi.swift */,
 				FC1660512B472AA1002F1BF7 /* GBooksApiManager.swift */,
+				FC1660582B4806A2002F1BF7 /* ReadersApiManager.swift */,
+				FCACF5482B48422D0035172E /* Header.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 				FC4AB5162B46E7F100D67B5D /* BookDetailView.swift */,
 				FC4AB5182B46E81A00D67B5D /* BookAddEditView.swift */,
 				FC4AB51C2B46EA1100D67B5D /* SplashView.swift */,
+				FC16605D2B483552002F1BF7 /* ListOfBooksView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +231,9 @@
 			dependencies = (
 			);
 			name = BookarooPlus;
+			packageProductDependencies = (
+				FC16605B2B482697002F1BF7 /* AlertToast */,
+			);
 			productName = BookarooPlus;
 			productReference = FCF9EB5C2B43383B00191996 /* BookarooPlus.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +262,9 @@
 				Base,
 			);
 			mainGroup = FCF9EB532B43383A00191996;
+			packageReferences = (
+				FC16605A2B482697002F1BF7 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = FCF9EB5D2B43383B00191996 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,10 +306,14 @@
 				FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */,
 				FC4AB5152B46E7C500D67B5D /* LoginView.swift in Sources */,
 				FC1660522B472AA1002F1BF7 /* GBooksApiManager.swift in Sources */,
+				FC1660592B4806A2002F1BF7 /* ReadersApiManager.swift in Sources */,
+				FCACF5492B48422D0035172E /* Header.swift in Sources */,
 				FC4AB5122B46E4F800D67B5D /* Reader.swift in Sources */,
 				FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */,
 				FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */,
 				FCF9EB622B43383B00191996 /* ContentView.swift in Sources */,
+				FC16605E2B483552002F1BF7 /* ListOfBooksView.swift in Sources */,
+				FCACF5472B48408F0035172E /* NavigateView.swift in Sources */,
 				FC4AB52E2B46F3D300D67B5D /* BooksApiProtocol.swift in Sources */,
 				FC4AB5282B46F20F00D67B5D /* BooksApiManager.swift in Sources */,
 				FC4AB52C2B46F29300D67B5D /* Api.swift in Sources */,
@@ -357,6 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Bookaroo needs camera to scan your ISBN.";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -414,6 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Bookaroo needs camera to scan your ISBN.";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -504,6 +530,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC16605A2B482697002F1BF7 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC16605B2B482697002F1BF7 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC16605A2B482697002F1BF7 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCF9EB542B43383A00191996 /* Project object */;
 }

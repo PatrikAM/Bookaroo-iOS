@@ -9,5 +9,5 @@ import Foundation
 
 enum CommunicationResult<T> {
     case success(T)
-    case failure(Error)
+    case failure(CommunicationError)
 }
