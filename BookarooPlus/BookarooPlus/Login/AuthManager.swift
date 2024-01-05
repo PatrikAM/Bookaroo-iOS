@@ -8,9 +8,9 @@
 import Foundation
 
 class AuthManager: ObservableObject {
-    @Published var email: String = ""
-    @Published var password: String = ""
-    @Published var name: String = ""
+    @Published var email: String = "example@ex.com"
+    @Published var password: String = "pass.123"
+    @Published var name: String = "John"
     
     @Published var errorMessage: String? = nil
     @Published var isLoading: Bool = false
