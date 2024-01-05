@@ -15,7 +15,7 @@ class AuthManager: ObservableObject {
     @Published var errorMessage: String? = nil
     @Published var isLoading: Bool = false
     
-    @Published var isErrorToastSowing: Bool = false
+    @Published var isErrorToastShown: Bool = false
     
     @Published var data: Reader? = nil
     
@@ -30,7 +30,7 @@ class AuthManager: ObservableObject {
         if self.password.isEmpty || self.email.isEmpty {
             self.isLoading = false
             self.errorMessage = "Please fill credentials in"
-            self.isErrorToastSowing = true
+            self.isErrorToastShown = true
             return
         }
         
@@ -64,7 +64,7 @@ class AuthManager: ObservableObject {
                             self.errorMessage = "unknown error"
                         }
                         self.isLoading = false
-                        self.isErrorToastSowing = true
+                        self.isErrorToastShown = true
                         return
                     case .none:
                         self.errorMessage = "unknonw error"
@@ -94,12 +94,12 @@ class AuthManager: ObservableObject {
         defaults.synchronize()
     }
     
-    func signin() {
+    func signup() {
         
         if self.password.isEmpty || self.email.isEmpty {
             self.isLoading = false
             self.errorMessage = "Please fill credentials in"
-            self.isErrorToastSowing = true
+            self.isErrorToastShown = true
             return
         }
         
@@ -134,7 +134,7 @@ class AuthManager: ObservableObject {
                             self.errorMessage = "unknown error"
                         }
                         self.isLoading = false
-                        self.isErrorToastSowing = true
+                        self.isErrorToastShown = true
                         return
                     case .none:
                         self.errorMessage = "unknonw error"

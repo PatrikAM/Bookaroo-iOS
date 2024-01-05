@@ -57,7 +57,7 @@ struct LoginView: View {
             
         }
         .navigate(to: ListOfBooksView(), when: $authManager.navigate)
-        .toast(isPresenting: $authManager.isErrorToastSowing) {
+        .toast(isPresenting: $authManager.isErrorToastShown) {
             AlertToast(
                 displayMode: .alert,
                 type: .error(Color.red),
