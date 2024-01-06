@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEB1DDED2B49910E00C238CA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */; };
 		CEBD1AB22B487E8C00EDC96E /* LoginScreenEllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD1AB12B487E8C00EDC96E /* LoginScreenEllipseShape.swift */; };
 		FC16604B2B471069002F1BF7 /* BaseUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16604A2B471069002F1BF7 /* BaseUrls.swift */; };
 		FC16604E2B471A44002F1BF7 /* DictionaryEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		CEBD1AB12B487E8C00EDC96E /* LoginScreenEllipseShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenEllipseShape.swift; sourceTree = "<group>"; };
 		FC16604A2B471069002F1BF7 /* BaseUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrls.swift; sourceTree = "<group>"; };
 		FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncodable.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		FCF9EB532B43383A00191996 = {
 			isa = PBXGroup;
 			children = (
+				CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */,
 				FCF9EB5E2B43383B00191996 /* BookarooPlus */,
 				FCF9EB5D2B43383B00191996 /* Products */,
 			);
@@ -278,12 +281,15 @@
 				};
 			};
 			buildConfigurationList = FCF9EB572B43383A00191996 /* Build configuration list for PBXProject "BookarooPlus" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				cs,
+				de,
+				ko,
 			);
 			mainGroup = FCF9EB532B43383A00191996;
 			packageReferences = (
@@ -305,6 +311,7 @@
 			files = (
 				FCF9EB672B43383C00191996 /* Preview Assets.xcassets in Resources */,
 				FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */,
+				CEB1DDED2B49910E00C238CA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
