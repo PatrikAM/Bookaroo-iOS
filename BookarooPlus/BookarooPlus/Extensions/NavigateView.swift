@@ -26,9 +26,15 @@ extension View {
                     isActive: binding
                 ) {
                     EmptyView()
+                        .background(.clear)
                 }
+                .background(.clear)
             }
+            .background(.clear)
         }
+        .background(.clear)
         .navigationViewStyle(.stack)
+        
     }
 }
+
