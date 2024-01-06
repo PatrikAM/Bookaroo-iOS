@@ -1,5 +1,83 @@
 {
   "sourceLanguage" : "en",
-  "strings" : {},
+  "strings" : {
+    "" : {
+
+    },
+    "Email" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이메일"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahoj, světe!"
+          }
+        }
+      }
+    },
+    "Log in" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heslo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "비밀번호"
+          }
+        }
+      }
+    },
+    "Scan Barcode Here" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skenovat čárový kód"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기에서 바코드 스캔"
+          }
+        }
+      }
+    }
+  },
   "version" : "1.0"
 }

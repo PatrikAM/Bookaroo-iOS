@@ -44,7 +44,7 @@ struct LoginView: View {
             Button(
                 action: authManager.login,
                 label: {
-                    Text("Login")
+                    Text("Log in")
                         .font(.system(size: 24, weight: .bold, design: .default))
                         .frame(maxWidth: .infinity, maxHeight: 60)
                         .foregroundColor(Color.white)
