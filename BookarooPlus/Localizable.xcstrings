@@ -38,6 +38,12 @@
     },
     "Log in" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přihlásit"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",

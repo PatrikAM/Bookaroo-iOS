@@ -156,4 +156,8 @@ class AuthManager: ObservableObject {
         }
         
     }
+    
+    func isUserSignedIn() -> Bool {
+        return defaults.bool(forKey: DefaultsKey.token.rawValue)
+    }
 }

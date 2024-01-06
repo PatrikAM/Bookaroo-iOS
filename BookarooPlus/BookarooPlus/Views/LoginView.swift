@@ -51,7 +51,10 @@ struct LoginView: View {
                         .background(.clear)
                     
                     Button(
-                        action: authManager.login,
+                        action: {
+                            clearFocus()
+                            authManager.login()
+                        },
                         label: {
                             Text("Log in")
                                 .font(.system(size: 24, weight: .bold, design: .default))
@@ -73,8 +76,15 @@ struct LoginView: View {
                 }
                 .background(.clear)
                 .padding(30)
+//                .onTapGesture {
+//                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//                }
             }
             .background(.clear)
+            .onTapGestureClearFocus()
+//            .onTapGesture {
+//                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//            }
             //.navigationDestination(for: $didLoginSucceed, destination: ListOfBooksView())
         }
     }

@@ -36,5 +36,20 @@ extension View {
         .navigationViewStyle(.stack)
         
     }
+    
+    func onTapGestureClearFocus() -> some View {
+        ZStack {
+            self
+        }
+        .onTapGesture {
+            clearFocus()
+//            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
+    }
+    
+}
+
+func clearFocus() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 }
 
