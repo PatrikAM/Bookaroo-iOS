@@ -40,7 +40,6 @@
 		FCACF5472B48408F0035172E /* NavigateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5462B48408F0035172E /* NavigateView.swift */; };
 		FCACF5492B48422D0035172E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5482B48422D0035172E /* Header.swift */; };
 		FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */; };
-		FCF9EB622B43383B00191996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB612B43383B00191996 /* ContentView.swift */; };
 		FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB632B43383C00191996 /* Assets.xcassets */; };
 		FCF9EB672B43383C00191996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB662B43383C00191996 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -79,7 +78,6 @@
 		FCACF5482B48422D0035172E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FCF9EB5C2B43383B00191996 /* BookarooPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookarooPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooPlusApp.swift; sourceTree = "<group>"; };
-		FCF9EB612B43383B00191996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCF9EB632B43383C00191996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCF9EB662B43383C00191996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -232,7 +230,6 @@
 			children = (
 				CEBD1AB02B487E5000EDC96E /* Shapes */,
 				FC1660572B47FD49002F1BF7 /* BarcodeScanner */,
-				FCF9EB612B43383B00191996 /* ContentView.swift */,
 				FC4AB5142B46E7C500D67B5D /* LoginView.swift */,
 				FC4AB5162B46E7F100D67B5D /* BookDetailView.swift */,
 				FC4AB5182B46E81A00D67B5D /* BookAddEditView.swift */,
@@ -338,7 +335,6 @@
 				FC4AB5122B46E4F800D67B5D /* Reader.swift in Sources */,
 				FC4AB5212B46EE1E00D67B5D /* LoginViewModel.swift in Sources */,
 				FC4AB50E2B46E4DE00D67B5D /* Library.swift in Sources */,
-				FCF9EB622B43383B00191996 /* ContentView.swift in Sources */,
 				FC16605E2B483552002F1BF7 /* ListOfBooksView.swift in Sources */,
 				FCACF5472B48408F0035172E /* NavigateView.swift in Sources */,
 				FC4AB52E2B46F3D300D67B5D /* BooksApiProtocol.swift in Sources */,
