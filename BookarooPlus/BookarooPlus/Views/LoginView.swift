@@ -33,25 +33,26 @@ struct LoginView: View {
                         Spacer()
                     }
                     
+                    Spacer()
+                        .frame(height: 100)
                     
                     VStack {
                         TextField(
                             "Email",
                             text: $authManager.email
                         )
+                        .textFieldStyle(ElegantTextFieldStyle())
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .padding(.top, 20)
-                        
-                        Divider()
+                    
                         
                         SecureField(
                             "Password",
                             text: $authManager.password
                         )
+                        .textFieldStyle(ElegantTextFieldStyle())
                         .padding(.top, 20)
-                        
-                        Divider()
                     }
                     .background(.clear)
                     

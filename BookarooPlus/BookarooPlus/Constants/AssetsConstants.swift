@@ -8,5 +8,5 @@
 import Foundation
 
 enum AssetsConstants: String {
-    case logotyp = "Bookaroo_LogoTyp"
+    case logotyp = "BookarooLogo"
 }
