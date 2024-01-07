@@ -18,8 +18,15 @@ class Api {
             
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let response = response as? HTTPURLResponse else { throw CommunicationError.badResponse }
-            print(data)
+            let dataPrep = String(data: data, encoding: .utf8)!
+
             guard response.statusCode >= 200 && response.statusCode < 300 else { throw CommunicationError.badStatus }
+            
+//            let decoded = try JSONDecoder().decode([Book].self, from: data)
+//            print(decoded)
+//            
+//            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            
             guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw CommunicationError.failedToDecodeResponse }
             
             return .success(decodedResponse)
@@ -36,6 +43,8 @@ class Api {
             print("Failed to decode response into the given type")
             return .failure(CommunicationError.failedToDecodeResponse)
         } catch {
+            print(error.localizedDescription)
+            print(String(describing: error))
             print("An error occured downloading the data")
             return .failure(CommunicationError.unknownError)
         }

@@ -47,3 +47,7 @@ struct Book: Identifiable, Codable, DictionaryEncodable {
 //        self.language = language
 //    }
 }
+
+struct Books: Codable {
+    var books: [Book]? = nil
+}
