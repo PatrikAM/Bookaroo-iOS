@@ -20,7 +20,7 @@ class AuthManager: ObservableObject {
     @Published var data: Reader? = nil
     
 //    @Published var navigate: Bool = false
-    @Published var didLoginSucceeded: Bool = false
+    @Published var didLoginSucceed: Bool = false
     
     let api = ReadersApiManager()
     
@@ -50,7 +50,7 @@ class AuthManager: ObservableObject {
                         self.defaults.set(self.email.lowercased(), forKey: "login")
                         self.defaults.set(data.id!, forKey: DefaultsKey.token.rawValue)
                         self.defaults.synchronize()
-                        self.didLoginSucceeded = true
+                        self.didLoginSucceed = true
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
@@ -115,7 +115,7 @@ class AuthManager: ObservableObject {
                     case .success(let data):
                         print(data)
                         self.data = data
-                        self.didLoginSucceeded = true
+                        self.didLoginSucceed = true
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):

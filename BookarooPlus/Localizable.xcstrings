@@ -101,6 +101,9 @@
           }
         }
       }
+    },
+    "This is going to be the base screen" : {
+
     }
   },
   "version" : "1.0"

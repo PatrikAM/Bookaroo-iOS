@@ -5,8 +5,8 @@
 //  Created by Marek Glas on 06.01.2024.
 //
 
-import Foundation
+import SwiftUI
 
-enum Colors: String {
-    case loginEllipseFillColor = "2CC3DD"
+struct Colors {
+    static let accentBlue = Color(red: 0.173, green: 0.765, blue: 0.867)
 }

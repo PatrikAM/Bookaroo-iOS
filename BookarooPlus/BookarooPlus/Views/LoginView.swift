@@ -17,14 +17,22 @@ struct LoginView: View {
         NavigationStack {
             ZStack(alignment: .bottom) {
                 LoginScreenEllipseShape()
-                    .fill(.cyan)
+                    .fill(Colors.accentBlue)
                     .frame(maxWidth: .infinity)
                     .ignoresSafeArea()
                     .frame(height: 500)
                 
                 VStack {
-                    Image(AssetsConstants.logotyp.rawValue)
-                        .background(.clear)
+                    HStack {
+                        Spacer()
+                        Image(AssetsConstants.logotyp.rawValue)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150)
+                            .background(.clear)
+                        Spacer()
+                    }
+                    
                     
                     VStack {
                         TextField(
@@ -86,8 +94,8 @@ struct LoginView: View {
             }
             .background(.clear)
             .onTapGestureClearFocus()
-            .onChange(of: authManager.didLoginSucceeded) {
-                didLoginSucceed = authManager.didLoginSucceeded
+            .onChange(of: authManager.didLoginSucceed) {
+                didLoginSucceed = authManager.didLoginSucceed
             }
             //.navigationDestination(for: $didLoginSucceed, destination: ListOfBooksView())
         }
