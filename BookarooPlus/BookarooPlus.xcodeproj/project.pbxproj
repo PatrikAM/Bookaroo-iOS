@@ -42,6 +42,7 @@
 		FCACF5472B48408F0035172E /* NavigateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5462B48408F0035172E /* NavigateView.swift */; };
 		FCACF5492B48422D0035172E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5482B48422D0035172E /* Header.swift */; };
 		FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54C2B49F4C80035172E /* DefaultsKey.swift */; };
+		FCACF54F2B4A12320035172E /* ListOfBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */; };
 		FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */; };
 		FCF9EB642B43383C00191996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB632B43383C00191996 /* Assets.xcassets */; };
 		FCF9EB672B43383C00191996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF9EB662B43383C00191996 /* Preview Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		FCACF5462B48408F0035172E /* NavigateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateView.swift; sourceTree = "<group>"; };
 		FCACF5482B48422D0035172E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FCACF54C2B49F4C80035172E /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
+		FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBooksViewModel.swift; sourceTree = "<group>"; };
 		FCF9EB5C2B43383B00191996 /* BookarooPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookarooPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF9EB5F2B43383B00191996 /* BookarooPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooPlusApp.swift; sourceTree = "<group>"; };
 		FCF9EB632B43383C00191996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */,
+				FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				FC16604B2B471069002F1BF7 /* BaseUrls.swift in Sources */,
 				FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */,
 				FC4AB5172B46E7F100D67B5D /* BookDetailView.swift in Sources */,
+				FCACF54F2B4A12320035172E /* ListOfBooksViewModel.swift in Sources */,
 				FC16604E2B471A44002F1BF7 /* DictionaryEncodable.swift in Sources */,
 				FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,

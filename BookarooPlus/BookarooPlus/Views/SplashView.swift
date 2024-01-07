@@ -16,19 +16,11 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if (timeIsGone) {
-                
                 if (!authManager.isUserSignedIn()) {
                     LoginView()
                         .transition(.opacity)
-                    //                        .opacity(opacityFull ? 1.0 : 0)
-                    //                        .onAppear() {
-                    //                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    //                                opacityFull.toggle()
-                    //                            }
-                    //                        }
-                    //                        .transition(.slide)
                 } else {
-                    // landing view
+                    ListOfBooksView()
                 }
             } else {
                 Image(AssetsConstants.logotyp.rawValue)

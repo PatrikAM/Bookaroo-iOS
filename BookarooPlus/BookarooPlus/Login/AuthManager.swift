@@ -158,6 +158,6 @@ class AuthManager: ObservableObject {
     }
     
     func isUserSignedIn() -> Bool {
-        return defaults.bool(forKey: DefaultsKey.token.rawValue)
+        return defaults.string(forKey: DefaultsKey.token.rawValue) != nil
     }
 }

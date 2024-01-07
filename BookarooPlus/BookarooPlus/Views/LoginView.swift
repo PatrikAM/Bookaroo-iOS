@@ -76,15 +76,13 @@ struct LoginView: View {
                 }
                 .background(.clear)
                 .padding(30)
+                .onTapGestureClearFocus()
 //                .onTapGesture {
 //                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 //                }
             }
             .background(.clear)
             .onTapGestureClearFocus()
-//            .onTapGesture {
-//                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-//            }
             //.navigationDestination(for: $didLoginSucceed, destination: ListOfBooksView())
         }
     }

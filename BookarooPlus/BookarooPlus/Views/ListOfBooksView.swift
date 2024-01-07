@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct ListOfBooksView: View {
+    
+    @ObservedObject var viewModel = ListOfBooksViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if viewModel.isLoading {
+                ProgressView()
+            } else if viewModel.books != nil {
+                List {
+                    ForEach(viewModel.books!) { book in
+                        Text(book.title!)
+                    }
+                }
+            } else {
+                Text(viewModel.errorMessage!)
+            }
+        }
+        .onAppear {
+            viewModel.fetchBooks()
+        }
+        
     }
+    
 }
 

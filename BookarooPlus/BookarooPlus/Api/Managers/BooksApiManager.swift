@@ -11,7 +11,7 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
         
     func fetchBooks() async -> CommunicationResult<[Book]> {
         let endpoint = "book/all_books"
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?token=\(String(describing: self.token))")
+        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?token=\(self.token!)")
     }
     
     func fetchBook(bookId: String) async -> CommunicationResult<Book> {
