@@ -10,14 +10,15 @@ import SwiftUI
 struct SplashView: View {
     
     @State var timeIsGone = false
+    @State var didLoginSucceed: Bool = false
     
     let authManager = AuthManager()
     
     var body: some View {
         VStack {
             if (timeIsGone) {
-                if (!authManager.isUserSignedIn()) {
-                    LoginView()
+                if (!authManager.isUserSignedIn() && !didLoginSucceed) {
+                    LoginView(didLoginSucceed: $didLoginSucceed)
                         .transition(.opacity)
                 } else {
                     ListOfBooksView()

@@ -19,7 +19,8 @@ class AuthManager: ObservableObject {
     
     @Published var data: Reader? = nil
     
-    @Published var navigate: Bool = false
+//    @Published var navigate: Bool = false
+    @Published var didLoginSucceeded: Bool = false
     
     let api = ReadersApiManager()
     
@@ -45,9 +46,11 @@ class AuthManager: ObservableObject {
                 await MainActor.run {
                     switch(result) {
                     case .success(let data):
-                        print(data)
                         self.data = data
-                        self.navigate = true
+                        self.defaults.set(self.email.lowercased(), forKey: "login")
+                        self.defaults.set(data.id!, forKey: DefaultsKey.token.rawValue)
+                        self.defaults.synchronize()
+                        self.didLoginSucceeded = true
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
@@ -74,11 +77,6 @@ class AuthManager: ObservableObject {
                     }
                     print("setting")
                     // if it worked
-                    self.defaults.set(self.email.lowercased(), forKey: "login")
-                    self.defaults.set(data?.id, forKey: "token")
-                    // user id
-                    //        defaults.set(email.lowercased(), forKey: "token")
-                    self.defaults.synchronize()
                     self.isLoading = false
                     
                 }
@@ -117,7 +115,7 @@ class AuthManager: ObservableObject {
                     case .success(let data):
                         print(data)
                         self.data = data
-                        self.navigate = true
+                        self.didLoginSucceeded = true
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):

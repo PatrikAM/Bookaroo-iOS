@@ -11,7 +11,7 @@ import SwiftUI
 struct LoginView: View {
     //    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     @ObservedObject var authManager: AuthManager = .init()
-    @State var didLoginSucceed: Bool? = false
+    @Binding var didLoginSucceed: Bool
     
     var body: some View {
         NavigationStack {
@@ -53,7 +53,10 @@ struct LoginView: View {
                     Button(
                         action: {
                             clearFocus()
-                            authManager.login()
+                            Task {
+                                authManager.login()
+//                                didLoginSucceed = true
+                            }
                         },
                         label: {
                             Text("Log in")
@@ -83,14 +86,17 @@ struct LoginView: View {
             }
             .background(.clear)
             .onTapGestureClearFocus()
+            .onChange(of: authManager.didLoginSucceeded) {
+                didLoginSucceed = authManager.didLoginSucceeded
+            }
             //.navigationDestination(for: $didLoginSucceed, destination: ListOfBooksView())
         }
     }
         
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}

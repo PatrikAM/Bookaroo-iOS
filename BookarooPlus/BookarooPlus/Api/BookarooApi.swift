@@ -8,6 +8,6 @@
 import Foundation
 
 class BookarooApi : Api {
-    let token = UserDefaults.standard.string(forKey: "token")
+    let token = UserDefaults.standard.string(forKey: DefaultsKey.token.rawValue)
     let baseUrl: String = BaseUrls.bookaroo.rawValue
 }

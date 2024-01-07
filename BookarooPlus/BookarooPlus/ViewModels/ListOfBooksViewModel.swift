@@ -23,7 +23,6 @@ class ListOfBooksViewModel: ObservableObject {
                 await MainActor.run {
                     switch(result) {
                     case .success(let data):
-                        print(data)
                         self.books = data
                     case .failure(let error):
                         switch(error) {

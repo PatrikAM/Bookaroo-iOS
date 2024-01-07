@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Reader: Codable, DictionaryEncodable {
+struct Reader: Codable, DictionaryEncodable, Equatable {
     var id: String?
     var name: String?
     var login: String?
