@@ -8,9 +8,9 @@
 import Foundation
 
 class AuthManager: ObservableObject {
-    @Published var email: String = "example@ex.com"
-    @Published var password: String = "pass.123"
-    @Published var name: String = "John"
+    @Published var email: String = "testmail1@domain.com"
+    @Published var password: String = "mypassword.123"
+    @Published var name: String = "Jacob"
     
     @Published var errorMessage: String? = nil
     @Published var isLoading: Bool = false
@@ -115,6 +115,9 @@ class AuthManager: ObservableObject {
                     case .success(let data):
                         print(data)
                         self.data = data
+                        self.defaults.set(self.email.lowercased(), forKey: "login")
+                        self.defaults.set(data.id!, forKey: DefaultsKey.token.rawValue)
+                        self.defaults.synchronize()
                         self.didLoginSucceed = true
                     case .failure(let error):
                         switch(error) {
@@ -142,11 +145,6 @@ class AuthManager: ObservableObject {
                     }
                     print("setting")
                     // if it worked
-                    self.defaults.set(self.email.lowercased(), forKey: "login")
-                    self.defaults.set(data?.id, forKey: "token")
-                    // user id
-                    //        defaults.set(email.lowercased(), forKey: "token")
-                    self.defaults.synchronize()
                     self.isLoading = false
                     
                 }

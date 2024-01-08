@@ -10,6 +10,10 @@ import SwiftUI
 struct ListOfBooksView: View {
     
     @ObservedObject var viewModel = ListOfBooksViewModel()
+    @ObservedObject var authManager: AuthManager = .init()
+    @Environment(\.presentationMode) var presentationMode
+    @State var isLoggedOut = false
+
     
     var body: some View {
         VStack {
@@ -24,11 +28,18 @@ struct ListOfBooksView: View {
             } else {
                 Text(viewModel.errorMessage!)
             }
+            Button(action: {
+                authManager.logout()
+                isLoggedOut = true
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+               Text("Log out")
+            })
         }
         .onAppear {
             viewModel.fetchBooks()
         }
-        
+        .navigate(to: BaseView(), when: $isLoggedOut)
     }
     
 }

@@ -10,19 +10,11 @@ import SwiftUI
 struct SplashView: View {
     
     @State var timeIsGone = false
-    @State var didLoginSucceed: Bool = false
-    
-    let authManager = AuthManager()
     
     var body: some View {
         VStack {
             if (timeIsGone) {
-                if (!authManager.isUserSignedIn() && !didLoginSucceed) {
-                    LoginView(didLoginSucceed: $didLoginSucceed)
-                        .transition(.opacity)
-                } else {
-                    ListOfBooksView()
-                }
+                BaseView()
             } else {
                 Image(AssetsConstants.logotyp.rawValue)
                     .phaseAnimator([false, true]) { content, phase in
@@ -31,11 +23,23 @@ struct SplashView: View {
                     } animation: { phase in
                             .easeInOut(duration: 1.1)
                     }
+//                ZStack {
+//                    Image(AssetsConstants.logotyp.rawValue)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .phaseAnimator([false, true]) { content, phase in
+//                            content
+//                                .opacity(phase ? 1.0 : 0)
+//                        } animation: { phase in
+//                                .easeInOut(duration: 1.1)
+//                        }
+//                }
+//                .frame(width: 300, height: 300)
             }
             
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation {
                     timeIsGone.toggle()
                 }

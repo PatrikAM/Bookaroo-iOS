@@ -4,6 +4,19 @@
     "" : {
 
     },
+    "Already registered? Log in" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Už máš účet? Přihlaš se"
+          }
+        }
+      }
+    },
+    "Books" : {
+
+    },
     "Email" : {
       "localizations" : {
         "cs" : {
@@ -26,6 +39,12 @@
         }
       }
     },
+    "Hello, libraries!" : {
+
+    },
+    "Hello, readers!" : {
+
+    },
     "Hello, World!" : {
       "localizations" : {
         "cs" : {
@@ -35,6 +54,9 @@
           }
         }
       }
+    },
+    "Libraries" : {
+
     },
     "Log in" : {
       "localizations" : {
@@ -58,6 +80,39 @@
         }
       }
     },
+    "Log out" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odhlásit"
+          }
+        }
+      }
+    },
+    "loggedout" : {
+
+    },
+    "Nickname" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uživatelské jméno"
+          }
+        }
+      }
+    },
+    "No account? Register here" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nemáš účet? Registruj se"
+          }
+        }
+      }
+    },
     "Password" : {
       "localizations" : {
         "cs" : {
@@ -76,6 +131,25 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호"
+          }
+        }
+      }
+    },
+    "Readers" : {
+
+    },
+    "Register" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrovat"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Register"
           }
         }
       }
@@ -103,9 +177,6 @@
       }
     },
     "Some cool text" : {
-
-    },
-    "This is going to be the base screen" : {
 
     }
   },

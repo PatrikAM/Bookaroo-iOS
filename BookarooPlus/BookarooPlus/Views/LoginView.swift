@@ -12,6 +12,8 @@ struct LoginView: View {
     //    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     @ObservedObject var authManager: AuthManager = .init()
     @Binding var didLoginSucceed: Bool
+    @State var isRegistration = false
+    @State var isProcessing = false
     
     var body: some View {
         NavigationStack {
@@ -45,7 +47,17 @@ struct LoginView: View {
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .padding(.top, 20)
-                    
+                        
+                        if (isRegistration) {
+                            TextField(
+                                "Nickname",
+                                text: $authManager.name
+                            )
+                            .textFieldStyle(ElegantTextFieldStyle())
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                            .padding(.top, 20)
+                        }
                         
                         SecureField(
                             "Password",
@@ -53,6 +65,21 @@ struct LoginView: View {
                         )
                         .textFieldStyle(ElegantTextFieldStyle())
                         .padding(.top, 20)
+                        
+                        Button(action: {
+                            isRegistration.toggle()
+                        }, label: {
+                            if(isRegistration) {
+                                Text("Already registered? Log in")
+                            } else {
+                                Text("No account? Register here")
+                            }
+                            
+                        })
+                        
+                        //                        NavigationLink("No account? Register here") {
+                        //                            RegistrationView()
+                        //                        }
                     }
                     .background(.clear)
                     
@@ -62,18 +89,35 @@ struct LoginView: View {
                     Button(
                         action: {
                             clearFocus()
-                            Task {
-                                authManager.login()
-//                                didLoginSucceed = true
+                            isProcessing.toggle()
+                            if (isRegistration) {
+                                Task {
+                                    authManager.signup()
+                                }
+                            } else {
+                                Task {
+                                    authManager.login()
+                                    //                                didLoginSucceed = true
+                                }
                             }
                         },
                         label: {
-                            Text("Log in")
-                                .font(.system(size: 24, weight: .bold, design: .default))
-                                .frame(maxWidth: .infinity, maxHeight: 60)
-                                .foregroundColor(Color.white)
-                                .background(Color.blue)
-                                .cornerRadius(10)
+                            if (!isRegistration) {
+                                Text("Log in")
+                                    .font(.system(size: 24, weight: .bold, design: .default))
+                                    .frame(maxWidth: .infinity, maxHeight: 60)
+                                    .foregroundColor(Color.white)
+                                    .background(Color.blue)
+                                    .cornerRadius(10)
+                            } else {
+                                Text("Register")
+                                    .font(.system(size: 24, weight: .bold, design: .default))
+                                    .frame(maxWidth: .infinity, maxHeight: 60)
+                                    .foregroundColor(Color.white)
+                                    .background(Color.blue)
+                                    .cornerRadius(10)
+                            }
+                            
                         }
                     )
                     .disabled(authManager.isLoading)
@@ -86,12 +130,15 @@ struct LoginView: View {
                         subTitle: authManager.errorMessage
                     )
                 }
+                .toast(isPresenting: $isProcessing) {
+                    AlertToast(displayMode: .alert, type: .loading, subTitle: "Loading...")
+                }
                 .background(.clear)
                 .padding(30)
                 .onTapGestureClearFocus()
-//                .onTapGesture {
-//                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-//                }
+                //                .onTapGesture {
+                //                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                //                }
             }
             .background(.clear)
             .onTapGestureClearFocus()
@@ -101,7 +148,7 @@ struct LoginView: View {
             //.navigationDestination(for: $didLoginSucceed, destination: ListOfBooksView())
         }
     }
-        
+    
 }
 
 //struct LoginView_Previews: PreviewProvider {
