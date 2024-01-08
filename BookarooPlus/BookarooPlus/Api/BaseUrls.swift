@@ -8,6 +8,6 @@
 import Foundation
 
 enum BaseUrls: String {
-    case bookaroo = "https://8139-2a00-1028-8d19-9726-b98a-2b9c-6b39-2ad0.ngrok-free.app/"
+    case bookaroo = "https://0445-95-82-145-228.ngrok-free.app/"
     case googleBooksApi = "https://www.googleapis.com/books/v1/"
 }

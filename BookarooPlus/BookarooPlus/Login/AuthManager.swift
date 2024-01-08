@@ -8,8 +8,8 @@
 import Foundation
 
 class AuthManager: ObservableObject {
-    @Published var email: String = "testmail1@domain.com"
-    @Published var password: String = "mypassword.123"
+    @Published var email: String = "example@ex.com"
+    @Published var password: String = "pass.123"
     @Published var name: String = "Jacob"
     
     @Published var errorMessage: String? = nil
@@ -119,6 +119,7 @@ class AuthManager: ObservableObject {
                         self.defaults.set(data.id!, forKey: DefaultsKey.token.rawValue)
                         self.defaults.synchronize()
                         self.didLoginSucceed = true
+                        self.isLoading = false
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):

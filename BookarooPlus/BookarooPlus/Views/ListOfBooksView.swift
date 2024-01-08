@@ -11,8 +11,8 @@ struct ListOfBooksView: View {
     
     @ObservedObject var viewModel = ListOfBooksViewModel()
     @ObservedObject var authManager: AuthManager = .init()
-    @Environment(\.presentationMode) var presentationMode
-    @State var isLoggedOut = false
+//    @Environment(\.presentationMode) var presentationMode
+    @Binding var isLoggedOut: Bool
 
     
     var body: some View {
@@ -31,7 +31,7 @@ struct ListOfBooksView: View {
             Button(action: {
                 authManager.logout()
                 isLoggedOut = true
-                presentationMode.wrappedValue.dismiss()
+//                presentationMode.wrappedValue.dismiss()
             }, label: {
                Text("Log out")
             })
@@ -39,7 +39,7 @@ struct ListOfBooksView: View {
         .onAppear {
             viewModel.fetchBooks()
         }
-        .navigate(to: BaseView(), when: $isLoggedOut)
+//        .navigate(to: BaseView(), when: $isLoggedOut)
     }
     
 }

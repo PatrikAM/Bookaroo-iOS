@@ -16,12 +16,12 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
     
     func fetchBook(bookId: String) async -> CommunicationResult<Book> {
         let endpoint = "book"
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)/\(bookId)?token=\(String(describing: self.token))")
+        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)/\(bookId)?token=\(self.token!)")
     }
     
     func fetchBooksFromLibrary(libraryId: String) async -> CommunicationResult<[Book]> {
         let endpoint = "book/find_by_library"
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)/\(libraryId)?token=\(String(describing: self.token))")
+        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)/\(libraryId)?token=\(self.token!)")
     }
     
     func createBook(book: Book) async -> CommunicationResult<Book> {
@@ -58,7 +58,7 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
     
     func deleteBook(bookId: String) async -> CommunicationResult<Book> {
         let endpoint = "book/remove_by_id"
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)/\(bookId)?token=\(String(describing: token))")
+        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)/\(bookId)?token=\(self.token!)")
     }
     
 }

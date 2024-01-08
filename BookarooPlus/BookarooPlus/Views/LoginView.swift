@@ -130,7 +130,7 @@ struct LoginView: View {
                         subTitle: authManager.errorMessage
                     )
                 }
-                .toast(isPresenting: $isProcessing) {
+                .toast(isPresenting: $authManager.isLoading) {
                     AlertToast(displayMode: .alert, type: .loading, subTitle: "Loading...")
                 }
                 .background(.clear)
@@ -143,7 +143,7 @@ struct LoginView: View {
             .background(.clear)
             .onTapGestureClearFocus()
             .onChange(of: authManager.didLoginSucceed) {
-                didLoginSucceed = authManager.didLoginSucceed
+                self.didLoginSucceed = authManager.didLoginSucceed
             }
             //.navigationDestination(for: $didLoginSucceed, destination: ListOfBooksView())
         }
