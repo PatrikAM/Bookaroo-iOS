@@ -15,6 +15,8 @@ class ListOfBooksViewModel: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var errorMessage: String? = nil
     
+    @Published var filteredBooks: [Book]? = nil
+    
     
     func fetchBooks() {
         Task {
@@ -24,6 +26,7 @@ class ListOfBooksViewModel: ObservableObject {
                     switch(result) {
                     case .success(let data):
                         self.books = data
+                        self.filteredBooks = data
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
@@ -52,6 +55,12 @@ class ListOfBooksViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func filterBooks(libs: [Library]) {
+        let listOfIDs = libs.map { $0.id }
+        var prep = self.books
+        filteredBooks = prep?.filter({ book in listOfIDs.contains(book.library!) })
     }
     
 }

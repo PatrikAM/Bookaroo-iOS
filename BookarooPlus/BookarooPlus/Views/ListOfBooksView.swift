@@ -14,6 +14,8 @@ struct ListOfBooksView: View {
     @ObservedObject var authManager: AuthManager = .init()
 //    @Environment(\.presentationMode) var presentationMode
     @Binding var isLoggedOut: Bool
+        
+    @State var selectionChange = false
 
     
     var body: some View {
@@ -24,15 +26,24 @@ struct ListOfBooksView: View {
                 if librariesViewModel.libraries != nil {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(librariesViewModel.libraries!) { library in
+                            ForEach(librariesViewModel.libraries!.indices) { index in
 //                                Text(library.name!)
-                                Chip(titleKey: library.name!, isSelected: library.isSelected!)
+                                Chip(
+                                    titleKey: librariesViewModel.libraries![index].name!,
+                                    isSelected: librariesViewModel.libraries![index].isSelected!,
+                                    selectionChanges: $selectionChange
+                                ) {
+                                    librariesViewModel.libraries![index].isSelected?.toggle()
+                                }
                             }
                         }
                     }
                 }
                 List {
-                    ForEach(booksViewModel.books!) { book in
+//                    ForEach(booksViewModel.books!) { book in
+//                        Text(book.title!)
+//                    }
+                    ForEach(booksViewModel.filteredBooks!) { book in
                         Text(book.title!)
                     }
                 }
@@ -50,6 +61,13 @@ struct ListOfBooksView: View {
         .onAppear {
             booksViewModel.fetchBooks()
             librariesViewModel.fetchLibraries()
+        }
+        .onChange(of: selectionChange) {
+            if librariesViewModel.libraries!.filter({ $0.isSelected! }).isEmpty {
+                booksViewModel.filteredBooks = booksViewModel.books
+            } else {
+                booksViewModel.filterBooks(libs: librariesViewModel.libraries!.filter { $0.isSelected! })
+            }
         }
 //        .navigate(to: BaseView(), when: $isLoggedOut)
     }

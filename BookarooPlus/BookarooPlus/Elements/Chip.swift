@@ -13,6 +13,12 @@ struct Chip: View {
     let titleKey: String
     @State var isSelected: Bool
     
+    
+        
+    @Binding var selectionChanges: Bool
+    
+    var onTapGesture: () -> Void
+    
     var body: some View {
         HStack(spacing: 4) {
             Image.init(systemName: systemImage).font(.body)
@@ -30,6 +36,9 @@ struct Chip: View {
             
         ).onTapGesture {
             isSelected.toggle()
+            onTapGesture()
+            selectionChanges.toggle()
+            
         }
     }
 }
