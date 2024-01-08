@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LibraryRemoteRepository {
-    func fetchLibraries() -> CommunicationResult<[Library]>
-    func createLibrary(library: String) -> CommunicationResult<Library>
+protocol LibrariesApiProtocol {
+    func fetchLibraries() async -> CommunicationResult<[Library]>
+    func createLibrary(library: String) async -> CommunicationResult<Library>
 }

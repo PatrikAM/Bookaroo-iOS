@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ListOfBooksView: View {
     
-    @ObservedObject var viewModel = ListOfBooksViewModel()
+    @ObservedObject var booksViewModel = ListOfBooksViewModel()
+    @ObservedObject var librariesViewModel = ListOfLibrariesViewModel()
     @ObservedObject var authManager: AuthManager = .init()
 //    @Environment(\.presentationMode) var presentationMode
     @Binding var isLoggedOut: Bool
@@ -17,16 +18,26 @@ struct ListOfBooksView: View {
     
     var body: some View {
         VStack {
-            if viewModel.isLoading {
+            if booksViewModel.isLoading {
                 ProgressView()
-            } else if viewModel.books != nil {
+            } else if booksViewModel.books != nil {
+                if librariesViewModel.libraries != nil {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(librariesViewModel.libraries!) { library in
+//                                Text(library.name!)
+                                Chip(titleKey: library.name!, isSelected: library.isSelected!)
+                            }
+                        }
+                    }
+                }
                 List {
-                    ForEach(viewModel.books!) { book in
+                    ForEach(booksViewModel.books!) { book in
                         Text(book.title!)
                     }
                 }
             } else {
-                Text(viewModel.errorMessage!)
+                Text(booksViewModel.errorMessage!)
             }
             Button(action: {
                 authManager.logout()
@@ -37,7 +48,8 @@ struct ListOfBooksView: View {
             })
         }
         .onAppear {
-            viewModel.fetchBooks()
+            booksViewModel.fetchBooks()
+            librariesViewModel.fetchLibraries()
         }
 //        .navigate(to: BaseView(), when: $isLoggedOut)
     }

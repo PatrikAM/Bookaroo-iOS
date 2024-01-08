@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct Library: Codable, DictionaryEncodable {
+struct Library: Identifiable, Codable, DictionaryEncodable {
     var id: String
     var name: String?
     var ownerId: String?
     var favourite: Int? = 0
     var total: Int? = 0
     var read: Int? = 0
+    var isSelected: Bool? = false
 }
