@@ -34,6 +34,10 @@ struct BaseView: View {
                 .tabItem {
                     Label("Libraries", systemImage: "building.columns")
                 }
+            UserOptionsView(isLoggedOut: $didLogout)
+                .tabItem {
+                    Label("User Settings", systemImage: "person.crop.circle")
+                }
         }
         
         //            }

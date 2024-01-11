@@ -22,7 +22,9 @@ struct Chip: View {
     var body: some View {
         HStack(spacing: 4) {
             Image.init(systemName: systemImage).font(.body)
-            Text(titleKey).font(.body).lineLimit(1)
+            Text(titleKey)
+                .font(.body)
+                .lineLimit(1)
         }
         .padding(.vertical, 4)
         .padding(.leading, 4)

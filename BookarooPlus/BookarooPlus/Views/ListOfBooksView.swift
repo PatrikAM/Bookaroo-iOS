@@ -38,6 +38,7 @@ struct ListOfBooksView: View {
                                 }
                             }
                         }
+                        .padding(10)
                         
                     }
                 }

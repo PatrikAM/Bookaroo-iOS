@@ -193,6 +193,16 @@
     },
     "TODO: info o knize" : {
 
+    },
+    "User Settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Settings"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
