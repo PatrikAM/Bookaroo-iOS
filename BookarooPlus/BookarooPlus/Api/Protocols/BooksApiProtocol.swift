@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol BooksApiProtocol {
     
@@ -20,5 +21,7 @@ protocol BooksApiProtocol {
     func updateBook(book: Book) async -> CommunicationResult<Book>
     
     func deleteBook(bookId: String) async -> CommunicationResult<Book>
+    
+    func downloadCover(fromUrl: String) async -> CommunicationResult<UIImage>
     
 }

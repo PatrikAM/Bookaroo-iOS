@@ -10,5 +10,6 @@ import SwiftUI
 struct ListOfReadersView: View {
     var body: some View {
         Text("Hello, readers!")
+        Text("Hello, all!")
     }
 }

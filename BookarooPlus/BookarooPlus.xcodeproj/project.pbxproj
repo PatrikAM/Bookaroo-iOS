@@ -45,6 +45,8 @@
 		FCACF5492B48422D0035172E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5482B48422D0035172E /* Header.swift */; };
 		FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54C2B49F4C80035172E /* DefaultsKey.swift */; };
 		FCACF54F2B4A12320035172E /* ListOfBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */; };
+		FCC91AC32B4F0765006554F9 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91AC22B4F0765006554F9 /* BookViewModel.swift */; };
+		FCC91AC52B4F0D14006554F9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91AC42B4F0D14006554F9 /* UIImageExtension.swift */; };
 		FCF214352B4C01770048F17D /* ListOfLibrariesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF214342B4C01770048F17D /* ListOfLibrariesView.swift */; };
 		FCF214372B4C01C30048F17D /* ListOfReadersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF214362B4C01C30048F17D /* ListOfReadersView.swift */; };
 		FCF214392B4C34620048F17D /* ListOfLibrariesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF214382B4C34620048F17D /* ListOfLibrariesViewModel.swift */; };
@@ -93,6 +95,8 @@
 		FCACF5482B48422D0035172E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FCACF54C2B49F4C80035172E /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBooksViewModel.swift; sourceTree = "<group>"; };
+		FCC91AC22B4F0765006554F9 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		FCC91AC42B4F0D14006554F9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FCF214342B4C01770048F17D /* ListOfLibrariesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLibrariesView.swift; sourceTree = "<group>"; };
 		FCF214362B4C01C30048F17D /* ListOfReadersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfReadersView.swift; sourceTree = "<group>"; };
 		FCF214382B4C34620048F17D /* ListOfLibrariesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLibrariesViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			children = (
 				FC16604D2B471A44002F1BF7 /* DictionaryEncodable.swift */,
 				FCACF5462B48408F0035172E /* ViewExtensions.swift */,
+				FCC91AC42B4F0D14006554F9 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				FC4AB5202B46EE1E00D67B5D /* LoginViewModel.swift */,
 				FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */,
 				FCF214382B4C34620048F17D /* ListOfLibrariesViewModel.swift */,
+				FCC91AC22B4F0765006554F9 /* BookViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				FC16604E2B471A44002F1BF7 /* DictionaryEncodable.swift in Sources */,
 				FCF2143D2B4C37480048F17D /* Chip.swift in Sources */,
 				FC4AB51F2B46EB6600D67B5D /* AssetsConstants.swift in Sources */,
+				FCC91AC52B4F0D14006554F9 /* UIImageExtension.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,
 				FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */,
 				FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */,
@@ -418,6 +425,7 @@
 				FC1660542B47FCE6002F1BF7 /* BarcodeOverlayView.swift in Sources */,
 				FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */,
 				FC1660502B472947002F1BF7 /* BookarooApi.swift in Sources */,
+				FCC91AC32B4F0765006554F9 /* BookViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
