@@ -13,6 +13,8 @@ protocol ReadersApiProtocol {
     
     func register(login: String, password: String, name: String) async -> CommunicationResult<Reader>
     
+    func fetchReaders() async -> CommunicationResult<[Reader]>
+    
 //    func logout() -> CommunicationResult<BookarooApiResponse>
     
 //    func closeAccount() -> CommunicationResult<BookarooApiResponse>

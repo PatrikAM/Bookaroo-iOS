@@ -8,7 +8,23 @@
 import SwiftUI
 
 struct ListOfLibrariesView: View {
+    
+    @ObservedObject var viewModel = ListOfLibrariesViewModel()
+    
     var body: some View {
-        Text("Hello, libraries!")
+        VStack {
+            if (viewModel.isLoading) {
+                ProgressView()
+            } else {
+                List {
+                    ForEach(viewModel.libraries!) { lib in
+                        Text(lib.name!)
+                    }
+                }
+            }
+        }
+        .onAppear {
+            viewModel.fetchLibraries()
+        }
     }
 }

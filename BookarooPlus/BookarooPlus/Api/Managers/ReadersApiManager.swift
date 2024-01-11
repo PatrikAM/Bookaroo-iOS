@@ -9,6 +9,12 @@ import SwiftUI
 
 class ReadersApiManager: BookarooApi, ReadersApiProtocol {
     
+    func fetchReaders() async -> CommunicationResult<[Reader]> {
+        let endpoint = "user/all_readers"
+        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)", header: .get)
+    }
+    
+    
     func login(login: String, password: String) async -> CommunicationResult<Reader> {
         let endpoint = "user/login"
         let params = "?login=\(login)&password=\(password)"
