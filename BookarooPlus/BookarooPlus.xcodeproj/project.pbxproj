@@ -10,6 +10,7 @@
 		CE4BBA502B49D1AC00482691 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BBA4F2B49D1AC00482691 /* Colors.swift */; };
 		CE8E037B2B50539F003913FA /* UserOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E037A2B50539F003913FA /* UserOptionsView.swift */; };
 		CE8E037D2B5059BA003913FA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E037C2B5059BA003913FA /* StringExtensions.swift */; };
+		CE8E037F2B505D23003913FA /* BookListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E037E2B505D23003913FA /* BookListCard.swift */; };
 		CEADE2102B4AF84E00A912B9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADE20F2B4AF84E00A912B9 /* BaseView.swift */; };
 		CEADE2122B4B052200A912B9 /* ElegantTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */; };
 		CEB1DDED2B49910E00C238CA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */; };
@@ -64,6 +65,7 @@
 		CE4BBA4F2B49D1AC00482691 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE8E037A2B50539F003913FA /* UserOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptionsView.swift; sourceTree = "<group>"; };
 		CE8E037C2B5059BA003913FA /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		CE8E037E2B505D23003913FA /* BookListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCard.swift; sourceTree = "<group>"; };
 		CEADE20F2B4AF84E00A912B9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegantTextFieldStyle.swift; sourceTree = "<group>"; };
 		CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		CE8E03802B505D32003913FA /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		CEADE20D2B4AF5A800A912B9 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				CEADE20F2B4AF84E00A912B9 /* BaseView.swift */,
-				CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */,
 				FCF2143C2B4C37480048F17D /* Chip.swift */,
+				CE8E037E2B505D23003913FA /* BookListCard.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -269,6 +279,7 @@
 		FCF9EB5E2B43383B00191996 /* BookarooPlus */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E03802B505D32003913FA /* Styles */,
 				CEADE20E2B4AF83800A912B9 /* Elements */,
 				CEADE20D2B4AF5A800A912B9 /* Constants */,
 				CE4BBA4E2B49D19E00482691 /* Theme */,
@@ -437,6 +448,7 @@
 				FC1660542B47FCE6002F1BF7 /* BarcodeOverlayView.swift in Sources */,
 				FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */,
 				FC1660502B472947002F1BF7 /* BookarooApi.swift in Sources */,
+				CE8E037F2B505D23003913FA /* BookListCard.swift in Sources */,
 				FCC91AC32B4F0765006554F9 /* BookViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

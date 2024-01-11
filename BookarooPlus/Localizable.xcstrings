@@ -56,6 +56,9 @@
         }
       }
     },
+    "IMG" : {
+
+    },
     "Libraries" : {
       "localizations" : {
         "cs" : {
@@ -196,6 +199,12 @@
     },
     "User Settings" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uživatel"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",

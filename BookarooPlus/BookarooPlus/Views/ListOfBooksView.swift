@@ -16,6 +16,7 @@ struct ListOfBooksView: View {
     @Binding var isLoggedOut: Bool
     
     @State var selectionChange = false
+    @State private var selectedBook: String?
     
     
     var body: some View {
@@ -24,7 +25,6 @@ struct ListOfBooksView: View {
                 ProgressView()
             } else if booksViewModel.books != nil {
                 if librariesViewModel.libraries != nil {
-                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(librariesViewModel.libraries!.indices) { index in
@@ -36,25 +36,41 @@ struct ListOfBooksView: View {
                                 ) {
                                     librariesViewModel.libraries![index].isSelected?.toggle()
                                 }
+                                .padding(.trailing, 10)
                             }
                         }
                         .padding(10)
                         
                     }
                 }
-                List {
-                    //                    ForEach(booksViewModel.books!) { book in
-                    //                        Text(book.title!)
-                    //                    }
-                    ForEach(booksViewModel.filteredBooks!) { book in
-                        NavigationLink {
-                            BookDetailView(bookId: book.id!)
-                                .toolbar(.hidden, for: .tabBar)
-                        } label: {
-                            Text(book.title!)
+                //                List {
+                //                    //                    ForEach(booksViewModel.books!) { book in
+                //                    //                        Text(book.title!)
+                //                    //                    }
+                //                    ForEach(booksViewModel.filteredBooks!) { book in
+                //                        NavigationLink {
+                //                            BookDetailView(bookId: book.id!)
+                //                                .toolbar(.hidden, for: .tabBar)
+                //                        } label: {
+                //                            Text(book.title!)
+                //                        }
+                //                    }
+                //                }
+                
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack {
+                        //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
+                        ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
+                            BookListCard(book: book)
+                                .onTapGesture {
+                                    selectedBook = book.id!
+                                }
+                                .padding(.all)
                         }
                     }
                 }
+                
+                Spacer()
             }
             else {
                 Text(booksViewModel.errorMessage!)
@@ -77,6 +93,9 @@ struct ListOfBooksView: View {
             } else {
                 booksViewModel.filterBooks(libs: librariesViewModel.libraries!.filter { $0.isSelected! })
             }
+        }
+        .navigationDestination(item: $selectedBook) { bookId in
+            BookDetailView(bookId: bookId)
         }
         //        .navigate(to: BaseView(), when: $isLoggedOut)
     }
