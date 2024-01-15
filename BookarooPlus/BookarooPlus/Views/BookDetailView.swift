@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookDetailView: View {
     
-    let bookId: String
+    var bookId: String
     
     @ObservedObject var viewModel = BookViewModel()
     

@@ -15,10 +15,10 @@ struct BookListCard: View {
         ZStack(alignment: .bottom) {
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: .continuous)
                 .fill(Color.cyan)
-                .shadow(radius: 5)
-                .frame(height: 500)
+                .shadow(radius: 5)     
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, idealHeight: 450, maxHeight: 450)
             
-            VStack (alignment: .leading) {
+            VStack {
                 HStack {
                     Spacer()
                     AsyncImage(url: URL(string: book.cover ?? "")) { image in
@@ -28,17 +28,43 @@ struct BookListCard: View {
                     } placeholder: {
                         ProgressView()
                     }
-                    .frame(height: 300)
+                    .frame(height: 400)
                     .clipped()
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                
-                Text(book.title ?? "Book title unknown")
-                    .font(.headline)
-                Text(book.author ?? "Book author unknown")
-                    .font(.subheadline)
-                Spacer()
+                VStack(alignment: .center) {
+                    Text(book.title ?? "Book title unknown")
+                        .font(.title3)
+                    Text(book.author ?? "Book author unknown")
+                        .font(.subheadline)
+                    Text("Pages: \(book.pages ?? 0)")
+                        .font(.subheadline)
+                    HStack {
+                        Button(action: {}) {
+                            Image(systemName: "book.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(.white)
+                                .backgroundStyle(.brown)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 100, height: 100)
+                        Spacer()
+                        Button(action: {}) {
+                            Image(systemName: "heart.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(.white)
+                                .backgroundStyle(.brown)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 100, height: 100)
+                    }
+                }
+            
             }
             Spacer()
             

@@ -50,10 +50,17 @@ struct ListOfBooksView: View {
                             BookListCard(book: book)
                                 .onTapGesture {
                                     selectedBook = book.id!
+                                    print("Book tapped: \(book.id!)")
                                 }
                                 .padding(.all)
                                 .ignoresSafeArea(edges: .horizontal)
                         }
+                    }
+                    .navigationDestination(item: $selectedBook) { bookId in
+                        BookDetailView(bookId: bookId)
+                            .onDisappear {
+                                selectedBook = nil
+                            }
                     }
                     .scrollTargetLayout()
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -73,6 +80,7 @@ struct ListOfBooksView: View {
                 Text("Log out")
             })
         }
+        
         .onAppear {
             booksViewModel.fetchBooks()
             librariesViewModel.fetchLibraries()
@@ -84,9 +92,7 @@ struct ListOfBooksView: View {
                 booksViewModel.filterBooks(libs: librariesViewModel.libraries!.filter { $0.isSelected! })
             }
         }
-        .navigationDestination(item: $selectedBook) { bookId in
-            BookDetailView(bookId: bookId)
-        }
+        
         //        .navigate(to: BaseView(), when: $isLoggedOut)
     }
 }

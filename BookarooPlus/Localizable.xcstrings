@@ -118,6 +118,16 @@
         }
       }
     },
+    "Pages: %lld" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Počet stran: %lld"
+          }
+        }
+      }
+    },
     "Password" : {
       "localizations" : {
         "cs" : {
