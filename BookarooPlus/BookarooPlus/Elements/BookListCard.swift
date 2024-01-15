@@ -11,6 +11,9 @@ struct BookListCard: View {
     
     var book: Book
     
+    var onHeartClick: () -> ()
+    var onBookClick: () -> ()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: .continuous)
@@ -41,22 +44,26 @@ struct BookListCard: View {
                     Text("Pages: \(book.pages ?? 0)")
                         .font(.subheadline)
                     HStack {
-                        Button(action: {}) {
+                        Button(action: {
+                            onBookClick()
+                        }) {
                             Image(systemName: "book.circle")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(self.book.read ?? false ? .green : .white)
                                 .backgroundStyle(.brown)
                                 .clipShape(Circle())
                         }
                         .buttonStyle(PlainButtonStyle())
                         .frame(width: 100, height: 100)
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            onHeartClick()
+                        }) {
                             Image(systemName: "heart.circle")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(self.book.favourite ?? false ? .red : .white)
                                 .backgroundStyle(.brown)
                                 .clipShape(Circle())
                         }

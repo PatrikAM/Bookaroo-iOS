@@ -9,23 +9,30 @@ import Foundation
 
 class Api {
     
-    func callApi<T: Codable>(fromURL: String, header: Header = .get) async -> CommunicationResult<T> {
-        
+    func callApi<T: Codable>(
+        fromURL: String,
+        header: Header = .get,
+        body: Data? = nil
+    ) async -> CommunicationResult<T> {
+        print(body)
         do {
             guard let url = URL(string: fromURL) else { throw CommunicationError.badUrl }
             var request = URLRequest(url: url)
             request.httpMethod = header.rawValue
+            if (body != nil) {
+                request.httpBody = body
+            }
             
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let response = response as? HTTPURLResponse else { throw CommunicationError.badResponse }
             let dataPrep = String(data: data, encoding: .utf8)!
-
+            
             guard response.statusCode >= 200 && response.statusCode < 300 else { throw CommunicationError.badStatus }
             
-//            let decoded = try JSONDecoder().decode([Book].self, from: data)
-//            print(decoded)
-//            
-//            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            //            let decoded = try JSONDecoder().decode([Book].self, from: data)
+            //            print(decoded)
+            //
+            //            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
             
             guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw CommunicationError.failedToDecodeResponse }
             
@@ -54,7 +61,11 @@ class Api {
         var params = "?token=\(String(describing: token))"
         fromObject.dictionary()?.forEach({ (key: String, value: Any?) in
             if let val = value {
-                params += "&\(key)=\(val)"
+                if let bool = val as? Bool {
+                    params += "&\(key)=\(bool ? "true" : "false")"
+                } else {
+                    params += "&\(key)=\(val)"
+                }
             }
         })
         

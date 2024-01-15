@@ -19,16 +19,16 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
             
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let response = response as? HTTPURLResponse else { throw CommunicationError.badResponse }
-//            let dataPrep = String(data: data, encoding: .utf8)!
-
+            //            let dataPrep = String(data: data, encoding: .utf8)!
+            
             guard response.statusCode >= 200 && response.statusCode < 300 else { throw CommunicationError.badStatus }
             
-//            let decoded = try JSONDecoder().decode([Book].self, from: data)
-//            print(decoded)
-//
-//            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            //            let decoded = try JSONDecoder().decode([Book].self, from: data)
+            //            print(decoded)
+            //
+            //            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
             
-//            guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw CommunicationError.failedToDecodeResponse }
+            //            guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw CommunicationError.failedToDecodeResponse }
             
             return .success(UIImage(data: data)!)
         } catch CommunicationError.badUrl {
@@ -51,10 +51,14 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
         }
     }
     
-        
+    
     func fetchBooks() async -> CommunicationResult<[Book]> {
         let endpoint = "book/all_books"
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?token=\(self.token!)")
+        if let tok = token {
+            return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?token=\(self.token!)")
+        } else {
+            return CommunicationResult.failure(.unknownError)
+        }
     }
     
     func fetchBook(bookId: String) async -> CommunicationResult<Book> {
@@ -69,34 +73,38 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
     
     func createBook(book: Book) async -> CommunicationResult<Book> {
         let endpoint = "book"
-//        let bookDict = book.dictionary()
+        //        let bookDict = book.dictionary()
         
         let params = super.buildParams(fromObject: book, token: self.token!)
         
-//        var params = "?token=\(String(describing: token))"
-//        book.dictionary()?.forEach({ (key: String, value: Any?) in
-//            if let val = value {
-//                params += "&\(key)=\(String(describing: value))"
-//            }
-//        })
+        //        var params = "?token=\(String(describing: token))"
+        //        book.dictionary()?.forEach({ (key: String, value: Any?) in
+        //            if let val = value {
+        //                params += "&\(key)=\(String(describing: value))"
+        //            }
+        //        })
         
         return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?\(params)")
     }
     
     func updateBook(book: Book) async -> CommunicationResult<Book> {
-        let endpoint = "book/update"
-//        let bookDict = book.dictionary()
+        let endpoint = "book"
+        //        let bookDict = book.dictionary()
         
         let params = super.buildParams(fromObject: book, token: self.token!)
         
-//        var params = "?token=\(String(describing: token))"
-//        book.dictionary()?.forEach({ (key: String, value: Any?) in
-//            if let val = value {
-//                params += "&\(key)=\(String(describing: value))"
-//            }
-//        })
+        //        var params = "?token=\(String(describing: token))"
+        //        book.dictionary()?.forEach({ (key: String, value: Any?) in
+        //            if let val = value {
+        //                params += "&\(key)=\(String(describing: value))"
+        //            }
+        //        })
         
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?\(params)")
+        return await super.callApi(
+            fromURL: "\(baseUrl)\(endpoint)?token=\(token!)",
+            header: .put,
+            body: try? JSONSerialization.data(withJSONObject: book.dictionary()!)
+        )
     }
     
     func deleteBook(bookId: String) async -> CommunicationResult<Book> {

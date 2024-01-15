@@ -18,6 +18,8 @@ class BookViewModel: ObservableObject {
     @Published var coverImage: UIImage? = nil
     @Published var coverImageFetchingDone: Bool = false
     
+    @Published var deletionDone = false
+    
     private let api = BooksApiManager()
     
     
@@ -55,6 +57,102 @@ class BookViewModel: ObservableObject {
                                 }
                             }
                         }
+                    case .failure(let error):
+                        switch(error) {
+                        case(.badResponse):
+                            self.errorMessage = "Failed to fetch"
+                        case .badUrl:
+                            self.errorMessage = "Failed to access the server"
+                        case .invalidRequest:
+                            self.errorMessage = "Failed to fetch"
+                        case .badStatus:
+                            self.errorMessage = "Failed to fetch"
+                        case .failedToDecodeResponse:
+                            self.errorMessage = "Failed to decode"
+                        case .unknownError:
+                            self.errorMessage = "unknown error"
+                        }
+                    case .none:
+                        self.errorMessage = "unknonw error"
+                    }
+                    self.showError = self.errorMessage != nil
+                    self.isLoading = false
+                }
+            }
+        }
+    }
+    
+    func deleteBook(bookId: String) {
+//        self.isLoading = true
+        self.errorMessage = nil
+        
+        Task {
+            guard let result: CommunicationResult<Book>? = await api.deleteBook(bookId: bookId) else {return}
+            Task {
+                await MainActor.run {
+                    switch(result) {
+                    case .success(let data):
+                        self.book = data
+                        self.deletionDone = true
+                    case .failure(let error):
+                        switch(error) {
+                        case(.badResponse):
+                            self.errorMessage = "Failed to delete"
+                        case .badUrl:
+                            self.errorMessage = "Failed to access the server"
+                        case .invalidRequest:
+                            self.errorMessage = "Failed to delete"
+                        case .badStatus:
+                            self.errorMessage = "Failed to delete"
+                        case .failedToDecodeResponse:
+                            self.errorMessage = "Failed to decode (may be deleted]"
+                        case .unknownError:
+                            self.errorMessage = "unknown error"
+                        }
+                    case .none:
+                        self.errorMessage = "unknonw error"
+                    }
+                    self.showError = self.errorMessage != nil
+//                    self.isLoading = false
+                }
+            }
+        }
+    }
+    
+    func updateBook(book: Book) {
+        self.isLoading = true
+        self.errorMessage = nil
+        
+        Task {
+            guard let result: CommunicationResult<Book>? = await api.updateBook(book: book) else {return}
+            Task {
+                await MainActor.run {
+                    switch(result) {
+                    case .success(let data):
+                        self.book = data
+                        self.isLoading = false
+//                        if let cover = book?.cover {
+//                            Task {
+//                                guard let result: CommunicationResult<UIImage>? = await api.downloadCover(fromUrl: cover) else {
+//                                    print("failed")
+//                                    return
+//                                }
+//                                Task {
+//                                    await MainActor.run {
+//                                        switch(result) {
+//                                        case .success(let data):
+//                                            print("succeded")
+//                                            self.coverImage = data
+//                                            self.coverImageFetchingDone = true
+//                                        case .failure(_):
+//                                            self.coverImageFetchingDone = true
+//                                        case .none:
+//                                            self.coverImageFetchingDone = true
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):

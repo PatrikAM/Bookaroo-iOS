@@ -10,7 +10,11 @@ import Foundation
 class LibrariesApiManager: BookarooApi, LibrariesApiProtocol {
     func fetchLibraries() async -> CommunicationResult<[Library]> {
         let endpoint = "library/all_libraries"
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?token=\(self.token!)")
+        if let tok = token {
+            return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?token=\(tok)")
+        } else {
+            return CommunicationResult.failure(.unknownError)
+        }
     }
     
     func createLibrary(library: String) async -> CommunicationResult<Library> {

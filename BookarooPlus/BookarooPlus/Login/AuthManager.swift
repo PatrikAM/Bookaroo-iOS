@@ -54,17 +54,17 @@ class AuthManager: ObservableObject {
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
-                            self.errorMessage = "Failed to log in"
+                            self.errorMessage = "Email or password incorrect"
                         case .badUrl:
-                            self.errorMessage = "Failed to access the server"
+                            self.errorMessage = "No internet connection"
                         case .invalidRequest:
-                            self.errorMessage = "Failed"
+                            self.errorMessage = "Something Failed"
                         case .badStatus:
-                            self.errorMessage = "Bad credentials"
+                            self.errorMessage = "Email or password incorrect"
                         case .failedToDecodeResponse:
-                            self.errorMessage = "Failed to decode"
+                            self.errorMessage = "Server answered unexpectedly"
                         case .unknownError:
-                            self.errorMessage = "unknown error"
+                            self.errorMessage = "No internet connection"
                         }
                         self.isLoading = false
                         self.isErrorToastShown = true
@@ -123,17 +123,17 @@ class AuthManager: ObservableObject {
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
-                            self.errorMessage = "Failed to log in"
+                            self.errorMessage = "Email or password incorrect"
                         case .badUrl:
-                            self.errorMessage = "Failed to access the server"
+                            self.errorMessage = "No internet connection"
                         case .invalidRequest:
-                            self.errorMessage = "Failed"
+                            self.errorMessage = "Something Failed"
                         case .badStatus:
-                            self.errorMessage = "Bad credentials"
+                            self.errorMessage = "Email or password incorrect"
                         case .failedToDecodeResponse:
-                            self.errorMessage = "Failed to decode"
+                            self.errorMessage = "Server answered unexpectedly"
                         case .unknownError:
-                            self.errorMessage = "unknown error"
+                            self.errorMessage = "No internet connection"
                         }
                         self.isLoading = false
                         self.isErrorToastShown = true

@@ -24,6 +24,9 @@
         }
       }
     },
+    "delete" : {
+
+    },
     "Email" : {
       "localizations" : {
         "cs" : {

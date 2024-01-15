@@ -10,6 +10,7 @@ import Foundation
 class ListOfLibrariesViewModel: ObservableObject {
     
     private let api = LibrariesApiManager()
+    private let booksApi = BooksApiManager()
     
     @Published var libraries: [Library]? = nil
     @Published var isLoading: Bool = true
@@ -26,6 +27,8 @@ class ListOfLibrariesViewModel: ObservableObject {
                         var defaultedData = data
                         defaultedData.indices.forEach { defaultedData[$0].isSelected = false }
                         self.libraries = defaultedData
+                        print(self.libraries)
+                        self.isLoading = false
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
@@ -49,12 +52,13 @@ class ListOfLibrariesViewModel: ObservableObject {
                         self.isLoading = false
                         return
                     }
-                    self.isLoading = false
+//                    self.isLoading = false
                     
                 }
             }
         }
     }
+
     
 }
 

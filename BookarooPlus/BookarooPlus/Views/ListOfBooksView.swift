@@ -18,6 +18,8 @@ struct ListOfBooksView: View {
     @State var selectionChange = false
     @State private var selectedBook: String?
     
+    @State var deletedId: String? = nil
+    
     
     var body: some View {
         NavigationStack {
@@ -47,17 +49,24 @@ struct ListOfBooksView: View {
                     LazyHStack(spacing: 0) {
                         //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
                         ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
-                            BookListCard(book: book)
-                                .onTapGesture {
-                                    selectedBook = book.id!
-                                    print("Book tapped: \(book.id!)")
-                                }
-                                .padding(.all)
-                                .ignoresSafeArea(edges: .horizontal)
+                            BookListCard(
+                                book: book,
+                                onHeartClick: { booksViewModel.toggleFavourite(bookId: book.id!) },
+                                onBookClick: { booksViewModel.toggleRead(bookId: book.id!) }
+                            )
+                            .onTapGesture {
+                                selectedBook = book.id!
+                                print("Book tapped: \(book.id!)")
+                            }
+                            .padding(.all)
+                            .ignoresSafeArea(edges: .horizontal)
                         }
                     }
                     .navigationDestination(item: $selectedBook) { bookId in
-                        BookDetailView(bookId: bookId)
+                        BookDetailView(
+                            deletedId: $deletedId,
+                            bookId: bookId
+                        )
                             .onDisappear {
                                 selectedBook = nil
                             }
@@ -72,15 +81,14 @@ struct ListOfBooksView: View {
             else {
                 Text(booksViewModel.errorMessage!)
             }
-            Button(action: {
-                authManager.logout()
-                isLoggedOut = true
-                //                presentationMode.wrappedValue.dismiss()
-            }, label: {
-                Text("Log out")
-            })
+//            Button(action: {
+//                authManager.logout()
+//                isLoggedOut = true
+//                //                presentationMode.wrappedValue.dismiss()
+//            }, label: {
+//                Text("Log out")
+//            })
         }
-        
         .onAppear {
             booksViewModel.fetchBooks()
             librariesViewModel.fetchLibraries()
@@ -92,8 +100,12 @@ struct ListOfBooksView: View {
                 booksViewModel.filterBooks(libs: librariesViewModel.libraries!.filter { $0.isSelected! })
             }
         }
+        .onChange(of: deletedId) {
+            booksViewModel.books?.removeAll(where: { book in book.id == deletedId } )
+            booksViewModel.filteredBooks?.removeAll(where: { book in book.id == deletedId } )
+        }
         
-        //        .navigate(to: BaseView(), when: $isLoggedOut)
+        //        .navigate (to: BaseView(), when: $isLoggedOut)
     }
 }
 

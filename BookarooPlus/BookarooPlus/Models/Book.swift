@@ -19,7 +19,9 @@ struct Book: Identifiable, Codable, DictionaryEncodable {
     var description: String? = nil
     var publisher: String? = nil
     var published: String? = nil
-    let language: String? = nil
+    var language: String? = nil
+    var favourite: Bool? = false
+    var read: Bool? = false
     
 //    init(id: String? = nil,
 //         isbn: String? = nil,
