@@ -2,7 +2,7 @@
 //  BookListCard.swift
 //  BookarooPlus
 //
-//  Created by User on 11.01.2024.
+//  Created by Marek Glas on 11.01.2024.
 //
 
 import SwiftUI
@@ -12,16 +12,40 @@ struct BookListCard: View {
     var book: Book
     
     var body: some View {
-        HStack {
+        ZStack(alignment: .bottom) {
+            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: .continuous)
+                .fill(Color.cyan)
+                .shadow(radius: 5)
+                .frame(height: 500)
+            
             VStack (alignment: .leading) {
+                HStack {
+                    Spacer()
+                    AsyncImage(url: URL(string: book.cover ?? "")) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(height: 300)
+                    .clipped()
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                
                 Text(book.title ?? "Book title unknown")
                     .font(.headline)
                 Text(book.author ?? "Book author unknown")
                     .font(.subheadline)
+                Spacer()
             }
             Spacer()
-            Text("IMG")
+            
         }
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .background()
+        
     }
 }
 

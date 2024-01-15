@@ -43,22 +43,8 @@ struct ListOfBooksView: View {
                         
                     }
                 }
-                //                List {
-                //                    //                    ForEach(booksViewModel.books!) { book in
-                //                    //                        Text(book.title!)
-                //                    //                    }
-                //                    ForEach(booksViewModel.filteredBooks!) { book in
-                //                        NavigationLink {
-                //                            BookDetailView(bookId: book.id!)
-                //                                .toolbar(.hidden, for: .tabBar)
-                //                        } label: {
-                //                            Text(book.title!)
-                //                        }
-                //                    }
-                //                }
-                
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: 0) {
                         //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
                         ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
                             BookListCard(book: book)
@@ -66,11 +52,15 @@ struct ListOfBooksView: View {
                                     selectedBook = book.id!
                                 }
                                 .padding(.all)
+                                .ignoresSafeArea(edges: .horizontal)
                         }
                     }
+                    .scrollTargetLayout()
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .scrollTargetBehavior(.viewAligned)
+                .safeAreaPadding(.horizontal)
                 
-                Spacer()
             }
             else {
                 Text(booksViewModel.errorMessage!)
