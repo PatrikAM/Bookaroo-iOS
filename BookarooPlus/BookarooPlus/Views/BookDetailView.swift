@@ -54,5 +54,6 @@ struct BookDetailView: View {
             deletedId = bookId
             presentationMode.wrappedValue.dismiss()
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }

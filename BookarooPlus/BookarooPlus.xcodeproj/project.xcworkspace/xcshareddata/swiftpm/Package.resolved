@@ -8,6 +8,15 @@
         "revision" : "b39252eacd159904afd7d718bba0afabb87f2f2f",
         "version" : "1.3.9"
       }
+    },
+    {
+      "identity" : "swiftui-tab-bar?ref=iosexample.com",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zijievv/swiftui-tab-bar?ref=iosexample.com",
+      "state" : {
+        "revision" : "ea2d605173e0fb2d101509f413a96953ac40e979",
+        "version" : "1.0.0"
+      }
     }
   ],
   "version" : 2

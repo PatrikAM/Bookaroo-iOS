@@ -26,17 +26,17 @@ struct Chip: View {
                 .font(.body)
                 .lineLimit(1)
         }
-        .padding(.vertical, 4)
-        .padding(.leading, 4)
-        .padding(.trailing, 10)
-        .foregroundColor(isSelected ? .white : .blue)
-        .background(isSelected ? Color.blue : Color.white)
+        .padding(.vertical, 6)
+        .padding(.leading, 6)
+        .padding(.trailing, 12)
+        .foregroundColor(isSelected ? .white : .white)
+        .background(isSelected ? Color.accentColor : Color("Secondary"))
         .cornerRadius(20)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.blue, lineWidth: 1.5)
-            
-        ).onTapGesture {
+                .stroke(Color.blue, lineWidth: 0)
+        )
+        .onTapGesture {
             isSelected.toggle()
             onTapGesture()
             selectionChanges.toggle()

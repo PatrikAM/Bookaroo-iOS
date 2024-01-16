@@ -26,69 +26,70 @@ struct ListOfBooksView: View {
             if booksViewModel.isLoading {
                 ProgressView()
             } else if booksViewModel.books != nil {
-                if librariesViewModel.libraries != nil {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(librariesViewModel.libraries!.indices) { index in
-                                //                                Text(library.name!)
-                                Chip(
-                                    titleKey: librariesViewModel.libraries![index].name!,
-                                    isSelected: librariesViewModel.libraries![index].isSelected!,
-                                    selectionChanges: $selectionChange
-                                ) {
-                                    librariesViewModel.libraries![index].isSelected?.toggle()
+                VStack {
+                    if librariesViewModel.libraries != nil {
+                        VStack {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach(librariesViewModel.libraries!.indices) { index in
+                                        //                                Text(library.name!)
+                                        Chip(
+                                            titleKey: librariesViewModel.libraries![index].name!,
+                                            isSelected: librariesViewModel.libraries![index].isSelected!,
+                                            selectionChanges: $selectionChange
+                                        ) {
+                                            librariesViewModel.libraries![index].isSelected?.toggle()
+                                        }
+                                        .padding(.trailing, 10)
+                                    }
                                 }
-                                .padding(.trailing, 10)
+                                .padding(10)
+                                
+                            }
+                            
+                        }
+                    }
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 0) {
+                            //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
+                            ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
+                                BookListCard(
+                                    book: book,
+                                    onHeartClick: { booksViewModel.toggleFavourite(bookId: book.id!) },
+                                    onBookClick: { booksViewModel.toggleRead(bookId: book.id!) }
+                                )
+                                .onTapGesture {
+                                    selectedBook = book.id!
+                                    print("Book tapped: \(book.id!)")
+                                }
+                                .padding(.all)
+                                .ignoresSafeArea(edges: .horizontal)
                             }
                         }
-                        .padding(10)
-                        
-                    }
-                }
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 0) {
-                        //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
-                        ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
-                            BookListCard(
-                                book: book,
-                                onHeartClick: { booksViewModel.toggleFavourite(bookId: book.id!) },
-                                onBookClick: { booksViewModel.toggleRead(bookId: book.id!) }
+                        .navigationDestination(item: $selectedBook) { bookId in
+                            BookDetailView(
+                                deletedId: $deletedId,
+                                bookId: bookId
                             )
-                            .onTapGesture {
-                                selectedBook = book.id!
-                                print("Book tapped: \(book.id!)")
-                            }
-                            .padding(.all)
-                            .ignoresSafeArea(edges: .horizontal)
-                        }
-                    }
-                    .navigationDestination(item: $selectedBook) { bookId in
-                        BookDetailView(
-                            deletedId: $deletedId,
-                            bookId: bookId
-                        )
+                            
                             .onDisappear {
                                 selectedBook = nil
                             }
+                        }
+                        .scrollTargetLayout()
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    .scrollTargetLayout()
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .scrollTargetBehavior(.viewAligned)
+                    .safeAreaPadding(.horizontal)
+                    
                 }
-                .scrollTargetBehavior(.viewAligned)
-                .safeAreaPadding(.horizontal)
                 
-            }
-            else {
+            } else {
                 Text(booksViewModel.errorMessage!)
             }
-//            Button(action: {
-//                authManager.logout()
-//                isLoggedOut = true
-//                //                presentationMode.wrappedValue.dismiss()
-//            }, label: {
-//                Text("Log out")
-//            })
+            
         }
+        
         .onAppear {
             booksViewModel.fetchBooks()
             librariesViewModel.fetchLibraries()

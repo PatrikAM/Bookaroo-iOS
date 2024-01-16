@@ -122,6 +122,7 @@ struct LoginView: View {
                     )
                     .disabled(authManager.isLoading)
                     .buttonStyle(PlainButtonStyle())
+                    .tint(Color.accentColor)
                 }
                 .toast(isPresenting: $authManager.isErrorToastShown) {
                     AlertToast(
