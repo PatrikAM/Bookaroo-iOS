@@ -18,4 +18,5 @@ DerivedData/
 *.xccheckout
 *.moved-aside
 *.xcuserstate
-
+xcuserdata/
+BookarooPlus/BookarooPlus.xcodeproj/xcuserdata

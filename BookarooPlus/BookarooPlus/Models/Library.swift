@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Library: Identifiable, Codable, DictionaryEncodable {
+struct Library: Identifiable, Codable, DictionaryEncodable, Hashable {
     var id: String
     var name: String?
     var ownerId: String?

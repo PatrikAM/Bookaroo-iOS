@@ -14,7 +14,6 @@ class Api {
         header: Header = .get,
         body: Data? = nil
     ) async -> CommunicationResult<T> {
-        print(body)
         do {
             guard let url = URL(string: fromURL) else { throw CommunicationError.badUrl }
             var request = URLRequest(url: url)
@@ -23,9 +22,12 @@ class Api {
                 request.httpBody = body
             }
             
+            print(request.httpMethod)
+            print(header.rawValue)
+            
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let response = response as? HTTPURLResponse else { throw CommunicationError.badResponse }
-            let dataPrep = String(data: data, encoding: .utf8)!
+//            let dataPrep = String(data: data, encoding: .utf8)!
             
             guard response.statusCode >= 200 && response.statusCode < 300 else { throw CommunicationError.badStatus }
             

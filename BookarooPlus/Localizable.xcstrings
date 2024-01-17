@@ -27,7 +27,13 @@
         }
       }
     },
+    "Cancel" : {
+
+    },
     "delete" : {
+
+    },
+    "edit" : {
 
     },
     "Email" : {
@@ -53,6 +59,7 @@
       }
     },
     "Hello, World!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -61,6 +68,12 @@
           }
         }
       }
+    },
+    "It appears your camera may not be available" : {
+
+    },
+    "It looks like this device doesn't support the DataScannerViewController" : {
+
     },
     "Keep reading!" : {
 
@@ -106,6 +119,12 @@
           }
         }
       }
+    },
+    "Manually" : {
+
+    },
+    "NEW BOOK" : {
+
     },
     "Nickname" : {
       "localizations" : {
@@ -185,6 +204,9 @@
         }
       }
     },
+    "Save" : {
+
+    },
     "Scan Barcode Here" : {
       "localizations" : {
         "cs" : {
@@ -207,6 +229,9 @@
         }
       }
     },
+    "Select a paint color" : {
+
+    },
     "Some cool text" : {
 
     },
@@ -228,6 +253,9 @@
           }
         }
       }
+    },
+    "Using ISBN" : {
+
     }
   },
   "version" : "1.0"

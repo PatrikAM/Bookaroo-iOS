@@ -24,7 +24,6 @@ class ReadersApiManager: BookarooApi, ReadersApiProtocol {
     func register(login: String, password: String, name: String) async -> CommunicationResult<Reader> {
         let endpoint = "user/register"
         let params = "?login=\(login)&password=\(password)&name=\(name)"
-        print(params)
         return await super.callApi(fromURL: "\(baseUrl)\(endpoint)\(params)", header: .post)
     }
     

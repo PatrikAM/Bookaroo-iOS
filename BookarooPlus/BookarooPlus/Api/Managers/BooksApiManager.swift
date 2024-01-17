@@ -11,7 +11,6 @@ import UIKit
 class BooksApiManager : BookarooApi, BooksApiProtocol {
     
     func downloadCover(fromUrl: String) async -> CommunicationResult<UIImage> {
-        print("downloading...")
         do {
             guard let url = URL(string: fromUrl) else { throw CommunicationError.badUrl }
             var request = URLRequest(url: url)
@@ -83,8 +82,8 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
         //                params += "&\(key)=\(String(describing: value))"
         //            }
         //        })
-        
-        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)?\(params)")
+        print("\(baseUrl)\(endpoint)?\(params)")
+        return await super.callApi(fromURL: "\(baseUrl)\(endpoint)\(params)", header: .post)
     }
     
     func updateBook(book: Book) async -> CommunicationResult<Book> {

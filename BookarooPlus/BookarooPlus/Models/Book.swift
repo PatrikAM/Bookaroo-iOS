@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book: Identifiable, Codable, DictionaryEncodable {
+struct Book: Identifiable, Codable, DictionaryEncodable, Equatable {
     var id: String? = nil
     var isbn: String? = nil
     var library: String? = nil

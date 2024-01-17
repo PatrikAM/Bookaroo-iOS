@@ -19,7 +19,8 @@ struct ListOfBooksView: View {
     @State private var selectedBook: String?
     
     @State var deletedId: String? = nil
-    
+    @State var showScanningDialog: Bool = false
+    @State var showScanner: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -84,6 +85,12 @@ struct ListOfBooksView: View {
                     
                 }
                 
+                Button(action: {
+                    showScanningDialog.toggle()
+                }) {
+                    Text("NEW BOOK")
+                }
+                
             } else {
                 Text(booksViewModel.errorMessage!)
             }
@@ -104,6 +111,28 @@ struct ListOfBooksView: View {
         .onChange(of: deletedId) {
             booksViewModel.books?.removeAll(where: { book in book.id == deletedId } )
             booksViewModel.filteredBooks?.removeAll(where: { book in book.id == deletedId } )
+        }
+        .customConfirmDialog(
+            isPresented: $showScanningDialog,
+            header: "Using ISBN or manually?",
+            message: "Bookaroo allows you to scan ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your Camera. It is pretty easy, when camera opens just scan bar code from your book."
+        ) {
+            Button {
+
+                showScanningDialog.toggle()
+            } label: {
+                Label("Manually", systemImage: "hand.raised")
+            }
+            Divider()
+            Button {
+                showScanner.toggle()
+                showScanningDialog.toggle()
+            } label: {
+                Label("Using ISBN", systemImage: "barcode.viewfinder")
+            }
+        }
+        .sheet(isPresented: $showScanner) {
+            BarcodeScannerView()
         }
         
         //        .navigate (to: BaseView(), when: $isLoggedOut)

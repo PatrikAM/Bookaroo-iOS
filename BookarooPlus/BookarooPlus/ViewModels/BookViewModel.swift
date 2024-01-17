@@ -20,7 +20,12 @@ class BookViewModel: ObservableObject {
     
     @Published var deletionDone = false
     
+    @Published var isUpdating = true
+    
+    @Published var libraries: [Library] = []
+    
     private let api = BooksApiManager()
+    private let gapi = GBooksApiManager()
     
     
     func fetchBook(bookId: String) {
@@ -119,6 +124,59 @@ class BookViewModel: ObservableObject {
         }
     }
     
+    func saveBook(book: Book) {
+        
+        if book.title == nil ||
+            book.author == nil ||
+            book.isbn == nil ||
+            book.library == nil
+        
+        {
+            errorMessage = "Please fill all required fields"
+            showError = true
+            return
+        }
+        
+        if isUpdating {
+            updateBook(book: book)
+        } else {
+            self.isLoading = true
+            self.errorMessage = nil
+            
+            Task {
+                guard let result: CommunicationResult<Book>? = await api.createBook(book: book) else {return}
+                Task {
+                    await MainActor.run {
+                        switch(result) {
+                        case .success(let data):
+                            self.book = data
+                            self.isLoading = false
+                        case .failure(let error):
+                            switch(error) {
+                            case(.badResponse):
+                                self.errorMessage = "Failed to create"
+                            case .badUrl:
+                                self.errorMessage = "Failed to access the server"
+                            case .invalidRequest:
+                                self.errorMessage = "Failed to create"
+                            case .badStatus:
+                                self.errorMessage = "Failed to create"
+                            case .failedToDecodeResponse:
+                                self.errorMessage = "Created, but failed to decode"
+                            case .unknownError:
+                                self.errorMessage = "unknown error"
+                            }
+                        case .none:
+                            self.errorMessage = "unknonw error"
+                        }
+                        self.showError = self.errorMessage != nil
+//                        self.isLoading = false
+                    }
+                }
+            }
+        }
+    }
+    
     func updateBook(book: Book) {
         self.isLoading = true
         self.errorMessage = nil
@@ -131,28 +189,6 @@ class BookViewModel: ObservableObject {
                     case .success(let data):
                         self.book = data
                         self.isLoading = false
-//                        if let cover = book?.cover {
-//                            Task {
-//                                guard let result: CommunicationResult<UIImage>? = await api.downloadCover(fromUrl: cover) else {
-//                                    print("failed")
-//                                    return
-//                                }
-//                                Task {
-//                                    await MainActor.run {
-//                                        switch(result) {
-//                                        case .success(let data):
-//                                            print("succeded")
-//                                            self.coverImage = data
-//                                            self.coverImageFetchingDone = true
-//                                        case .failure(_):
-//                                            self.coverImageFetchingDone = true
-//                                        case .none:
-//                                            self.coverImageFetchingDone = true
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
@@ -173,6 +209,71 @@ class BookViewModel: ObservableObject {
                     }
                     self.showError = self.errorMessage != nil
                     self.isLoading = false
+                }
+            }
+        }
+    }
+    
+    func fetchBookByIsbn(isbn: String) {
+        self.isLoading = true
+        self.errorMessage = nil
+        
+        Task {
+            guard let result: CommunicationResult<GBooks>? = await gapi.getBookByIsbn(isbn: isbn) else {return}
+            Task {
+                await MainActor.run {
+                    switch(result) {
+                    case .success(let data):
+                        
+                        if let items = data.items, let gbook = items.first {
+                            self.book = gbook.convert()
+                        } else {
+                            errorMessage = "No such book at Google Books"
+                            showError.toggle()
+                        }
+//                        self.isLoading = false
+                        if let cover = book?.cover {
+                            Task {
+                                guard let result: CommunicationResult<UIImage>? = await api.downloadCover(fromUrl: cover) else {
+                                    print("failed")
+                                    return
+                                }
+                                Task {
+                                    await MainActor.run {
+                                        switch(result) {
+                                        case .success(let data):
+                                            print("succeded")
+                                            self.coverImage = data
+                                            self.coverImageFetchingDone = true
+                                        case .failure(_):
+                                            self.coverImageFetchingDone = true
+                                        case .none:
+                                            self.coverImageFetchingDone = true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    case .failure(let error):
+                        switch(error) {
+                        case(.badResponse):
+                            self.errorMessage = "Failed to fetch"
+                        case .badUrl:
+                            self.errorMessage = "Failed to access the server"
+                        case .invalidRequest:
+                            self.errorMessage = "Failed to fetch"
+                        case .badStatus:
+                            self.errorMessage = "Failed to fetch"
+                        case .failedToDecodeResponse:
+                            self.errorMessage = "Failed to decode"
+                        case .unknownError:
+                            self.errorMessage = "unknown error"
+                        }
+                    case .none:
+                        self.errorMessage = "unknonw error"
+                    }
+                    self.showError = self.errorMessage != nil
+//                    self.isLoading = false
                 }
             }
         }

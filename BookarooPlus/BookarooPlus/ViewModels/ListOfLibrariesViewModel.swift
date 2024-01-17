@@ -10,7 +10,7 @@ import Foundation
 class ListOfLibrariesViewModel: ObservableObject {
     
     private let api = LibrariesApiManager()
-    private let booksApi = BooksApiManager()
+//    private let booksApi = BooksApiManager()
     
     @Published var libraries: [Library]? = nil
     @Published var isLoading: Bool = true

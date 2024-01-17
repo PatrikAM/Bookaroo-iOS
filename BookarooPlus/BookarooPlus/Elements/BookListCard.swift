@@ -14,26 +14,41 @@ struct BookListCard: View {
     var onHeartClick: () -> ()
     var onBookClick: () -> ()
     
+    let bookPlaceHolderImage = "https://www.marytribble.com/wp-content/uploads/2020/12/book-cover-placeholder.png"
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: .continuous)
                 .fill(Color.cyan)
-                .shadow(radius: 5)     
+                .shadow(radius: 5)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, idealHeight: 450, maxHeight: 450)
             
             VStack {
                 HStack {
                     Spacer()
-                    AsyncImage(url: URL(string: book.cover ?? "")) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
-                    } placeholder: {
-                        ProgressView()
+                    if book.cover != nil && book.cover!.isValidUrl() {
+                        AsyncImage(url: URL(string: book.cover!)) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(height: 400)
+                        .clipped()
+                        Spacer()
+                    } else {
+                        AsyncImage(url: URL(string: bookPlaceHolderImage)) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(height: 400)
+                        .clipped()
+                        Spacer()
                     }
-                    .frame(height: 400)
-                    .clipped()
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 VStack(alignment: .center) {
@@ -50,7 +65,7 @@ struct BookListCard: View {
                             Image(systemName: "book.circle")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-                                .foregroundStyle(self.book.read ?? false ? .green : .white)
+                                .foregroundStyle(self.book.read ?? false ? .indigo : .white)
                                 .backgroundStyle(.brown)
                                 .clipShape(Circle())
                         }
@@ -71,7 +86,7 @@ struct BookListCard: View {
                         .frame(width: 100, height: 100)
                     }
                 }
-            
+                
             }
             Spacer()
             

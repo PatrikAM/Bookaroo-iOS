@@ -10,11 +10,11 @@ import Foundation
 class GBooksApiManager : Api, GBooksApiProtocol {
     
     private let baseUrl: String = BaseUrls.googleBooksApi.rawValue
-    private let token: String = ""
+    private let token: String = "AIzaSyCNy-ufOm_1_eiAOMIhFrMGBqMIoSAl7ho"
     
     func getBookByIsbn(isbn: String) async -> CommunicationResult<GBooks> {
         let endpoint = "volumes"
-        
+
         return await self.callApi(fromURL: "\(baseUrl)\(endpoint)?q=isbn:\(isbn)&token=\(token)")
     }
     
