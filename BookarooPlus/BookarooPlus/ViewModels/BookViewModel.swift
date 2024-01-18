@@ -126,10 +126,10 @@ class BookViewModel: ObservableObject {
     
     func saveBook(book: Book) {
         
-        if book.title == nil ||
-            book.author == nil ||
-            book.isbn == nil ||
-            book.library == nil
+        if book.title == nil || ((book.title?.isEmpty) != false) ||
+            book.author == nil || ((book.author?.isEmpty) != false) ||
+            book.isbn == nil || ((book.isbn?.isEmpty) != false) ||
+            book.library == nil || ((book.library?.isEmpty) != false)
         
         {
             errorMessage = "Please fill all required fields"
@@ -149,7 +149,7 @@ class BookViewModel: ObservableObject {
                     await MainActor.run {
                         switch(result) {
                         case .success(let data):
-                            self.book = data
+//                            self.book = data
                             self.isLoading = false
                         case .failure(let error):
                             switch(error) {
@@ -187,7 +187,7 @@ class BookViewModel: ObservableObject {
                 await MainActor.run {
                     switch(result) {
                     case .success(let data):
-                        self.book = data
+//                        self.book = data
                         self.isLoading = false
                     case .failure(let error):
                         switch(error) {

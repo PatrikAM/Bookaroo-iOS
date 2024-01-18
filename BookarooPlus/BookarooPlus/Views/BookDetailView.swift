@@ -28,6 +28,7 @@ struct BookDetailView: View {
                 } else if viewModel.book != nil {
                     Text(viewModel.book!.title!)
                     Text(viewModel.book?.cover ?? "unknown")
+                    Text(viewModel.book?.isbn ?? "")
                     if let image = viewModel.book?.cover {
                         if let image = viewModel.coverImage {
                             Circle()

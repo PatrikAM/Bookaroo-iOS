@@ -19,7 +19,7 @@ struct BookAddEditView: View {
     @State var book: Book = Book()
     @State var pages: String = ""
     
-//    @State var selectedLibrary: Library? = nil
+    //    @State var selectedLibrary: Library? = nil
     @State var selectedLibrary: Library = Library(id: "createThisOne", name: "Default")
     
     @ObservedObject var viewModel = BookViewModel()
@@ -90,39 +90,45 @@ struct BookAddEditView: View {
         }
         .onAppear {
             libsViewModel.fetchLibraries()
-            
-            if isbn != nil {
-                viewModel.fetchBookByIsbn(isbn: isbn!)
-            }
-            
-            if (book.id == nil) {
+            if book.id == nil {
+                if isbn != nil {
+                    viewModel.fetchBookByIsbn(isbn: isbn!)
+                }
+                
                 book.isbn = isbn
                 viewModel.isUpdating = false
+                
+                viewModel.book = book
+            } else {
+                if let pgs = book.pages {
+                    pages = "\(pgs)"
+                }
             }
-            if let pgs = book.pages {
-                pages = "\(pgs)"
-            }
-            viewModel.book = book
+            
         }
         .onChange(of: selectedLibrary) {
             self.book.library = selectedLibrary.id
         }
         .onChange(of: libsViewModel.libraries) {
-            if viewModel.isUpdating {
-                selectedLibrary = (libsViewModel.libraries?.filter {
-                    lib in lib.id == book.library
-                }.first)!
-            } else {
-                if libsViewModel.libraries!.isEmpty {
-                    selectedLibrary = libsViewModel.libraries!.first!
+            if libsViewModel.libraries != nil {
+                if viewModel.isUpdating {
+                    selectedLibrary = (libsViewModel.libraries?.filter {
+                        lib in lib.id == book.library
+                    }.first)!
+                } else {
+                    if libsViewModel.libraries!.isEmpty {
+                        selectedLibrary = libsViewModel.libraries!.first!
+                    }
                 }
             }
         }
         .onChange(of: viewModel.book) {
-            viewModel.book!.isbn = isbn
-            book = viewModel.book!
-            if let pgs = viewModel.book!.pages {
-                pages = "\(pgs)"
+            if viewModel.book != nil {
+                viewModel.book!.isbn = isbn
+                book = viewModel.book!
+                if let pgs = viewModel.book!.pages {
+                    pages = "\(pgs)"
+                }
             }
         }
         .onChange(of: viewModel.isLoading) {
