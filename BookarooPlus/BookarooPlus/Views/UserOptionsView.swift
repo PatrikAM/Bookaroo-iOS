@@ -2,7 +2,7 @@
 //  UserOptionsView.swift
 //  BookarooPlus
 //
-//  Created by User on 11.01.2024.
+//  Created by Marek Glas on 11.01.2024.
 //
 
 import SwiftUI

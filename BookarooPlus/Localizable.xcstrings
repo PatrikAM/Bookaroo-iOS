@@ -17,6 +17,17 @@
         }
       }
     },
+    "Bookaroo allows you to scan the ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your camera. It's pretty easy, when the camera opens, just scan the barcode from the cover of your book." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bookaroo Vám umožňuje skenovat ISBN pro vytvoření knihy ve Vaší knihovně. Teď si vyberte, zda chcete knihu vytvořit ručně, nebo s použitím fotoaparátu. Je to jednoduché, stačí po otevření fotoaparátu oskenovat čárový kód na přebalu knihy."
+          }
+        }
+      }
+    },
     "Books" : {
       "localizations" : {
         "cs" : {
@@ -28,13 +39,34 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrušit"
+          }
+        }
+      }
     },
     "delete" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat"
+          }
+        }
+      }
     },
     "edit" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravit"
+          }
+        }
+      }
     },
     "Email" : {
       "localizations" : {
@@ -70,13 +102,27 @@
       }
     },
     "It appears your camera may not be available" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zdá se, že Váš fotoaparát je nedostupný."
+          }
+        }
+      }
     },
     "It looks like this device doesn't support the DataScannerViewController" : {
 
     },
     "Keep reading!" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokračujte ve čtení!"
+          }
+        }
+      }
     },
     "Libraries" : {
       "localizations" : {
@@ -121,10 +167,24 @@
       }
     },
     "Manually" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ručně"
+          }
+        }
+      }
     },
     "NEW BOOK" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nová kniha"
+          }
+        }
+      }
     },
     "Nickname" : {
       "localizations" : {
@@ -205,7 +265,14 @@
       }
     },
     "Save" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložit"
+          }
+        }
+      }
     },
     "Scan Barcode Here" : {
       "localizations" : {
@@ -230,10 +297,24 @@
       }
     },
     "Select a paint color" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zvol si barvu"
+          }
+        }
+      }
     },
     "Some cool text" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nějaký cool text"
+          }
+        }
+      }
     },
     "TODO: info o knize" : {
 
@@ -255,7 +336,25 @@
       }
     },
     "Using ISBN" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomocí ISBN"
+          }
+        }
+      }
+    },
+    "Using ISBN or manually?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomocí ISBN nebo ručně?"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

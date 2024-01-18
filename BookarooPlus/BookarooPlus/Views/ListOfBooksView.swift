@@ -90,7 +90,7 @@ struct ListOfBooksView: View {
                     Button(action: {
                         showScanningDialog.toggle()
                     }) {
-                        Text("NEW BOOK")
+                        Text("New book")
                     }
                     
                 } else {
@@ -121,7 +121,7 @@ struct ListOfBooksView: View {
         .customConfirmDialog(
             isPresented: $showScanningDialog,
             header: "Using ISBN or manually?",
-            message: "Bookaroo allows you to scan ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your Camera. It is pretty easy, when camera opens just scan bar code from your book."
+            message: "Bookaroo allows you to scan the ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your camera. It's pretty easy, when the camera opens, just scan the barcode from the cover of your book."
         ) {
             Button {
                 navigateToBookAdd = true
