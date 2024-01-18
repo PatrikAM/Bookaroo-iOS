@@ -5,28 +5,21 @@
 
     },
     "%.2f %%" : {
-
-    },
-    "%.2f%%" : {
-
-    },
-    "40 %" : {
-      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "40 %"
+            "value" : "%.2f %%"
           }
         }
       }
     },
-    "Account Created: ???" : {
+    "%.2f%%" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Účet vytvořen: ???"
+            "value" : "%.2f%%"
           }
         }
       }
@@ -37,6 +30,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Už máš účet? Přihlaš se"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Already registered? Log in"
           }
         }
       }
@@ -65,29 +64,43 @@
             "state" : "translated",
             "value" : "Knihy"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Books"
+          }
         }
       }
     },
-    "Books read from all libraries" : {
+    "Books read from all libraries:" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Přečteno ze všech knihoven"
+            "value" : "Přečteno ze všech knihoven:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Books read from all libraries:"
           }
         }
       }
     },
     "Books: %lld" : {
-
-    },
-    "Books: 256" : {
-      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Knihy: 256"
+            "value" : "Knihy: %d"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Books: %d"
           }
         }
       }
@@ -99,36 +112,46 @@
             "state" : "translated",
             "value" : "Zrušit"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
         }
       }
     },
-    "delete" : {
-      "extractionState" : "stale",
+    "Delete" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smazat"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
         }
       }
     },
-    "Delete" : {
-
-    },
-    "edit" : {
-      "extractionState" : "stale",
+    "Edit" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upravit"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
         }
       }
-    },
-    "Edit" : {
-
     },
     "Email" : {
       "localizations" : {
@@ -148,17 +171,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일"
-          }
-        }
-      }
-    },
-    "Hello, World!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ahoj, světe!"
           }
         }
       }
@@ -184,14 +196,33 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Zdá se, že Váš fotoaparát je nedostupný."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your camera seems to be unavailable."
           }
         }
       }
     },
     "It looks like this device doesn't support the DataScannerViewController" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zdá se, že Vaše zařízení nepodporuje skenování ISBN."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your device does not seem to support ISBN scanning."
+          }
+        }
+      }
     },
     "Keep reading!" : {
       "localizations" : {
@@ -199,6 +230,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokračujte ve čtení!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep reading!"
           }
         }
       }
@@ -210,25 +247,46 @@
             "state" : "translated",
             "value" : "Knihovny"
           }
-        }
-      }
-    },
-    "Libraries: %lld" : {
-
-    },
-    "Libraries: 3" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
+        },
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Knihovny: 3"
+            "value" : "Libraries"
           }
         }
       }
     },
-    "Libraries: NaN" : {
-
+    "Libraries: %lld" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knihovny: %lld"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libraries: %lld"
+          }
+        }
+      }
+    },
+    "Libraries: none" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knihovny: žádné"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libraries: none"
+          }
+        }
+      }
     },
     "Log in" : {
       "localizations" : {
@@ -259,6 +317,12 @@
             "state" : "translated",
             "value" : "Odhlásit"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log out"
+          }
         }
       }
     },
@@ -268,6 +332,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ručně"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manually"
           }
         }
       }
@@ -279,16 +349,11 @@
             "state" : "translated",
             "value" : "Nová kniha"
           }
-        }
-      }
-    },
-    "NEW BOOK" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
+        },
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nová kniha"
+            "value" : "New book"
           }
         }
       }
@@ -300,6 +365,12 @@
             "state" : "translated",
             "value" : "Uživatelské jméno"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nickname"
+          }
         }
       }
     },
@@ -310,6 +381,12 @@
             "state" : "translated",
             "value" : "Nemáš účet? Registruj se"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No account? Register here"
+          }
         }
       }
     },
@@ -319,6 +396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Počet stran: %lld"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pages: %lld"
           }
         }
       }
@@ -345,23 +428,18 @@
         }
       }
     },
-    "Preferred language: Czech" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preferovaný jazyk: Čeština"
-          }
-        }
-      }
-    },
     "Readers" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Čtenáři"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Readers"
           }
         }
       }
@@ -388,6 +466,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uložit"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
           }
         }
       }
@@ -421,6 +505,12 @@
             "state" : "translated",
             "value" : "Zvolte si barvu"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a paint color"
+          }
         }
       }
     },
@@ -434,23 +524,18 @@
         }
       }
     },
-    "Testing User" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Testovaci Uzivatel"
-          }
-        }
-      }
-    },
     "That's pretty good!" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "To je celkem slušné!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That's pretty good!"
           }
         }
       }
@@ -463,7 +548,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uživatel"
+            "value" : "Uživatelské nastavení"
           }
         },
         "en" : {
@@ -478,8 +563,14 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pomocí ISBN"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Using ISBN?"
           }
         }
       }

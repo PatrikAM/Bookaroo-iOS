@@ -23,6 +23,8 @@ struct UserOptionsView: View {
                 Image(systemName: "person.circle")
                     .resizable()
                     .frame(width: 80, height: 80)
+                Spacer()
+                    .frame(width: 30)
                 VStack {
                     if let name = defaults.string(forKey: DefaultsKey.name.rawValue) {
                         Text(name.capitalizeEachWord())
@@ -31,10 +33,6 @@ struct UserOptionsView: View {
                         Text("User".capitalizeEachWord())
                             .font(.headline)
                     }
-                    
-                    // do not have this info
-                    Text("Account Created: ???")
-                        .font(.subheadline)
                     
                     Text(defaults.string(forKey: DefaultsKey.login.rawValue)!)
                 }
@@ -50,10 +48,10 @@ struct UserOptionsView: View {
                 if let libCount = libsViewModel.libraries?.count {
                     Text("Libraries: \(libCount)")
                 } else {
-                    Text("Libraries: NaN")
+                    Text("Libraries: none")
                 }
-                Text("Books: \(booksViewModel.books?.count ?? 0)")
-//                Text("Preferred language: Czech")
+                Text(LocalizedStringKey("Books: \(booksViewModel.books?.count ?? 0)"))
+                
             }
             
             
@@ -65,7 +63,8 @@ struct UserOptionsView: View {
             
             if let relativeBookRead = booksViewModel.relativeBookRead {
                 VStack {
-                    Text("Books read from all libraries")
+                    Text("Books read from all libraries:")
+                        .font(.headline)
                     ProgressView(value: relativeBookRead, label: { Text("That's pretty good!") }, currentValueLabel: { Text("\(relativeBookRead, specifier: "%.2f") %") })
                         .progressViewStyle(ProgressBarStyle(height: 30.0))
                 }
