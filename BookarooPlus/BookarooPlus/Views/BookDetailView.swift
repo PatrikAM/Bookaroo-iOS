@@ -40,13 +40,13 @@ struct BookDetailView: View {
                     Button(action: {
                         viewModel.deleteBook(bookId: bookId)
                     }) {
-                        Text("delete")
+                        Text("Delete")
                     }
                     
                     Button(action: {
                         editing = true
                     }) {
-                        Text("edit")
+                        Text("Edit")
                     }
                     
                 }

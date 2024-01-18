@@ -38,7 +38,7 @@ struct ListOfLibrariesView: View {
                         .frame(maxWidth:100)
                     }
                     ProgressView(value: Float(lib.read!) / Float(lib.total!), label: { Text("Keep reading!") }, currentValueLabel: { Text("\(Float(lib.read!) / Float(lib.total!) *   100, specifier: "%.2f")%") })
-                        .progressViewStyle(BarProgressStyle(height: 100.0))
+                        .progressViewStyle(ProgressBarStyle(height: 100.0))
                 }
             }
         }

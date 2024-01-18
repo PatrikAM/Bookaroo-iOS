@@ -120,8 +120,8 @@ struct ListOfBooksView: View {
         }
         .customConfirmDialog(
             isPresented: $showScanningDialog,
-            header: "Using ISBN or manually?",
-            message: "Bookaroo allows you to scan the ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your camera. It's pretty easy, when the camera opens, just scan the barcode from the cover of your book."
+            header: "isbn_manual_selection_text",
+            message: "barcode_scan_help_text"
         ) {
             Button {
                 navigateToBookAdd = true

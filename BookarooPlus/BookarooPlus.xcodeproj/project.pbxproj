@@ -49,7 +49,7 @@
 		FC4AB5352B46FAAE00D67B5D /* LibrariesApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */; };
 		FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */; };
 		FCA82DBA2B5684C700D3D647 /* TabBarModule in Frameworks */ = {isa = PBXBuildFile; productRef = FCA82DB92B5684C700D3D647 /* TabBarModule */; };
-		FCA82DBC2B56970500D3D647 /* BarProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA82DBB2B56970500D3D647 /* BarProgressStyle.swift */; };
+		FCA82DBC2B56970500D3D647 /* ProgressBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA82DBB2B56970500D3D647 /* ProgressBarStyle.swift */; };
 		FCACF5472B48408F0035172E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5462B48408F0035172E /* ViewExtensions.swift */; };
 		FCACF5492B48422D0035172E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5482B48422D0035172E /* Header.swift */; };
 		FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54C2B49F4C80035172E /* DefaultsKey.swift */; };
@@ -108,7 +108,7 @@
 		FC4AB5322B46FA5900D67B5D /* GBooksApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBooksApiProtocol.swift; sourceTree = "<group>"; };
 		FC4AB5342B46FAAE00D67B5D /* LibrariesApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesApiProtocol.swift; sourceTree = "<group>"; };
 		FC4AB5362B46FB2D00D67B5D /* ReadersApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadersApiProtocol.swift; sourceTree = "<group>"; };
-		FCA82DBB2B56970500D3D647 /* BarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarProgressStyle.swift; sourceTree = "<group>"; };
+		FCA82DBB2B56970500D3D647 /* ProgressBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarStyle.swift; sourceTree = "<group>"; };
 		FCACF5462B48408F0035172E /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		FCACF5482B48422D0035172E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FCACF54C2B49F4C80035172E /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */,
-				FCA82DBB2B56970500D3D647 /* BarProgressStyle.swift */,
+				FCA82DBB2B56970500D3D647 /* ProgressBarStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 				FC4AB52E2B46F3D300D67B5D /* BooksApiProtocol.swift in Sources */,
 				FC4AB5282B46F20F00D67B5D /* BooksApiManager.swift in Sources */,
 				FC4AB52C2B46F29300D67B5D /* Api.swift in Sources */,
-				FCA82DBC2B56970500D3D647 /* BarProgressStyle.swift in Sources */,
+				FCA82DBC2B56970500D3D647 /* ProgressBarStyle.swift in Sources */,
 				CE8E037D2B5059BA003913FA /* StringExtensions.swift in Sources */,
 				FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */,
 				FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */,

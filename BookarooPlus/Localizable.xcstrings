@@ -7,6 +7,26 @@
     "%.2f%%" : {
 
     },
+    "40 %" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "40 %"
+          }
+        }
+      }
+    },
+    "Account Created: ???" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Účet vytvořen: ???"
+          }
+        }
+      }
+    },
     "Already registered? Log in" : {
       "localizations" : {
         "cs" : {
@@ -17,13 +37,19 @@
         }
       }
     },
-    "Bookaroo allows you to scan the ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your camera. It's pretty easy, when the camera opens, just scan the barcode from the cover of your book." : {
+    "barcode_scan_help_text" : {
       "extractionState" : "manual",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bookaroo Vám umožňuje skenovat ISBN pro vytvoření knihy ve Vaší knihovně. Teď si vyberte, zda chcete knihu vytvořit ručně, nebo s použitím fotoaparátu. Je to jednoduché, stačí po otevření fotoaparátu oskenovat čárový kód na přebalu knihy."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bookaroo allows you to scan the ISBN to create a book in your library. Now is the moment to choose if you want to create your book manually or using your camera. It's pretty easy, when the camera opens, just scan the barcode from the cover of your book."
           }
         }
       }
@@ -34,6 +60,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Knihy"
+          }
+        }
+      }
+    },
+    "Books read from all libraries" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přečteno ze všech knihoven"
+          }
+        }
+      }
+    },
+    "Books: 256" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knihy: 256"
           }
         }
       }
@@ -49,6 +95,7 @@
       }
     },
     "delete" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -58,7 +105,11 @@
         }
       }
     },
+    "Delete" : {
+
+    },
     "edit" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -67,6 +118,9 @@
           }
         }
       }
+    },
+    "Edit" : {
+
     },
     "Email" : {
       "localizations" : {
@@ -101,6 +155,23 @@
         }
       }
     },
+    "isbn_manual_selection_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomocí ISBN nebo ručně?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Using ISBN or manually?"
+          }
+        }
+      }
+    },
     "It appears your camera may not be available" : {
       "localizations" : {
         "cs" : {
@@ -130,6 +201,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Knihovny"
+          }
+        }
+      }
+    },
+    "Libraries: 3" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knihovny: 3"
           }
         }
       }
@@ -176,7 +257,18 @@
         }
       }
     },
+    "New book" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nová kniha"
+          }
+        }
+      }
+    },
     "NEW BOOK" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -234,6 +326,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호"
+          }
+        }
+      }
+    },
+    "Preferred language: Czech" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferovaný jazyk: Čeština"
           }
         }
       }
@@ -301,7 +403,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zvol si barvu"
+            "value" : "Zvolte si barvu"
           }
         }
       }
@@ -312,6 +414,27 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nějaký cool text"
+          }
+        }
+      }
+    },
+    "Testing User" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testovaci Uzivatel"
+          }
+        }
+      }
+    },
+    "That's pretty good!" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To je celkem slušné!"
           }
         }
       }
@@ -341,17 +464,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pomocí ISBN"
-          }
-        }
-      }
-    },
-    "Using ISBN or manually?" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pomocí ISBN nebo ručně?"
           }
         }
       }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct BarProgressStyle: ProgressViewStyle {
+struct ProgressBarStyle: ProgressViewStyle {
     
     var color: Color = .accentColor
     var height: Double = 10.0
