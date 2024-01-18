@@ -36,20 +36,22 @@ struct UserOptionsView: View {
                     
                     Text(defaults.string(forKey: DefaultsKey.login.rawValue)!)
                 }
+                Spacer()
             }
+            .padding(.all)
             
-            Spacer()
-                .frame(height: 20)
             Divider()
             Spacer()
                 .frame(height: 20)
             
-            VStack {
+            HStack {
                 if let libCount = libsViewModel.libraries?.count {
                     Text("Libraries: \(libCount)")
                 } else {
                     Text("Libraries: none")
                 }
+                Divider()
+                    .frame(height: 25)
                 Text(LocalizedStringKey("Books: \(booksViewModel.books?.count ?? 0)"))
                 
             }

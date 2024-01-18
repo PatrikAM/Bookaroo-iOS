@@ -548,7 +548,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uživatelské nastavení"
+            "value" : "Uživatel"
           }
         },
         "en" : {
@@ -563,7 +563,7 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Pomocí ISBN"
           }
         },
