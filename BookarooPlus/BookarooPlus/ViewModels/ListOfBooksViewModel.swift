@@ -18,6 +18,7 @@ class ListOfBooksViewModel: ObservableObject {
     @Published var filteredBooks: [Book]? = nil
     
     @Published var changes: Bool = false
+    @Published var relativeBookRead: Float? = nil
     
     
     func fetchBooks() {
@@ -29,6 +30,9 @@ class ListOfBooksViewModel: ObservableObject {
                     case .success(let data):
                         self.books = data
                         self.filteredBooks = self.books
+                        if let booksRead = self.books?.filter { book in book.read! }.count {
+                            self.relativeBookRead = Float(booksRead) / Float(self.books!.count)
+                        }
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):

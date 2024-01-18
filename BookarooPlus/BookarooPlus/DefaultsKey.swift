@@ -10,4 +10,5 @@ import Foundation
 enum DefaultsKey: String {
     case token = "token"
     case login = "login"
+    case name = "name"
 }

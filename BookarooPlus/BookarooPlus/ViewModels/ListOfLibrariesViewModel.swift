@@ -58,7 +58,6 @@ class ListOfLibrariesViewModel: ObservableObject {
             }
         }
     }
-
     
 }
 

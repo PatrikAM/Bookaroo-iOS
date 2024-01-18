@@ -12,6 +12,11 @@ struct UserOptionsView: View {
     @ObservedObject var authManager: AuthManager = .init()
     @Binding var isLoggedOut: Bool
     
+    private let defaults = UserDefaults.standard
+    
+    @ObservedObject var libsViewModel = ListOfLibrariesViewModel()
+    @ObservedObject var booksViewModel = ListOfBooksViewModel()
+    
     var body: some View {
         VStack {
             HStack {
@@ -19,11 +24,19 @@ struct UserOptionsView: View {
                     .resizable()
                     .frame(width: 80, height: 80)
                 VStack {
-                    Text("Testing User".capitalizeEachWord())
-                        .font(.headline)
+                    if let name = defaults.string(forKey: DefaultsKey.name.rawValue) {
+                        Text(name.capitalizeEachWord())
+                            .font(.headline)
+                    } else {
+                        Text("User".capitalizeEachWord())
+                            .font(.headline)
+                    }
                     
+                    // do not have this info
                     Text("Account Created: ???")
                         .font(.subheadline)
+                    
+                    Text(defaults.string(forKey: DefaultsKey.login.rawValue)!)
                 }
             }
             
@@ -34,9 +47,13 @@ struct UserOptionsView: View {
                 .frame(height: 20)
             
             VStack {
-                Text("Libraries: 3")
-                Text("Books: 256")
-                Text("Preferred language: Czech")
+                if let libCount = libsViewModel.libraries?.count {
+                    Text("Libraries: \(libCount)")
+                } else {
+                    Text("Libraries: NaN")
+                }
+                Text("Books: \(booksViewModel.books?.count ?? 0)")
+//                Text("Preferred language: Czech")
             }
             
             
@@ -46,12 +63,14 @@ struct UserOptionsView: View {
             Spacer()
                 .frame(height: 20)
             
-            VStack {
-                Text("Books read from all libraries")
-                ProgressView(value: 0.4, label: { Text("That's pretty good!") }, currentValueLabel: { Text("40 %") })
-                    .progressViewStyle(ProgressBarStyle(height: 30.0))
+            if let relativeBookRead = booksViewModel.relativeBookRead {
+                VStack {
+                    Text("Books read from all libraries")
+                    ProgressView(value: relativeBookRead, label: { Text("That's pretty good!") }, currentValueLabel: { Text("\(relativeBookRead, specifier: "%.2f") %") })
+                        .progressViewStyle(ProgressBarStyle(height: 30.0))
+                }
+                .padding(.all)
             }
-            .padding(.all)
             
             
             
@@ -63,6 +82,10 @@ struct UserOptionsView: View {
                 Text("Log out")
             })
             .buttonStyle(.borderedProminent)
+        }
+        .onAppear{
+            libsViewModel.fetchLibraries()
+            booksViewModel.fetchBooks()
         }
         
     }

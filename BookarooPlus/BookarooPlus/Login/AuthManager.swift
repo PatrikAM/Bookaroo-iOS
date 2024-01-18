@@ -47,8 +47,9 @@ class AuthManager: ObservableObject {
                     switch(result) {
                     case .success(let data):
                         self.data = data
-                        self.defaults.set(self.email.lowercased(), forKey: "login")
                         self.defaults.set(data.id!, forKey: DefaultsKey.token.rawValue)
+                        self.defaults.set(data.login!.lowercased(), forKey: DefaultsKey.login.rawValue)
+                        self.defaults.set(data.name!.lowercased(), forKey: DefaultsKey.name.rawValue)
                         self.defaults.synchronize()
                         self.didLoginSucceed = true
                     case .failure(let error):
@@ -115,8 +116,9 @@ class AuthManager: ObservableObject {
                     case .success(let data):
                         print(data)
                         self.data = data
-                        self.defaults.set(self.email.lowercased(), forKey: "login")
                         self.defaults.set(data.id!, forKey: DefaultsKey.token.rawValue)
+                        self.defaults.set(data.login!.lowercased(), forKey: DefaultsKey.login.rawValue)
+                        self.defaults.set(data.name!.lowercased(), forKey: DefaultsKey.name.rawValue)
                         self.defaults.synchronize()
                         self.didLoginSucceed = true
                         self.isLoading = false
