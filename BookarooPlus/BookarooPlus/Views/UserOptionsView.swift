@@ -18,7 +18,7 @@ struct UserOptionsView: View {
     @ObservedObject var booksViewModel = ListOfBooksViewModel()
     
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
             if (booksViewModel.isLoading || libsViewModel.isLoading) {
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -72,15 +72,17 @@ struct UserOptionsView: View {
                         VStack {
                             Text("Books read from all libraries:")
                                 .font(.headline)
+                            Spacer()
+                                .frame(height: 20)
                             ProgressView(value: relativeBookRead, label: { Text("That's pretty good!") }, currentValueLabel: { Text("\(relativeBookRead, specifier: "%.2f") %") })
                                 .progressViewStyle(ProgressBarStyle(height: 30.0))
+                                .frame(height: 60)
                         }
                         .padding(.all)
                     }
                     
                     Spacer()
-                        .frame(height: 100)
-                    
+                        .frame(height: 80)
                     
                     Button(action: {
                         authManager.logout()
@@ -90,6 +92,8 @@ struct UserOptionsView: View {
                         Text("Log out")
                     })
                     .buttonStyle(.borderedProminent)
+                    
+                    Spacer()
                 }
             }
         }
