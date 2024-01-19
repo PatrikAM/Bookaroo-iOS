@@ -50,6 +50,16 @@
         }
       }
     },
+    "An unknown error has occurred." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Došlo k neznámé chybě."
+          }
+        }
+      }
+    },
     "barcode_scan_help_text" : {
       "extractionState" : "manual",
       "localizations" : {

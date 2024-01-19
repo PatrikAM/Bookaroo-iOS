@@ -22,7 +22,27 @@ struct UserOptionsView: View {
             if (booksViewModel.isLoading || libsViewModel.isLoading) {
                 ProgressView()
                     .progressViewStyle(.circular)
-            } else {
+            } else if(booksViewModel.errorMessage != nil || libsViewModel.errorMessage != nil) {
+                VStack {
+                    // TODO: view localized alternative texts based on error message response
+                    if (booksViewModel.errorMessage != nil) {
+                        Text(booksViewModel.errorMessage!)
+                    } else if (libsViewModel.errorMessage != nil) {
+                        Text(libsViewModel.errorMessage!)
+                    } else {
+                        Text("An unknown error has occurred.")
+                    }
+                    
+                    Spacer()
+                        .frame(height: 30)
+                    
+                    Image(AssetsConstants.errorIcon.rawValue)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 270)
+                }
+            }
+            else {
                 VStack {
                     HStack {
                         Image(systemName: "person.circle")
