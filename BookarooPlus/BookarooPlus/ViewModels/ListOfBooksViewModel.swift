@@ -33,6 +33,7 @@ class ListOfBooksViewModel: ObservableObject {
                         if let booksRead = self.books?.filter { book in book.read! }.count {
                             self.relativeBookRead = Float(booksRead) / Float(self.books!.count)
                         }
+                        self.isLoading = false
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
