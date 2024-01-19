@@ -74,9 +74,25 @@ struct UserOptionsView: View {
                                 .font(.headline)
                             Spacer()
                                 .frame(height: 20)
-                            ProgressView(value: relativeBookRead, label: { Text("That's pretty good!") }, currentValueLabel: { Text("\(relativeBookRead, specifier: "%.2f") %") })
-                                .progressViewStyle(ProgressBarStyle(height: 30.0))
-                                .frame(height: 60)
+                            ProgressView(value: relativeBookRead,
+                                         label:
+                                            {
+                                if (relativeBookRead < 0.3) {
+                                    Text("You should probably read a little more.")
+                                } else if (0.3 <= relativeBookRead && relativeBookRead < 0.6) {
+                                    Text("You're doing great. You could do greater, though.")
+                                } else if (0.6 <= relativeBookRead && relativeBookRead < 0.9) {
+                                    Text("That's pretty good!")
+                                } else if (0.9 <= relativeBookRead && relativeBookRead < 1.0) {
+                                    Text("Almost there!")
+                                } else {
+                                    Text("You read me like a book.")
+                                }
+                                
+                            },
+                                         currentValueLabel: { Text("\(relativeBookRead, specifier: "%.2f") %") })
+                            .progressViewStyle(ProgressBarStyle(height: 30.0))
+                            .frame(height: 60)
                         }
                         .padding(.all)
                     }

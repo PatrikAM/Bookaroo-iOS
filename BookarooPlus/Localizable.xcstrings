@@ -24,6 +24,16 @@
         }
       }
     },
+    "Almost there!" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skoro doma!"
+          }
+        }
+      }
+    },
     "Already registered? Log in" : {
       "localizations" : {
         "cs" : {
@@ -196,7 +206,7 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Zdá se, že Váš fotoaparát je nedostupný."
           }
         },
@@ -571,6 +581,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Using ISBN?"
+          }
+        }
+      }
+    },
+    "You read me like a book." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tvé dny jsou sečteny."
+          }
+        }
+      }
+    },
+    "You should probably read a little more." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Možná by to chtělo zabrat."
+          }
+        }
+      }
+    },
+    "You're doing great. You could do greater, though." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jde to skvěle - ale šlo by to skvěleji."
           }
         }
       }
