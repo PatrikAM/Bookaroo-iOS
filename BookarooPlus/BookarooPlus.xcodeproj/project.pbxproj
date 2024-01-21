@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE4BBA502B49D1AC00482691 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BBA4F2B49D1AC00482691 /* Colors.swift */; };
+		CE8BCE782B5D6126008A4606 /* AddLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCE772B5D6126008A4606 /* AddLibraryView.swift */; };
 		CE8E037B2B50539F003913FA /* UserOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E037A2B50539F003913FA /* UserOptionsView.swift */; };
 		CE8E037D2B5059BA003913FA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E037C2B5059BA003913FA /* StringExtensions.swift */; };
 		CE8E037F2B505D23003913FA /* BookListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E037E2B505D23003913FA /* BookListCard.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		CE4BBA4F2B49D1AC00482691 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE8BCE772B5D6126008A4606 /* AddLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLibraryView.swift; sourceTree = "<group>"; };
 		CE8E037A2B50539F003913FA /* UserOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptionsView.swift; sourceTree = "<group>"; };
 		CE8E037C2B5059BA003913FA /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		CE8E037E2B505D23003913FA /* BookListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCard.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				FCF214342B4C01770048F17D /* ListOfLibrariesView.swift */,
 				FCF214362B4C01C30048F17D /* ListOfReadersView.swift */,
 				CE8E037A2B50539F003913FA /* UserOptionsView.swift */,
+				CE8BCE772B5D6126008A4606 /* AddLibraryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				FC1660562B47FD19002F1BF7 /* VideoCaptureView.swift in Sources */,
 				FC4AB52A2B46F23000D67B5D /* CommunicationError.swift in Sources */,
 				CEADE2122B4B052200A912B9 /* ElegantTextFieldStyle.swift in Sources */,
+				CE8BCE782B5D6126008A4606 /* AddLibraryView.swift in Sources */,
 				FC16604B2B471069002F1BF7 /* BaseUrls.swift in Sources */,
 				FC4AB5192B46E81A00D67B5D /* BookAddEditView.swift in Sources */,
 				FC4AB5172B46E7F100D67B5D /* BookDetailView.swift in Sources */,

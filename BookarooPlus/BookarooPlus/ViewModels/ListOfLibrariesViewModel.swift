@@ -59,5 +59,10 @@ class ListOfLibrariesViewModel: ObservableObject {
         }
     }
     
+    // do NOT delete underscore, this makes the function a callback
+    func addLibrary(_ libraryName: String) {
+        // TODO: fill in functionality for adding a library
+    }
+    
 }
 

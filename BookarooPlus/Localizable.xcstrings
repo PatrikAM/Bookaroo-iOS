@@ -24,12 +24,50 @@
         }
       }
     },
+    "Add new library" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat novou knihovnu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add new library"
+          }
+        }
+      }
+    },
+    "Add to libraries" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat do knihoven"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to libraries"
+          }
+        }
+      }
+    },
     "Almost there!" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skoro doma!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almost there!"
           }
         }
       }
@@ -44,7 +82,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Already registered? Log in"
           }
         }
@@ -56,6 +94,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Došlo k neznámé chybě."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unknown error has occurred."
           }
         }
       }
@@ -195,6 +239,39 @@
         }
       }
     },
+    "Enter new library name" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadej jméno nové knihovny"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter new library name"
+          }
+        }
+      }
+    },
+    "Hint: Use the plus button to add a new library" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nápověda: Tlačítkem plus přidej novou knihovnu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hint: Use the plus button to add a new library"
+          }
+        }
+      }
+    },
     "isbn_manual_selection_text" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -217,7 +294,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zdá se, že Váš fotoaparát je nedostupný."
+            "value" : "Zdá se, že Tvůj fotoaparát je nedostupný."
           }
         },
         "en" : {
@@ -233,7 +310,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zdá se, že Vaše zařízení nepodporuje skenování ISBN."
+            "value" : "Zdá se, že Tvé zařízení nepodporuje skenování ISBN."
           }
         },
         "en" : {
@@ -249,7 +326,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pokračujte ve čtení!"
+            "value" : "Pokračuj ve čtení!"
           }
         },
         "en" : {
@@ -523,7 +600,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zvolte si barvu"
+            "value" : "Zvol si barvu"
           }
         },
         "en" : {
@@ -602,6 +679,12 @@
             "state" : "translated",
             "value" : "Tvé dny jsou sečteny."
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You read me like a book."
+          }
         }
       }
     },
@@ -612,6 +695,12 @@
             "state" : "translated",
             "value" : "Možná by to chtělo zabrat."
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You should probably read a little more."
+          }
         }
       }
     },
@@ -621,6 +710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jde to skvěle - ale šlo by to skvěleji."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You're doing great. You could do greater, though."
           }
         }
       }
