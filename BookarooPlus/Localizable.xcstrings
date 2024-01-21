@@ -4,6 +4,38 @@
     "" : {
 
     },
+    " - " : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        }
+      }
+    },
+    " ratio" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " (poměr)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " ratio"
+          }
+        }
+      }
+    },
     "%.2f %%" : {
       "localizations" : {
         "cs" : {
@@ -153,6 +185,22 @@
         }
       }
     },
+    "Books read from this library:" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přečteno z této knihovny:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Books read from this library:"
+          }
+        }
+      }
+    },
     "Books: %lld" : {
       "localizations" : {
         "cs" : {
@@ -256,6 +304,22 @@
         }
       }
     },
+    "Favorites" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oblíbené"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorites"
+          }
+        }
+      }
+    },
     "Hint: Use the plus button to add a new library" : {
       "localizations" : {
         "cs" : {
@@ -322,6 +386,7 @@
       }
     },
     "Keep reading!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -640,6 +705,22 @@
     "TODO: info o knize" : {
 
     },
+    "total" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "celkem"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "total"
+          }
+        }
+      }
+    },
     "User Settings" : {
       "localizations" : {
         "cs" : {
@@ -651,7 +732,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "User Settings"
+            "value" : "User"
           }
         }
       }

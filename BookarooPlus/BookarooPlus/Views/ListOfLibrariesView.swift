@@ -31,7 +31,20 @@ struct ListOfLibrariesView: View {
                                     .font(.largeTitle)
                                     .bold()
                                 var l = [Library(id: "fv", favourite: lib.favourite!), Library(id: "total", favourite: lib.total! - lib.favourite!)]
-                                VStack {
+                                HStack {
+                                    Text("Favorites")
+                                        .foregroundStyle(Color.blue)
+                                        .font(.callout)
+                                    + Text(" - ")
+                                        .font(.callout)
+                                    + Text("total")
+                                        .font(.callout)
+                                        .foregroundStyle(Color.red)
+                                    + Text(" ratio")
+                                        .font(.callout)
+                          
+                                    Spacer()
+                                    
                                     Chart (l) { sector in
                                         SectorMark(
                                             angle: .value(Text(verbatim:"Value"), sector.favourite!),
@@ -43,14 +56,14 @@ struct ListOfLibrariesView: View {
                                         .foregroundStyle(sector.id == "fv" ? Color.blue : Color.red)
                                     }
                                 }
-                                .frame(maxWidth:100)
+                                .padding(.all)
                             }
                             
                             Spacer()
                                 .frame(height: 30)
                             
                             ProgressView(value: Float(lib.read!) / Float(lib.total!),
-                                         label: { Text("Keep reading!") },
+                                         label: { Text("Books read from this library:") },
                                          currentValueLabel: { Text("\(Float(lib.read!) / Float(lib.total!) *   100, specifier: "%.2f")%") })
                             .progressViewStyle(ProgressBarStyle(height: 50))
                             .frame(height: 60)
