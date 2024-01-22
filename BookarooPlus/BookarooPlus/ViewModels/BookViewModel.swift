@@ -149,7 +149,6 @@ class BookViewModel: ObservableObject {
                     await MainActor.run {
                         switch(result) {
                         case .success(let data):
-                            print(data)
 //                            self.book = data
                             self.isLoading = false
                         case .failure(let error):
