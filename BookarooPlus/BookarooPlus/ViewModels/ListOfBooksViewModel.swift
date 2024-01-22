@@ -122,11 +122,14 @@ class ListOfBooksViewModel: ObservableObject {
                     switch(result) {
                     case .success(let data):
                         self.books?.indices.forEach { index in
-                            if (self.filteredBooks![index].id == book.id) {
-                                self.filteredBooks![index] = data
-                            }
+
                             if (self.books![index].id == book.id) {
                                 self.books![index] = data
+                            }
+                        }
+                        self.filteredBooks?.indices.forEach { index in
+                            if (self.filteredBooks![index].id == book.id) {
+                                self.filteredBooks![index] = data
                             }
                         }
                     case .failure:
