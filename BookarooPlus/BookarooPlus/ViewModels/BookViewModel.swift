@@ -78,7 +78,7 @@ class BookViewModel: ObservableObject {
                             self.errorMessage = APIErrorsConstants.unknownError.rawValue
                         }
                     case .none:
-                        self.errorMessage = "unknonw error"
+                        self.errorMessage = APIErrorsConstants.unknownError.rawValue
                     }
                     self.showError = self.errorMessage != nil
                     self.isLoading = false

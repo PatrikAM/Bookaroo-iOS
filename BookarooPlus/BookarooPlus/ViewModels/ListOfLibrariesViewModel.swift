@@ -92,7 +92,7 @@ class ListOfLibrariesViewModel: ObservableObject {
                         self.isLoading = false
                         return
                     case .none:
-                        self.errorMessage = "unknonw error"
+                        self.errorMessage = APIErrorsConstants.unknownError.rawValue
                         print("total failure")
                         self.isLoading = false
                         return
