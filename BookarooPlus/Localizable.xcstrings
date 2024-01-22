@@ -12,6 +12,12 @@
             "value" : " - "
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26,6 +32,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : " (poměr)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anteil"
           }
         },
         "en" : {
@@ -43,12 +55,24 @@
             "state" : "translated",
             "value" : "%.2f %%"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.2f %%"
+          }
         }
       }
     },
     "%.2f%%" : {
       "localizations" : {
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.2f%%"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%.2f%%"
@@ -62,6 +86,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat novou knihovnu"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neue Bibliothek hinzufügen"
           }
         },
         "en" : {
@@ -80,6 +110,12 @@
             "value" : "Přidat do knihoven"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zu Bibliotheken hinzufügen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -94,6 +130,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skoro doma!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fast am Ziel!"
           }
         },
         "en" : {
@@ -112,6 +154,12 @@
             "value" : "Už máš účet? Přihlaš se"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bereits registriert? Anmelden"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -126,6 +174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Došlo k neznámé chybě."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist ein unbekannter Fehler aufgetreten."
           }
         },
         "en" : {
@@ -145,6 +199,12 @@
             "value" : "Bookaroo Vám umožňuje skenovat ISBN pro vytvoření knihy ve Vaší knihovně. Teď si vyberte, zda chcete knihu vytvořit ručně, nebo s použitím fotoaparátu. Je to jednoduché, stačí po otevření fotoaparátu oskenovat čárový kód na přebalu knihy."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bookaroo ermöglicht es Ihnen, die ISBN zu scannen, um ein Buch in Ihrer Bibliothek zu erstellen. Jetzt können Sie wählen, ob Sie Ihr Buch manuell oder mit Ihrer Kamera erstellen möchten. Das ist ganz einfach: Wenn sich die Kamera öffnet, scannen Sie einfach den Barcode auf dem Cover Ihres Buches."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -154,7 +214,14 @@
       }
     },
     "Book recommendation for today" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buchtipp für heute"
+          }
+        }
+      }
     },
     "Books" : {
       "localizations" : {
@@ -162,6 +229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Knihy"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buchen"
           }
         },
         "en" : {
@@ -180,6 +253,12 @@
             "value" : "Přečteno ze všech knihoven:"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelesene Bücher aus allen Bibliotheken:"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -194,6 +273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přečteno z této knihovny:"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelesene Bücher aus dieser Bibliothek:"
           }
         },
         "en" : {
@@ -212,6 +297,12 @@
             "value" : "Knihy: %d"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buchen %d"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -226,6 +317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrušit"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
           }
         },
         "en" : {
@@ -244,6 +341,12 @@
             "value" : "Smazat"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -260,6 +363,12 @@
             "value" : "Upravit"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -274,6 +383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "E-mail"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
           }
         },
         "en" : {
@@ -299,6 +414,12 @@
             "value" : "Zadej jméno nové knihovny"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neuen Bibliotheksnamen eingeben"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -315,6 +436,12 @@
             "value" : "Oblíbené"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoriten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -329,6 +456,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nápověda: Tlačítkem plus přidej novou knihovnu"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipp: Verwenden Sie die Plustaste, um eine neue Bibliothek hinzuzufügen"
           }
         },
         "en" : {
@@ -348,6 +481,12 @@
             "value" : "Pomocí ISBN nebo ručně?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit ISBN oder manuell?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -364,6 +503,12 @@
             "value" : "Zdá se, že Tvůj fotoaparát je nedostupný."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihre Kamera scheint nicht verfügbar zu sein."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -378,6 +523,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdá se, že Tvé zařízení nepodporuje skenování ISBN."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Gerät scheint das ISBN-Scannen nicht zu unterstützen."
           }
         },
         "en" : {
@@ -397,6 +548,12 @@
             "value" : "Pokračuj ve čtení!"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesen Sie weiter!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -411,6 +568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Knihovny"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliotheken"
           }
         },
         "en" : {
@@ -429,6 +592,12 @@
             "value" : "Knihovny: %lld"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliotheken %lld"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -445,6 +614,12 @@
             "value" : "Knihovny: žádné"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliotheken: keine"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -459,6 +634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přihlásit"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anmelden"
           }
         },
         "en" : {
@@ -483,6 +664,12 @@
             "value" : "Odhlásit"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abmelden"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -497,6 +684,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ručně"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manuell"
           }
         },
         "en" : {
@@ -515,6 +708,12 @@
             "value" : "Nová kniha"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neues Buch"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -529,6 +728,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uživatelské jméno"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spitzname"
           }
         },
         "en" : {
@@ -547,6 +752,12 @@
             "value" : "Nemáš účet? Registruj se"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein Konto? Hier registrieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -563,6 +774,12 @@
             "value" : "Počet stran: %lld"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seiten %lld"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -577,6 +794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heslo"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passwort"
           }
         },
         "en" : {
@@ -601,6 +824,12 @@
             "value" : "Čtenáři"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leserinnen und Leser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -610,7 +839,14 @@
       }
     },
     "Recommend me a book" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlen Sie mir ein Buch"
+          }
+        }
+      }
     },
     "Register" : {
       "localizations" : {
@@ -618,6 +854,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registrovat"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abmelden"
           }
         },
         "en" : {
@@ -636,6 +878,12 @@
             "value" : "Uložit"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -650,6 +898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skenovat čárový kód"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barcode hier scannen"
           }
         },
         "en" : {
@@ -674,6 +928,12 @@
             "value" : "Zvol si barvu"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie eine Farbe aus"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -689,6 +949,12 @@
             "state" : "translated",
             "value" : "Nějaký cool text"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein toller Text"
+          }
         }
       }
     },
@@ -700,6 +966,12 @@
             "value" : "To je celkem slušné!"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ist ziemlich gut!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -709,7 +981,14 @@
       }
     },
     "TODO: info o knize" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TODO: Informationen über das Buch"
+          }
+        }
+      }
     },
     "total" : {
       "localizations" : {
@@ -717,6 +996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "celkem"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gesamt"
           }
         },
         "en" : {
@@ -735,6 +1020,12 @@
             "value" : "Uživatel"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -749,6 +1040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pomocí ISBN"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit ISBN?"
           }
         },
         "en" : {
@@ -767,6 +1064,12 @@
             "value" : "Tvé dny jsou sečteny."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du liest mich wie ein Buch."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -783,6 +1086,12 @@
             "value" : "Možná by to chtělo zabrat."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie sollten vielleicht ein wenig mehr lesen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -797,6 +1106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jde to skvěle - ale šlo by to skvěleji."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie machen das großartig. Sie könnten aber noch mehr tun."
           }
         },
         "en" : {
