@@ -82,7 +82,7 @@ class BooksApiManager : BookarooApi, BooksApiProtocol {
         //                params += "&\(key)=\(String(describing: value))"
         //            }
         //        })
-        print("\(baseUrl)\(endpoint)?\(params)")
+        print("\(baseUrl)\(endpoint)\(params)")
         return await super.callApi(fromURL: "\(baseUrl)\(endpoint)\(params)", header: .post)
     }
     

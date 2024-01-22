@@ -121,7 +121,7 @@ struct UserOptionsView: View {
                                 }
                                 
                             },
-                                         currentValueLabel: { Text("\(relativeBookRead, specifier: "%.2f") %") })
+                                         currentValueLabel: { Text("\(relativeBookRead*100, specifier: "%.2f") %") })
                             .progressViewStyle(ProgressBarStyle(height: 30.0))
                             .frame(height: 60)
                         }
@@ -139,7 +139,7 @@ struct UserOptionsView: View {
                             bookDict[book.title!] = book.favourite ?? false ? 1.0 : 0.0
                         }
 
-                        var recommenderOutput = try? model.prediction(
+                        let recommenderOutput = try? model.prediction(
                             input: BooksRecommenderInput(items: bookDict, k: 10, restrict_: [], exclude: [])
                         )
                         
@@ -150,7 +150,7 @@ struct UserOptionsView: View {
                             
                             for str in recommenderOutput!.recommendations{
                                 let score = recommenderOutput?.scores[str] ?? 0
-                                var filtered = booksViewModel.books?.filter { book in
+                                let filtered = booksViewModel.books?.filter { book in
                                     book.title == str && score != 0 && !book.read!
                                 }
                                 if filtered != nil && !filtered!.isEmpty {
