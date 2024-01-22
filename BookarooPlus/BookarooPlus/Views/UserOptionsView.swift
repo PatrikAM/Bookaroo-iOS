@@ -31,25 +31,10 @@ struct UserOptionsView: View {
             if (booksViewModel.isLoading || libsViewModel.isLoading) {
                 ProgressView()
                     .progressViewStyle(.circular)
-            } else if(booksViewModel.errorMessage != nil || libsViewModel.errorMessage != nil) {
-                VStack {
-                    // TODO: view localized alternative texts based on error message response
-                    if (booksViewModel.errorMessage != nil) {
-                        Text(booksViewModel.errorMessage!)
-                    } else if (libsViewModel.errorMessage != nil) {
-                        Text(libsViewModel.errorMessage!)
-                    } else {
-                        Text("An unknown error has occurred.")
-                    }
-                    
-                    Spacer()
-                        .frame(height: 30)
-                    
-                    Image(AssetsConstants.accessDeniedIcon.rawValue)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 270)
-                }
+            } else if (libsViewModel.errorMessage != nil) {
+                ErrorView(onRetryButtonClick: libsViewModel.fetchLibraries, errorMessageIdentifier: libsViewModel.errorMessage!)
+            } else if(booksViewModel.errorMessage != nil) {
+                ErrorView(onRetryButtonClick: booksViewModel.fetchBooks, errorMessageIdentifier: booksViewModel.errorMessage!)
             }
             else {
                 VStack {
@@ -132,13 +117,13 @@ struct UserOptionsView: View {
                         .frame(height: 80)
                     
                     Button(action: {
-
+                        
                         var bookDict = Dictionary<String, Double>()
                         
                         booksViewModel.books?.forEach { book in
                             bookDict[book.title!] = book.favourite ?? false ? 1.0 : 0.0
                         }
-
+                        
                         let recommenderOutput = try? model.prediction(
                             input: BooksRecommenderInput(items: bookDict, k: 10, restrict_: [], exclude: [])
                         )
@@ -164,11 +149,11 @@ struct UserOptionsView: View {
                             self.recommendedBook = booksViewModel.books?.first { book in
                                 book.title == list.first
                             }
-
+                            
                             self.recommendedBookName = list.first
                             self.showRecommendation.toggle()
                         }
-
+                        
                     }, label: {
                         Text("Recommend me a book")
                     })

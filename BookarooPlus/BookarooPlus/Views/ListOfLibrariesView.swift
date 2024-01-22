@@ -23,7 +23,8 @@ struct ListOfLibrariesView: View {
                     if (viewModel.isLoading) {
                         ProgressView()
                             .progressViewStyle(.circular)
-                        // TODO: separate localized views for error handling from viewmodel error message
+                    } else if (viewModel.errorMessage != nil) {
+                        ErrorView(onRetryButtonClick: viewModel.fetchLibraries, errorMessageIdentifier: viewModel.errorMessage!)
                     } else {
                         ForEach(viewModel.libraries!) { lib in
                             VStack {
