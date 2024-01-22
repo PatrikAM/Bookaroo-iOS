@@ -169,6 +169,7 @@
       }
     },
     "An unknown error has occurred." : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
