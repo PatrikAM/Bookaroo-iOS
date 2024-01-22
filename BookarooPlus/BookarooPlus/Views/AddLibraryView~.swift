@@ -43,3 +43,7 @@ struct AddLibraryView: View {
         .padding(.all)
     }
 }
+
+#Preview {
+    AddLibraryView()
+}

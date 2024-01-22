@@ -9,5 +9,10 @@ import Foundation
 
 enum AssetsConstants: String {
     case logotyp = "BookarooLogo"
-    case errorIcon = "AccessDeniedIcon"
+    case accessDeniedIcon = "AccessDeniedIcon"
+    case fixingBugsIcon = "FixingBugsIcon"
+    case pageNotFoundIcon = "PageNotFoundIcon"
+    case serverDownIcon = "ServerDownIcon"
+    case fingerprintLoginIcon = "FingerprintLoginIcon"
+    case bugHuntIcon = "BugHuntIcon"
 }

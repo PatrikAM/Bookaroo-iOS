@@ -45,7 +45,7 @@ struct UserOptionsView: View {
                     Spacer()
                         .frame(height: 30)
                     
-                    Image(AssetsConstants.errorIcon.rawValue)
+                    Image(AssetsConstants.accessDeniedIcon.rawValue)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 270)

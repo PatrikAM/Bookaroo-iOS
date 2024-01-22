@@ -482,6 +482,9 @@
         }
       }
     },
+    "Incorrect login credentials. Please tap the retry button. If it doesn't work, try logging out and back in." : {
+
+    },
     "isbn_manual_selection_text" : {
       "extractionState" : "manual",
       "localizations" : {
