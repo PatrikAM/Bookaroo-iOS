@@ -69,6 +69,7 @@ class ListOfLibrariesViewModel: ObservableObject {
                     switch(result) {
                     case .success(let data):
                         var defaultedData = data
+                        self.libraries?.append(data)
 //                        defaultedData.indices.forEach { defaultedData[$0].isSelected = false }
 //                        self.libraries = defaultedData
 //                        print(self.libraries)
