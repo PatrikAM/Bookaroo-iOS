@@ -26,17 +26,17 @@ class ListOfReadersViewModel: ObservableObject {
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
-                            self.errorMessage = "Email or password incorrect"
+                            self.errorMessage = APIErrorsConstants.loginFailed.rawValue
                         case .badUrl:
-                            self.errorMessage = "No internet connection"
+                            self.errorMessage = APIErrorsConstants.badUrl.rawValue
                         case .invalidRequest:
-                            self.errorMessage = "Something Failed"
+                            self.errorMessage = APIErrorsConstants.invalidRequest.rawValue
                         case .badStatus:
-                            self.errorMessage = "Email or password incorrect"
+                            self.errorMessage = APIErrorsConstants.badStatusCode.rawValue
                         case .failedToDecodeResponse:
-                            self.errorMessage = "Server answered unexpectedly"
+                            self.errorMessage = APIErrorsConstants.failedToDecodeResponse.rawValue
                         case .unknownError:
-                            self.errorMessage = "No internet connection"
+                            self.errorMessage = APIErrorsConstants.unknownError.rawValue
                         }
                         self.isLoading = false
                         return

@@ -77,17 +77,17 @@ class ListOfLibrariesViewModel: ObservableObject {
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
-                            self.errorMessage = "Failed to log in"
+                            self.errorMessage = APIErrorsConstants.loginFailed.rawValue
                         case .badUrl:
-                            self.errorMessage = "Failed to access the server"
+                            self.errorMessage = APIErrorsConstants.badUrl.rawValue
                         case .invalidRequest:
-                            self.errorMessage = "Failed"
+                            self.errorMessage = APIErrorsConstants.invalidRequest.rawValue
                         case .badStatus:
-                            self.errorMessage = "Bad credentials"
+                            self.errorMessage = APIErrorsConstants.badStatusCode.rawValue
                         case .failedToDecodeResponse:
-                            self.errorMessage = "Failed to decode"
+                            self.errorMessage = APIErrorsConstants.failedToDecodeResponse.rawValue
                         case .unknownError:
-                            self.errorMessage = "unknown error"
+                            self.errorMessage = APIErrorsConstants.unknownError.rawValue
                         }
                         self.isLoading = false
                         return

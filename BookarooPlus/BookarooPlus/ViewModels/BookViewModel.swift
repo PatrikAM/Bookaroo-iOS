@@ -65,17 +65,17 @@ class BookViewModel: ObservableObject {
                     case .failure(let error):
                         switch(error) {
                         case(.badResponse):
-                            self.errorMessage = "Failed to fetch"
+                            self.errorMessage = APIErrorsConstants.loginFailed.rawValue
                         case .badUrl:
-                            self.errorMessage = "Failed to access the server"
+                            self.errorMessage = APIErrorsConstants.badUrl.rawValue
                         case .invalidRequest:
-                            self.errorMessage = "Failed to fetch"
+                            self.errorMessage = APIErrorsConstants.invalidRequest.rawValue
                         case .badStatus:
-                            self.errorMessage = "Failed to fetch"
+                            self.errorMessage = APIErrorsConstants.badStatusCode.rawValue
                         case .failedToDecodeResponse:
-                            self.errorMessage = "Failed to decode"
+                            self.errorMessage = APIErrorsConstants.failedToDecodeResponse.rawValue
                         case .unknownError:
-                            self.errorMessage = "unknown error"
+                            self.errorMessage = APIErrorsConstants.unknownError.rawValue
                         }
                     case .none:
                         self.errorMessage = "unknonw error"
