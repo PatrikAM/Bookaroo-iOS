@@ -19,6 +19,7 @@
 		CED43F4E2B5EDDED00BEF05B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED43F4D2B5EDDED00BEF05B /* ErrorView.swift */; };
 		CEF07B342B5EAE1300B9C295 /* ReaderContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07B332B5EAE1200B9C295 /* ReaderContactCard.swift */; };
 		CEF07B362B5EB7F700B9C295 /* APIErrorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07B352B5EB7F700B9C295 /* APIErrorsConstants.swift */; };
+		FC02EF6C2B5F03F40086F909 /* BookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02EF6B2B5F03F40086F909 /* BookCard.swift */; };
 		FC0A0ECF2B584713004D6F93 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A0ECE2B584713004D6F93 /* BindingExtensions.swift */; };
 		FC0A0ED12B5847AE004D6F93 /* BookarooTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A0ED02B5847AE004D6F93 /* BookarooTextfield.swift */; };
 		FC0A0ED32B587235004D6F93 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A0ED22B587235004D6F93 /* ViewExtension.swift */; };
@@ -85,6 +86,7 @@
 		CED43F4D2B5EDDED00BEF05B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		CEF07B332B5EAE1200B9C295 /* ReaderContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderContactCard.swift; sourceTree = "<group>"; };
 		CEF07B352B5EB7F700B9C295 /* APIErrorsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorsConstants.swift; sourceTree = "<group>"; };
+		FC02EF6B2B5F03F40086F909 /* BookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCard.swift; sourceTree = "<group>"; };
 		FC0A0ECE2B584713004D6F93 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		FC0A0ED02B5847AE004D6F93 /* BookarooTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooTextfield.swift; sourceTree = "<group>"; };
 		FC0A0ED22B587235004D6F93 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				CE8E037E2B505D23003913FA /* BookListCard.swift */,
 				FC0A0ED02B5847AE004D6F93 /* BookarooTextfield.swift */,
 				CEF07B332B5EAE1200B9C295 /* ReaderContactCard.swift */,
+				FC02EF6B2B5F03F40086F909 /* BookCard.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				FCC91AC52B4F0D14006554F9 /* UIImageExtension.swift in Sources */,
 				FC0A0ED52B5878EF004D6F93 /* BarcodeScannerRepresentable.swift in Sources */,
 				FC4AB50F2B46E4DE00D67B5D /* GBook.swift in Sources */,
+				FC02EF6C2B5F03F40086F909 /* BookCard.swift in Sources */,
 				FC4AB5302B46F42600D67B5D /* CommunicationResult.swift in Sources */,
 				FC4AB5372B46FB2D00D67B5D /* ReadersApiProtocol.swift in Sources */,
 				CEADE2102B4AF84E00A912B9 /* BaseView.swift in Sources */,

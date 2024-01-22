@@ -80,6 +80,12 @@
         }
       }
     },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
     "Add new library" : {
       "localizations" : {
         "cs" : {
@@ -191,6 +197,22 @@
         }
       }
     },
+    "Author" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autor"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autor"
+          }
+        }
+      }
+    },
     "barcode_scan_help_text" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -216,6 +238,12 @@
     },
     "Book recommendation for today" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnešní návrh"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -342,6 +370,18 @@
     },
     "Could not reach the server. Please tap the retry button or relaunch the app." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze se spojit se serverem. Klepněte na tlačítko opakovat pokus nebo aplikaci znovu spusťte."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Server konnte nicht erreicht werden. Bitte tippen Sie auf die Schaltfläche \"Erneut versuchen\" oder starten Sie die App neu."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -424,6 +464,18 @@
     },
     "Encountered an issue logging in. Please launch the app again and log in if it's required." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyskytl se problém při přihlašování. Spusťte prosím aplikaci znovu a přihlaste se, pokud je to vyžadováno."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist ein Problem bei der Anmeldung aufgetreten. Bitte starten Sie die App erneut und melden Sie sich an, falls dies erforderlich ist."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -479,6 +531,18 @@
     },
     "Hint: Use the plus button to add a new book" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tip: Tlačítkem plus přidáte novou knihu."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipp: Verwenden Sie die Plustaste, um ein neues Buch hinzuzufügen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -511,10 +575,38 @@
     },
     "Incorrect login credentials. Please tap the retry button. If it doesn't work, try logging out and back in." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nesprávné přihlašovací údaje. Klepněte na tlačítko opakovat pokus. Pokud to nepomůže, zkuste se odhlásit a znovu přihlásit."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falsche Anmeldedaten. Bitte tippen Sie auf die Schaltfläche Erneut versuchen. Wenn es nicht funktioniert, versuchen Sie, sich ab- und wieder anzumelden."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Incorrect login credentials. Please tap the retry button. If it doesn't work, try logging out and back in."
+          }
+        }
+      }
+    },
+    "ISBN" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ISBN"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ISBN"
           }
         }
       }
@@ -814,6 +906,22 @@
         }
       }
     },
+    "Pages" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stránky"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seiten"
+          }
+        }
+      }
+    },
     "Pages: %lld" : {
       "localizations" : {
         "cs" : {
@@ -864,6 +972,38 @@
         }
       }
     },
+    "Published" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vydáno"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veröffentlicht"
+          }
+        }
+      }
+    },
+    "Publisher" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vydavatel"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herausgeber"
+          }
+        }
+      }
+    },
     "Readers" : {
       "localizations" : {
         "cs" : {
@@ -888,6 +1028,12 @@
     },
     "Recommend me a book" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doporuč mi knihu"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -926,6 +1072,18 @@
     },
     "Retry" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Znovu"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiederholen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1022,6 +1180,22 @@
         }
       }
     },
+    "Subtitle" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podnázev"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untertitel"
+          }
+        }
+      }
+    },
     "That's pretty good!" : {
       "localizations" : {
         "cs" : {
@@ -1046,6 +1220,18 @@
     },
     "The application encountered an unknown error. Please tap the retry button or restart the app." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikace narazila na neznámou chybu. Klepněte na tlačítko opakovat pokus nebo aplikaci restartujte."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In der Anwendung ist ein unbekannter Fehler aufgetreten. Bitte tippen Sie auf die Schaltfläche \"Erneut versuchen\" oder starten Sie die Anwendung neu."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1056,6 +1242,18 @@
     },
     "There was an issue while downloading data. Please tap the retry button." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při stahování dat došlo k problému. Klepněte na tlačítko opakovat."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Herunterladen der Daten ist ein Problem aufgetreten. Bitte tippen Sie auf die Schaltfläche Erneut versuchen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1066,6 +1264,18 @@
     },
     "There was an issue while trying to read your data. Please tap the retry button." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při pokusu o načtení vašich dat došlo k problému. Klepněte na tlačítko opakovat."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Versuch, Ihre Daten zu lesen, ist ein Problem aufgetreten. Bitte tippen Sie auf die Schaltfläche Erneut versuchen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1074,8 +1284,31 @@
         }
       }
     },
-    "TODO: info o knize" : {
+    "Title" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel"
+          }
+        }
+      }
+    },
+    "TODO: info o knize" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TODO: info o knize"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
