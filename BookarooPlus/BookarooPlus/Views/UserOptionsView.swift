@@ -14,8 +14,17 @@ struct UserOptionsView: View {
     
     private let defaults = UserDefaults.standard
     
+    @State var recommenderOutput: [String]? = nil
+    @State var recommendedBookName: String? = nil
+    @State var recommendedBook: Book? = nil
+    @State var deleteId: String? = nil
+    
+    @State var showRecommendation: Bool = false
+    
     @ObservedObject var libsViewModel = ListOfLibrariesViewModel()
     @ObservedObject var booksViewModel = ListOfBooksViewModel()
+    
+    let model: BooksRecommender = .init()
     
     var body: some View {
         VStack(alignment: .leading){
@@ -84,7 +93,9 @@ struct UserOptionsView: View {
                     
                     Spacer()
                         .frame(height: 20)
+                    
                     Divider()
+                    
                     Spacer()
                         .frame(height: 20)
                     
@@ -121,6 +132,52 @@ struct UserOptionsView: View {
                         .frame(height: 80)
                     
                     Button(action: {
+
+                        var bookDict = Dictionary<String, Double>()
+                        
+                        booksViewModel.books?.forEach { book in
+                            bookDict[book.title!] = book.favourite ?? false ? 1.0 : 0.0
+                        }
+
+                        var recommenderOutput = try? model.prediction(
+                            input: BooksRecommenderInput(items: bookDict, k: 10, restrict_: [], exclude: [])
+                        )
+                        
+                        if recommenderOutput == nil {
+                            fatalError("Unexpected runtime error.")
+                        } else {
+                            var list: [String] = []
+                            
+                            for str in recommenderOutput!.recommendations{
+                                let score = recommenderOutput?.scores[str] ?? 0
+                                var filtered = booksViewModel.books?.filter { book in
+                                    book.title == str && score != 0 && !book.read!
+                                }
+                                if filtered != nil && !filtered!.isEmpty {
+                                    list.append(str)
+                                    print(str)
+                                }
+                            }
+                            
+                            self.recommenderOutput = list
+                            
+                            self.recommendedBook = booksViewModel.books?.first { book in
+                                book.title == list.first
+                            }
+
+                            self.recommendedBookName = list.first
+                            self.showRecommendation.toggle()
+                        }
+
+                    }, label: {
+                        Text("Recommend me a book")
+                    })
+                    .buttonStyle(.borderedProminent)
+                    
+                    Spacer()
+                        .frame(height: 80)
+                    
+                    Button(action: {
                         authManager.logout()
                         isLoggedOut = true
                         //                presentationMode.wrappedValue.dismiss()
@@ -131,6 +188,14 @@ struct UserOptionsView: View {
                     
                     Spacer()
                 }
+            }
+        }
+        .sheet(isPresented: $showRecommendation) {
+            if recommendedBook != nil && recommendedBook?.id != nil {
+                BookDetailView(deletedId: $deleteId, bookId: recommendedBook!.id!)
+            } else {
+                Text("Book recommendation for today")
+                Text(recommendedBookName ?? "none")
             }
         }
         .onAppear{

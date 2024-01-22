@@ -55,6 +55,7 @@
 		FCACF5492B48422D0035172E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF5482B48422D0035172E /* Header.swift */; };
 		FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54C2B49F4C80035172E /* DefaultsKey.swift */; };
 		FCACF54F2B4A12320035172E /* ListOfBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */; };
+		FCB419C32B5E4DAE00A192EC /* BooksRecommender.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FCB419C22B5E4DAE00A192EC /* BooksRecommender.mlmodel */; };
 		FCC91AC32B4F0765006554F9 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91AC22B4F0765006554F9 /* BookViewModel.swift */; };
 		FCC91AC52B4F0D14006554F9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91AC42B4F0D14006554F9 /* UIImageExtension.swift */; };
 		FCC91AC72B4FF60C006554F9 /* ListOfReadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91AC62B4FF60C006554F9 /* ListOfReadersViewModel.swift */; };
@@ -115,6 +116,7 @@
 		FCACF5482B48422D0035172E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FCACF54C2B49F4C80035172E /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		FCACF54E2B4A12320035172E /* ListOfBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBooksViewModel.swift; sourceTree = "<group>"; };
+		FCB419C22B5E4DAE00A192EC /* BooksRecommender.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BooksRecommender.mlmodel; sourceTree = "<group>"; };
 		FCC91AC22B4F0765006554F9 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		FCC91AC42B4F0D14006554F9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FCC91AC62B4FF60C006554F9 /* ListOfReadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfReadersViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */,
+				FCB419C22B5E4DAE00A192EC /* BooksRecommender.mlmodel */,
 				FCF9EB5E2B43383B00191996 /* BookarooPlus */,
 				FCF9EB5D2B43383B00191996 /* Products */,
 			);
@@ -465,6 +468,7 @@
 				CE8E037D2B5059BA003913FA /* StringExtensions.swift in Sources */,
 				FC4AB5102B46E4DE00D67B5D /* Book.swift in Sources */,
 				FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */,
+				FCB419C32B5E4DAE00A192EC /* BooksRecommender.mlmodel in Sources */,
 				CEBD1AB22B487E8C00EDC96E /* LoginScreenEllipseShape.swift in Sources */,
 				FCF214352B4C01770048F17D /* ListOfLibrariesView.swift in Sources */,
 				FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */,

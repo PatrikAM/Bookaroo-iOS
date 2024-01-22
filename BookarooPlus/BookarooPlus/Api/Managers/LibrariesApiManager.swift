@@ -20,7 +20,7 @@ class LibrariesApiManager: BookarooApi, LibrariesApiProtocol {
     func createLibrary(library: String) async -> CommunicationResult<Library> {
         let endpoint = "library"
         return await super.callApi(
-            fromURL: "\(baseUrl)\(endpoint)?token=\(self.token!)?token=\(self.token!)&name=\(library)",
+            fromURL: "\(baseUrl)\(endpoint)?token=\(self.token!)&name=\(library)",
             header: .post
         )
     }
