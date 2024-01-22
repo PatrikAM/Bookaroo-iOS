@@ -16,6 +16,7 @@
 		CEADE2122B4B052200A912B9 /* ElegantTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */; };
 		CEB1DDED2B49910E00C238CA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */; };
 		CEBD1AB22B487E8C00EDC96E /* LoginScreenEllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD1AB12B487E8C00EDC96E /* LoginScreenEllipseShape.swift */; };
+		CEF07B342B5EAE1300B9C295 /* ReaderContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07B332B5EAE1200B9C295 /* ReaderContactCard.swift */; };
 		FC0A0ECF2B584713004D6F93 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A0ECE2B584713004D6F93 /* BindingExtensions.swift */; };
 		FC0A0ED12B5847AE004D6F93 /* BookarooTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A0ED02B5847AE004D6F93 /* BookarooTextfield.swift */; };
 		FC0A0ED32B587235004D6F93 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A0ED22B587235004D6F93 /* ViewExtension.swift */; };
@@ -79,6 +80,7 @@
 		CEADE2112B4B052200A912B9 /* ElegantTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegantTextFieldStyle.swift; sourceTree = "<group>"; };
 		CEB1DDEC2B49910E00C238CA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		CEBD1AB12B487E8C00EDC96E /* LoginScreenEllipseShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenEllipseShape.swift; sourceTree = "<group>"; };
+		CEF07B332B5EAE1200B9C295 /* ReaderContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderContactCard.swift; sourceTree = "<group>"; };
 		FC0A0ECE2B584713004D6F93 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		FC0A0ED02B5847AE004D6F93 /* BookarooTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarooTextfield.swift; sourceTree = "<group>"; };
 		FC0A0ED22B587235004D6F93 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				FCF2143C2B4C37480048F17D /* Chip.swift */,
 				CE8E037E2B505D23003913FA /* BookListCard.swift */,
 				FC0A0ED02B5847AE004D6F93 /* BookarooTextfield.swift */,
+				CEF07B332B5EAE1200B9C295 /* ReaderContactCard.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				FCACF54D2B49F4C80035172E /* DefaultsKey.swift in Sources */,
 				FCB419C32B5E4DAE00A192EC /* BooksRecommender.mlmodel in Sources */,
 				CEBD1AB22B487E8C00EDC96E /* LoginScreenEllipseShape.swift in Sources */,
+				CEF07B342B5EAE1300B9C295 /* ReaderContactCard.swift in Sources */,
 				FCF214352B4C01770048F17D /* ListOfLibrariesView.swift in Sources */,
 				FCF9EB602B43383B00191996 /* BookarooPlusApp.swift in Sources */,
 				FCC91AC72B4FF60C006554F9 /* ListOfReadersViewModel.swift in Sources */,

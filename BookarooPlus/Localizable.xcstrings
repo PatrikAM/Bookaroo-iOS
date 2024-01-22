@@ -450,6 +450,16 @@
         }
       }
     },
+    "Hint: Use the plus button to add a new book" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hint: Use the plus button to add a new book"
+          }
+        }
+      }
+    },
     "Hint: Use the plus button to add a new library" : {
       "localizations" : {
         "cs" : {
@@ -701,6 +711,7 @@
       }
     },
     "New book" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -844,6 +855,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Empfehlen Sie mir ein Buch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommend me a book"
           }
         }
       }

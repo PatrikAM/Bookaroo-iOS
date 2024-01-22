@@ -12,15 +12,17 @@ struct ListOfReadersView: View {
     @ObservedObject var viewModel = ListOfReadersViewModel()
     
     var body: some View {
+        // TODO: create error view with separate error states for all viewmodels and retry button with callback
         VStack {
             if (viewModel.isLoading) {
                 ProgressView()
             } else {
-                List {
+                ScrollView {
                     ForEach(viewModel.readers!) { reader in
-                        Text(reader.login!)
+                        ReaderContactCard(reader: reader)
                     }
                 }
+                .scrollIndicators(.visible)
             }
         }
         .onAppear {

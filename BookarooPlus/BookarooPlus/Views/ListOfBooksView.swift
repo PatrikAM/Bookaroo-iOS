@@ -25,6 +25,10 @@ struct ListOfBooksView: View {
     
     var body: some View {
         NavigationStack {
+            Text("Hint: Use the plus button to add a new book")
+                .font(.subheadline)
+                .padding(.all)
+            
             VStack {
                 if booksViewModel.isLoading {
                     ProgressView()
@@ -87,12 +91,6 @@ struct ListOfBooksView: View {
                         
                     }
                     
-                    Button(action: {
-                        showScanningDialog.toggle()
-                    }) {
-                        Text("New book")
-                    }
-                    
                 } else {
                     Text(booksViewModel.errorMessage!)
                 }
@@ -118,6 +116,7 @@ struct ListOfBooksView: View {
             booksViewModel.books?.removeAll(where: { book in book.id == deletedId } )
             booksViewModel.filteredBooks?.removeAll(where: { book in book.id == deletedId } )
         }
+        // TODO: change dialog header and message to Unit -> needs Text for string catalog to recognise
         .customConfirmDialog(
             isPresented: $showScanningDialog,
             header: "isbn_manual_selection_text",
@@ -135,6 +134,15 @@ struct ListOfBooksView: View {
                 showScanningDialog.toggle()
             } label: {
                 Label("Using ISBN", systemImage: "barcode.viewfinder")
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showScanningDialog.toggle()
+                } label: {
+                    Image(systemName: "plus")
+                }
             }
         }
         .sheet(isPresented: $showScanner) {
