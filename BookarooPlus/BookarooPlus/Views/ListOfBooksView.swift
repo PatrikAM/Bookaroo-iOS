@@ -25,14 +25,15 @@ struct ListOfBooksView: View {
     
     var body: some View {
         NavigationStack {
-            Text("Hint: Use the plus button to add a new book")
-                .font(.subheadline)
-                .padding(.all)
-            
             VStack {
                 if booksViewModel.isLoading {
                     ProgressView()
+                } else if (booksViewModel.errorMessage != nil) {
+                    ErrorView(onRetryButtonClick: booksViewModel.fetchBooks, errorMessageIdentifier: booksViewModel.errorMessage!)
                 } else if booksViewModel.books != nil {
+                    Text("Hint: Use the plus button to add a new book")
+                        .font(.subheadline)
+                        .padding(.all)
                     VStack {
                         if librariesViewModel.libraries != nil {
                             VStack {
@@ -56,35 +57,38 @@ struct ListOfBooksView: View {
                                 
                             }
                         }
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(spacing: 0) {
-                                //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
-                                ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
-                                    BookListCard(
-                                        book: book,
-                                        onHeartClick: { booksViewModel.toggleFavourite(bookId: book.id!) },
-                                        onBookClick: { booksViewModel.toggleRead(bookId: book.id!) }
-                                    )
-                                    .onTapGesture {
-                                        selectedBook = book.id!
-                                        print("Book tapped: \(book.id!)")
+                        GeometryReader { geometry in
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack(spacing: 0) {
+                                    //                    BookListCard(book: booksViewModel.filteredBooks!.first!)
+                                    ForEach(booksViewModel.filteredBooks!, id: \.id) { book in
+                                        BookListCard(
+                                            book: book,
+                                            onHeartClick: { booksViewModel.toggleFavourite(bookId: book.id!) },
+                                            onBookClick: { booksViewModel.toggleRead(bookId: book.id!) }
+                                        )
+                                        .onTapGesture {
+                                            selectedBook = book.id!
+                                            print("Book tapped: \(book.id!)")
+                                        }
+                                        .padding(.all)
+                                        .ignoresSafeArea(edges: .horizontal)
+                                        .frame(width: geometry.size.width)
                                     }
-                                    .padding(.all)
-                                    .ignoresSafeArea(edges: .horizontal)
+                                }
+                                .navigationDestination(item: $selectedBook) { bookId in
+                                    BookDetailView(
+                                        deletedId: $deletedId,
+                                        bookId: bookId
+                                    )
+                                    
+                                    .onDisappear {
+                                        selectedBook = nil
+                                    }
                                 }
                             }
-                            .navigationDestination(item: $selectedBook) { bookId in
-                                BookDetailView(
-                                    deletedId: $deletedId,
-                                    bookId: bookId
-                                )
-                                
-                                .onDisappear {
-                                    selectedBook = nil
-                                }
-                            }
+                            .frame(width: geometry.size.width)
                             .scrollTargetLayout()
-                            .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .scrollTargetBehavior(.viewAligned)
                         .safeAreaPadding(.horizontal)

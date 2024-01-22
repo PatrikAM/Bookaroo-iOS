@@ -29,23 +29,23 @@ struct BookListCard: View {
                     if book.cover != nil && book.cover!.isValidUrl() {
                         AsyncImage(url: URL(string: book.cover!)) { image in
                             image.resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: .fit)
                                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
                         } placeholder: {
                             ProgressView()
                         }
-                        .frame(height: 400)
+                        .frame(height: 380)
                         .clipped()
                         Spacer()
                     } else {
                         AsyncImage(url: URL(string: bookPlaceHolderImage)) { image in
                             image.resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: .fit)
                                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
                         } placeholder: {
                             ProgressView()
                         }
-                        .frame(height: 400)
+                        .frame(height: 380)
                         .clipped()
                         Spacer()
                     }

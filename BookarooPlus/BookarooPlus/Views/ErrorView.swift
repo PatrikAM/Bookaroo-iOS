@@ -61,6 +61,18 @@ struct ErrorView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 270)
             }
+            
+            Spacer()
+                .frame(height: 100)
+            
+            Button(action: {
+                onRetryButtonClick()
+            }, label: {
+                Image(systemName: "arrow.counterclockwise")
+                Text("Retry")
+            })
+            .buttonStyle(.borderedProminent)
         }
+        .padding(.all)
     }
 }

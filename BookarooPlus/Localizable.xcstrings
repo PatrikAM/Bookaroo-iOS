@@ -220,6 +220,12 @@
             "state" : "translated",
             "value" : "Buchtipp für heute"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Book recommendation for today"
+          }
         }
       }
     },
@@ -333,6 +339,16 @@
         }
       }
     },
+    "Could not reach the server. Please tap the retry button or relaunch the app." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not reach the server. Please tap the retry button or relaunch the app."
+          }
+        }
+      }
+    },
     "Delete" : {
       "localizations" : {
         "cs" : {
@@ -401,6 +417,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일"
+          }
+        }
+      }
+    },
+    "Encountered an issue logging in. Please launch the app again and log in if it's required." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encountered an issue logging in. Please launch the app again and log in if it's required."
           }
         }
       }
@@ -483,7 +509,14 @@
       }
     },
     "Incorrect login credentials. Please tap the retry button. If it doesn't work, try logging out and back in." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incorrect login credentials. Please tap the retry button. If it doesn't work, try logging out and back in."
+          }
+        }
+      }
     },
     "isbn_manual_selection_text" : {
       "extractionState" : "manual",
@@ -890,6 +923,16 @@
         }
       }
     },
+    "Retry" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        }
+      }
+    },
     "Save" : {
       "localizations" : {
         "cs" : {
@@ -996,6 +1039,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "That's pretty good!"
+          }
+        }
+      }
+    },
+    "The application encountered an unknown error. Please tap the retry button or restart the app." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The application encountered an unknown error. Please tap the retry button or restart the app."
+          }
+        }
+      }
+    },
+    "There was an issue while downloading data. Please tap the retry button." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There was an issue while downloading data. Please tap the retry button."
+          }
+        }
+      }
+    },
+    "There was an issue while trying to read your data. Please tap the retry button." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There was an issue while trying to read your data. Please tap the retry button."
           }
         }
       }
