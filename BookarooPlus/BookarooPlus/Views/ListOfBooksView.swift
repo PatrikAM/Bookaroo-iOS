@@ -31,9 +31,9 @@ struct ListOfBooksView: View {
                 } else if (booksViewModel.errorMessage != nil) {
                     ErrorView(onRetryButtonClick: booksViewModel.fetchBooks, errorMessageIdentifier: booksViewModel.errorMessage!)
                 } else if booksViewModel.books != nil {
-//                    Text("Hint: Use the plus button to add a new book")
-//                        .font(.subheadline)
-//                        .padding(.all)
+                    //                    Text("Hint: Use the plus button to add a new book")
+                    //                        .font(.subheadline)
+                    //                        .padding(.all)
                     VStack {
                         if librariesViewModel.libraries != nil {
                             VStack {
@@ -105,7 +105,9 @@ struct ListOfBooksView: View {
             }
             .navigationDestination(isPresented: $navigateToBookAdd) {
                 BookAddEditView(
-                    onDisappearEvent: booksViewModel.fetchBooks)
+                    onDisappearEvent: booksViewModel.fetchBooks,
+                    isScannerViewActive: $showScanner
+                )
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -172,6 +174,3 @@ struct ListOfBooksView: View {
         //        .navigate (to: BaseView(), when: $isLoggedOut)
     }
 }
-
-
-
