@@ -16,6 +16,8 @@ struct BookCard: View {
     var onHeartClick: () -> ()
     var onBookClick: () -> ()
     
+    var showActions: Bool = true
+    
     let bookPlaceHolderImage = "https://www.marytribble.com/wp-content/uploads/2020/12/book-cover-placeholder.png"
 
     var body: some View {
@@ -27,32 +29,34 @@ struct BookCard: View {
             
             ZStack(alignment: .top) {
                 HStack(alignment: .top) {
-                    Button(action: {
-                        onBookClick()
-                    }) {
-                        Image(systemName: "book.circle")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .foregroundStyle(self.book.read ?? false ? .indigo : .white)
-                            .backgroundStyle(.brown)
-                            .clipShape(Circle())
+                    if showActions {
+                        Button(action: {
+                            onBookClick()
+                        }) {
+                            Image(systemName: "book.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(self.book.read ?? false ? .indigo : .white)
+                                .backgroundStyle(.brown)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 100, height: 350)
+                        Spacer()
+                        Spacer()
+                        Button(action: {
+                            onHeartClick()
+                        }) {
+                            Image(systemName: "heart.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(self.book.favourite ?? false ? .red : .white)
+                                .backgroundStyle(.brown)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 100, height: 350)
                     }
-                    .buttonStyle(PlainButtonStyle())
-                    .frame(width: 100, height: 350)
-                    Spacer()
-                    Spacer()
-                    Button(action: {
-                        onHeartClick()
-                    }) {
-                        Image(systemName: "heart.circle")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .foregroundStyle(self.book.favourite ?? false ? .red : .white)
-                            .backgroundStyle(.brown)
-                            .clipShape(Circle())
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .frame(width: 100, height: 350)
                 }
                 VStack {
                     VStack(alignment: .center) {

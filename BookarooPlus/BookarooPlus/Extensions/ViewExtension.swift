@@ -13,7 +13,7 @@ extension View {
         return self.modifier(MyCustomModifier(isPresented: isPresented, header: nil, message: nil, actions: actions))
     }
     
-    func customConfirmDialog<A: View>(isPresented: Binding<Bool>, header: String, message: String, @ViewBuilder actions: @escaping () -> A) -> some View {
+    func customConfirmDialog<A: View>(isPresented: Binding<Bool>, header: Text, message: Text, @ViewBuilder actions: @escaping () -> A) -> some View {
         return self.modifier(MyCustomModifier(isPresented: isPresented, header: header, message: message, actions: actions))
     }
 }
@@ -21,8 +21,8 @@ extension View {
 struct MyCustomModifier<A>: ViewModifier where A: View {
     
     @Binding var isPresented: Bool
-    let header: String?
-    let message: String?
+    let header: (Text)?
+    let message: (Text)?
     @ViewBuilder let actions: () -> A
     
     func body(content: Content) -> some View {
@@ -44,12 +44,14 @@ struct MyCustomModifier<A>: ViewModifier where A: View {
                     VStack {
                         GroupBox {
                             if let hdr = header {
-                                Text(hdr)
+//                                Text(hdr)
+                                hdr
                                     .font(.headline)
                                 Divider()
                             }
                             if let msg = message {
-                                Text(msg)
+//                                Text(msg)
+                                msg
                             }
                         }
                         GroupBox {

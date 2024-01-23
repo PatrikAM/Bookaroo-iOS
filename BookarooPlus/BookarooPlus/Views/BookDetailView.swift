@@ -49,7 +49,8 @@ struct BookDetailView: View {
                                 book: viewModel.book!,
                                 color: Color(viewModel.coverImage?.averageColor ?? .gray),
                                 onHeartClick: { viewModel.book?.favourite?.toggle() },
-                                onBookClick: { viewModel.book?.read?.toggle() }
+                                onBookClick: { viewModel.book?.read?.toggle() },
+                                showActions: !isRecommendation
                             )
 //                            Text(viewModel.book!.title!)
 //                            Text(viewModel.book?.cover ?? "unknown")

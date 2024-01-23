@@ -132,8 +132,8 @@ struct ListOfBooksView: View {
         // TODO: change dialog header and message to Unit -> needs Text for string catalog to recognise
         .customConfirmDialog(
             isPresented: $showScanningDialog,
-            header: "isbn_manual_selection_text",
-            message: "barcode_scan_help_text"
+            header: Text("isbn_manual_selection_text"),
+            message: Text("barcode_scan_help_text")
         ) {
             Button {
                 navigateToBookAdd = true
