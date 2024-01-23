@@ -177,7 +177,11 @@ struct UserOptionsView: View {
         }
         .sheet(isPresented: $showRecommendation) {
             if recommendedBook != nil && recommendedBook?.id != nil {
-                BookDetailView(deletedId: $deleteId, bookId: recommendedBook!.id!)
+                BookDetailView(
+                    deletedId: $deleteId,
+                    bookId: recommendedBook!.id!,
+                    isRecommendation: true
+                )
             } else {
                 Text("Book recommendation for today")
                 Text(recommendedBookName ?? "none")

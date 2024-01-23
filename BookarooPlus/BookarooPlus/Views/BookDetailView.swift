@@ -16,6 +16,8 @@ struct BookDetailView: View {
     
     var bookId: String
     
+    var isRecommendation: Bool = false
+    
     @ObservedObject var viewModel = BookViewModel()
     
     @State private var editing = false
@@ -111,16 +113,19 @@ struct BookDetailView: View {
                             }
                             Divider()
                             
-                            Button(action: {
-                                viewModel.deleteBook(bookId: bookId)
-                            }) {
-                                Text("Delete")
-                            }
-                            
-                            Button(action: {
-                                editing = true
-                            }) {
-                                Text("Edit")
+                            if !isRecommendation {
+                                
+                                Button(action: {
+                                    viewModel.deleteBook(bookId: bookId)
+                                }) {
+                                    Text("Delete")
+                                }
+                                
+                                Button(action: {
+                                    editing = true
+                                }) {
+                                    Text("Edit")
+                                }
                             }
                         }
                     }
