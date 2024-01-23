@@ -530,6 +530,7 @@
       }
     },
     "Hint: Use the plus button to add a new book" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
