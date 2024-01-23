@@ -80,6 +80,7 @@ struct ListOfBooksView: View {
                                     BookDetailView(
                                         onReadButtonClick: booksViewModel.toggleRead,
                                         onFavButtonClick: booksViewModel.toggleFavourite,
+                                        onDisappearEvent: booksViewModel.fetchBooks,
                                         deletedId: $deletedId,
                                         bookId: bookId
                                     )
@@ -103,7 +104,8 @@ struct ListOfBooksView: View {
                 
             }
             .navigationDestination(isPresented: $navigateToBookAdd) {
-                BookAddEditView()
+                BookAddEditView(
+                    onDisappearEvent: booksViewModel.fetchBooks)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -161,7 +163,10 @@ struct ListOfBooksView: View {
             }
         }
         .sheet(isPresented: $showScanner) {
-            BarcodeScannerView()
+            BarcodeScannerView(
+                onDisappearEvent: booksViewModel.fetchBooks,
+                isScannerViewActive: $showScanner
+            )
         }
         
         //        .navigate (to: BaseView(), when: $isLoggedOut)

@@ -12,8 +12,11 @@ struct BookDetailView: View {
     
     var onReadButtonClick: (String) -> Void = { _ in }
     var onFavButtonClick: (String) -> Void = { _ in }
+    var onDisappearEvent: () -> Void
     
     @Environment(\.presentationMode) var presentationMode
+    
+    @State var scannerViewDefault = false
     
     @Binding var deletedId: String?
     
@@ -178,7 +181,7 @@ struct BookDetailView: View {
                     
                     .navigationDestination(isPresented: $editing) {
                         if viewModel.book != nil {
-                            BookAddEditView(book: viewModel.book!)
+                            BookAddEditView(onDisappearEvent: onDisappearEvent, isScannerViewActive: $scannerViewDefault, book: viewModel.book!)
                         }
                     }
                     .toast(isPresenting: $viewModel.showError) {

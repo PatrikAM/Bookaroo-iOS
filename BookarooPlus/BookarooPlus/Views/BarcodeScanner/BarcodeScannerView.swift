@@ -42,6 +42,9 @@ struct BarcodeScannerView: View {
 //        }
 //    }
 //    
+    var onDisappearEvent: () -> Void
+    @Binding var isScannerViewActive: Bool
+    
     
     @State var isShowingScanner = true
     @State private var scannedText = ""
@@ -77,6 +80,6 @@ struct BarcodeScannerView: View {
                 message = "This is not valid ISBN. Please try again."
             }
         }
-        .navigate(to: BookAddEditView(isbn: scannedText), when: $navigate)
+        .navigate(to: BookAddEditView(onDisappearEvent: onDisappearEvent, isScannerViewActive: $isScannerViewActive, isbn: scannedText), when: $navigate)
     }
 }

@@ -178,6 +178,7 @@ struct UserOptionsView: View {
         .sheet(isPresented: $showRecommendation) {
             if recommendedBook != nil && recommendedBook?.id != nil {
                 BookDetailView(
+                    onDisappearEvent: {}, 
                     deletedId: $deleteId,
                     bookId: recommendedBook!.id!,
                     isRecommendation: true

@@ -13,6 +13,10 @@ struct BookAddEditView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    var onDisappearEvent: () -> Void
+    
+    @Binding var isScannerViewActive: Bool
+    
     @State var isbn: String? = nil
     
     //    let id: String? = nil
@@ -121,6 +125,10 @@ struct BookAddEditView: View {
                     }
                 }
             }
+        }
+        .onDisappear {
+            onDisappearEvent()
+            isScannerViewActive.toggle()
         }
         .onChange(of: viewModel.book) {
             if viewModel.book != nil {
