@@ -10,6 +10,9 @@ import SwiftUI
 
 struct BookDetailView: View {
     
+    var onReadButtonClick: (String) -> Void = { _ in }
+    var onFavButtonClick: (String) -> Void = { _ in }
+    
     @Environment(\.presentationMode) var presentationMode
     
     @Binding var deletedId: String?
@@ -48,8 +51,14 @@ struct BookDetailView: View {
                             BookCard(
                                 book: viewModel.book!,
                                 color: Color(viewModel.coverImage?.averageColor ?? .gray),
-                                onHeartClick: { viewModel.book?.favourite?.toggle() },
-                                onBookClick: { viewModel.book?.read?.toggle() },
+                                onHeartClick: {
+                                    onFavButtonClick(bookId)
+                                    presentationMode.wrappedValue.dismiss()
+                                },
+                                onBookClick: {
+                                    onReadButtonClick(bookId)
+                                    presentationMode.wrappedValue.dismiss()
+                                },
                                 showActions: !isRecommendation
                             )
 //                            Text(viewModel.book!.title!)
@@ -70,6 +79,7 @@ struct BookDetailView: View {
                                 Spacer()
                                 Text("\(viewModel.book?.author ?? "unknown")")
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             HStack {
@@ -77,56 +87,91 @@ struct BookDetailView: View {
                                 Spacer()
                                 Text("\(viewModel.book?.title ?? "unknown")")
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             HStack {
                                 Text("Subtitle")
                                 Spacer()
-                                Text("\(viewModel.book?.subtitle ?? "unknown")")
+                                if let subtitle = viewModel.book?.subtitle {
+                                    Text("\(subtitle)")
+                                } else {
+                                    Text("unknown")
+                                }
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             HStack {
                                 Text("Pages")
                                 Spacer()
-                                Text("\(viewModel.book?.pages ?? 0)")
+                                if let pages = viewModel.book?.pages {
+                                    Text("\(pages)")
+                                } else {
+                                    Text("unknown")
+                                }
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             HStack {
                                 Text("ISBN")
                                 Spacer()
-                                Text("\(viewModel.book?.isbn ?? "unknown")")
+                                if let isbn = viewModel.book?.isbn {
+                                    Text("\(isbn)")
+                                } else {
+                                    Text("unknown")
+                                }
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             HStack {
                                 Text("Published")
                                 Spacer()
-                                Text("\(viewModel.book?.published ?? "unknown")")
+                                if let published = viewModel.book?.published {
+                                    Text("\(published)")
+                                } else {
+                                    Text("unknown")
+                                }
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             HStack {
                                 Text("Publisher")
                                 Spacer()
-                                Text("\(viewModel.book?.publisher ?? "unknown")")
+                                if let publisher = viewModel.book?.publisher {
+                                    Text("\(publisher)")
+                                } else {
+                                    Text("unknown")
+                                }
+                                
+                                
                             }
+                            .padding(.horizontal)
                             Divider()
                             
                             if !isRecommendation {
-                                
-                                Button(action: {
-                                    viewModel.deleteBook(bookId: bookId)
-                                }) {
-                                    Text("Delete")
+                                HStack {
+                                    Button(action: {
+                                        viewModel.deleteBook(bookId: bookId)
+                                    }) {
+                                        Text("Delete")
+                                    }
+                                    .buttonStyle(.borderedProminent)
+                                    
+                                    Spacer()
+                                    
+                                    Button(action: {
+                                        editing = true
+                                    }) {
+                                        Text("Edit")
+                                    }
+                                    .buttonStyle(.borderedProminent)
                                 }
+                                .padding(.horizontal, 15)
                                 
-                                Button(action: {
-                                    editing = true
-                                }) {
-                                    Text("Edit")
-                                }
                             }
                         }
                     }
@@ -144,6 +189,7 @@ struct BookDetailView: View {
                         )
                     }
                     .onAppear {
+                        print("on appear")
                         viewModel.fetchBook(bookId: bookId)
                     }
                     .onChange(of: viewModel.deletionDone) {

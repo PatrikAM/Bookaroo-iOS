@@ -63,6 +63,8 @@ class ListOfLibrariesViewModel: ObservableObject {
     func addLibrary(_ libraryName: String) {
         // TODO: fill in functionality for adding a library
         Task {
+            isLoading = true
+            errorMessage = nil
             guard let result: CommunicationResult<Library>? = await api.createLibrary(library: libraryName) else {return}
             Task {
                 await MainActor.run {

@@ -22,6 +22,8 @@ class ListOfBooksViewModel: ObservableObject {
     
     
     func fetchBooks() {
+        isLoading = true
+        errorMessage = nil
         Task {
             guard let result: CommunicationResult<[Book]>? = await api.fetchBooks() else {return}
             Task {
@@ -132,6 +134,7 @@ class ListOfBooksViewModel: ObservableObject {
                                 self.filteredBooks![index] = data
                             }
                         }
+                        isLoading = false
                     case .failure:
                         self.errorMessage = "failed to update"
                         //

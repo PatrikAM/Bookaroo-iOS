@@ -16,6 +16,8 @@ class ListOfReadersViewModel: ObservableObject {
     @Published var errorMessage: String? = nil
     
     func fetchReaders() {
+        isLoading = true
+        errorMessage = nil
         Task {
             guard let result: CommunicationResult<[Reader]>? = await api.fetchReaders() else {return}
             Task {

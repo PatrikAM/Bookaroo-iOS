@@ -13,8 +13,8 @@ struct BookCard: View {
     
     let color: Color
     
-    var onHeartClick: () -> ()
-    var onBookClick: () -> ()
+    var onHeartClick: () -> Void
+    var onBookClick: () -> Void
     
     var showActions: Bool = true
     

@@ -24,6 +24,10 @@ struct ListOfReadersView: View {
                             ReaderContactCard(reader: reader)
                                 .padding(.horizontal, 20)
                                 .padding(.vertical, 5)
+                            
+                            if (reader != viewModel.readers!.last) {
+                                Divider()
+                            }
                         }
                     }
 //                    .frame(width: geometry.size.width, height: geometry.size.height)

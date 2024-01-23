@@ -144,5 +144,6 @@ struct BookAddEditView: View {
             )
         }
         .toolbar(.hidden, for: .tabBar)
+        .padding(.all)
     }
 }

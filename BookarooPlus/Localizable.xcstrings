@@ -210,6 +210,12 @@
             "state" : "translated",
             "value" : "Autor"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Author"
+          }
         }
       }
     },
@@ -1336,6 +1342,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "total"
+          }
+        }
+      }
+    },
+    "unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neudáno."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unspecified."
           }
         }
       }

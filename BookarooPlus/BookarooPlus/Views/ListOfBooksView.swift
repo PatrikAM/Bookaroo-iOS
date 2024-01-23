@@ -78,6 +78,8 @@ struct ListOfBooksView: View {
                                 }
                                 .navigationDestination(item: $selectedBook) { bookId in
                                     BookDetailView(
+                                        onReadButtonClick: booksViewModel.toggleRead,
+                                        onFavButtonClick: booksViewModel.toggleFavourite,
                                         deletedId: $deletedId,
                                         bookId: bookId
                                     )

@@ -21,6 +21,7 @@ struct ErrorView: View {
                     .frame(height: 30)
                 Image(AssetsConstants.fingerprintLoginIcon.rawValue)
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 270)
             } else if (errorMessageIdentifier  == APIErrorsConstants.loginFailed.rawValue) {
                 Text("Encountered an issue logging in. Please launch the app again and log in if it's required.")
@@ -28,6 +29,7 @@ struct ErrorView: View {
                     .frame(height: 30)
                 Image(AssetsConstants.fingerprintLoginIcon.rawValue)
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 270)
             } else if (errorMessageIdentifier == APIErrorsConstants.badUrl.rawValue) {
                 Text("Could not reach the server. Please tap the retry button or relaunch the app.")
@@ -35,6 +37,7 @@ struct ErrorView: View {
                     .frame(height: 30)
                 Image(AssetsConstants.serverDownIcon.rawValue)
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 270)
             } else if (errorMessageIdentifier == APIErrorsConstants.invalidRequest.rawValue) {
                 Text("There was an issue while downloading data. Please tap the retry button.")
